@@ -1,0 +1,69 @@
+/* .single-project {
+    transform: scale(3);
+    transition: transform 0.5s linear;
+  }
+  
+  .single-project:hover {
+  } */
+
+.img-container-dark,
+.img-container-light,
+.button-container-light,
+.button-container-dark {
+  position: relative;
+}
+
+.img-container-dark::before,
+.img-container-light::before,
+.button-container-light::before,
+.button-container-dark::before,
+.img-container-dark::after,
+.img-container-light::after,
+.button-container-light::after,
+.button-container-dark::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  border: 2px solid transparent;
+  transition: all 0.25s ease-out;
+}
+
+.img-container-dark::before {
+  background-color: #ffd60a;
+  top: -15px;
+  left: -15px;
+}
+
+.img-container-light::before {
+  background-color: #000814;
+  top: -15px;
+  left: -15px;
+}
+
+.img-container-dark::after {
+  bottom: -15px;
+  right: -15px;
+}
+.img-container-light::after {
+  bottom: -15px;
+  right: -15px;
+}
+
+.img-container-dark:hover::before,
+.img-container-light:hover::before {
+  top: 15px;
+  left: 15px;
+  border: #000814;
+}
+
+.img-container-light:hover::before {
+  border: #000814;
+}
+
+.img-container-light:hover::after {
+  bottom: 15px;
+  right: 15px;
+  border-color: #000814;
+}

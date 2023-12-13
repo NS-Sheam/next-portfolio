@@ -2,26 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: "Roboto Condensed", sans-serif;
 }
+
+/* .typed-cursor {
+  display: none !important;
+} */
+
+.inner-container {
+  @apply xl:px-20 md:px-10 px-4 sm:px-2;
+}
+.my-container {
+  @apply xl:mx-20 md:mx-10 mx-4 sm:mx-2;
+}
+/* .my-container-sm{
+  @apply container mx-auto px-4;
+} */
+
+.font-gradient {
+  /* background: linear-gradient(to right top, #d207d9, #ac05ca, #ebbdfe, #be9fd7, #c1aaed); */
+  background: linear-gradient(to right top, #ffc300, #ffd60a, #eadb90, #fff9de, #f9f6e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* d207d9
+c1aaed */
+.react-tabs__tab--selected {
+  border: none !important;
+  background: transparent !important;
+}
+
+.react-tabs__tab--selected::after {
+  display: none;
+  border: none !important;
+  background: transparent !important;
+}
+
+.gradient-btn {
+  @apply bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary hover:from-bandTernary hover:to-bandPrimary;
+}
+
+.button-container-dark::before {
+  background-color: #ffd60a;
+  top: -6px;
+  left: -6px;
+}
+
+.button-container-light::before {
+  background-color: #000814;
+  top: -6px;
+  left: -6px;
+}
+.button-container-dark::after {
+  bottom: -6px;
+  right: -6px;
+}
+
+.button-container-light::after {
+  bottom: -6px;
+  right: -6px;
+}
+
+.button-container-light:hover::before,
+.button-container-dark:hover::before {
+  top: 6px;
+  left: 6px;
+}
+.button-container-light:hover::before {
+  border: #000814;
+}
+
+.img-container-dark:hover::after {
+  bottom: 15px;
+  right: 15px;
+  border-color: #ffd60a;
+}
+
+.button-container-light:hover::after {
+  bottom: 6px;
+  right: 6px;
+  border-color: #ffffff;
+}
+
+.button-container-dark:hover::after {
+  bottom: 6px;
+  right: 6px;
+  border-color: #ffd60a;
+}
+
+/* ------------------- */
+/* Styles for the blog card css  container */
+.blog-card {
+  box-shadow: 0px 20px 50px #555;
+  transition: transform 0.5s, box-shadow 0.5s, z-index 0.5s;
+  transform: rotateX(60deg) scale(0.7);
+}
+
+.blog-card:hover {
+  cursor: pointer;
+  transform: rotate(0deg) scale(1) translateY(10px);
+  box-shadow: 0px 20px 100px #555;
+  z-index: 5;
+}
+
+.blog-card .card-actions {
+  visibility: hidden;
+}
+.blog-card:hover .card-actions {
+  visibility: visible;
+}
+/* Styles for the blog card css  container end */

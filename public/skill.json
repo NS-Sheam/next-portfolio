@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "HTML",
+    "proficiency": "Advanced",
+    "percentage": 90,
+    "image": "/skill-icon/html.png"
+  },
+  {
+    "id": 2,
+    "name": "CSS",
+    "proficiency": "Advanced",
+    "percentage": 85,
+    "image": "/skill-icon/css-3.png"
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "proficiency": "Intermediate",
+    "percentage": 75,
+    "image": "/skill-icon/js.png"
+  },
+  {
+    "id": 4,
+    "name": "React",
+    "proficiency": "Advanced",
+    "percentage": 85,
+    "image": "/skill-icon/react.png"
+  },
+  {
+    "id": 5,
+    "name": "Node.js",
+    "proficiency": "Familier",
+    "percentage": 70,
+    "image": "/skill-icon/node-js.png"
+  },
+  {
+    "id": 6,
+    "name": "Express.js",
+    "proficiency": "Intermediate",
+    "percentage": 80,
+    "image": "/skill-icon/express.png"
+  },
+  {
+    "id": 7,
+    "name": "MongoDB",
+    "proficiency": "Intermediate",
+    "percentage": 80,
+    "image": "/skill-icon/mongodb.png"
+  },
+  {
+    "id": 8,
+    "name": "REST APIs",
+    "proficiency": "Intermediate",
+    "percentage": 80,
+    "image": "/skill-icon/node-js.png"
+  },
+  {
+    "id": 9,
+    "name": "Git",
+    "proficiency": "Familier",
+    "percentage": 75,
+    "image": "/skill-icon/github.png"
+  },
+  {
+    "id": 10,
+    "name": "Tailwind css",
+    "proficiency": "Advanced",
+    "percentage": 85,
+    "image": "/skill-icon/tailwind.png"
+  },
+  {
+    "id": 11,
+    "name": "Bootstrap",
+    "proficiency": "Advanced",
+    "percentage": 80,
+    "image": "/skill-icon/bootstrap.png"
+  },
+  {
+    "id": 12,
+    "name": "React Bootstrap",
+    "proficiency": "Advanced",
+    "percentage": 80,
+    "image": "/skill-icon/bootstrap.png"
+  }
+]
