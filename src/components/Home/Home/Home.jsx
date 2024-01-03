@@ -6,6 +6,7 @@ import { useLayoutEffect } from 'react';
 import Quotes from '../Quotes/Quotes';
 import HomeBlogs from '../HomeBlogs/HomeBlogs';
 import MetaDecorator from '../../../meta/MetaDecorator';
+import Technology from '../Technology/Technology';
 
 const Home = () => {
     useLayoutEffect(() => {
@@ -20,7 +21,8 @@ const Home = () => {
                 imageAlt="nazmus-sakib"
             />
             <HeaderBanner />
-            <Skills />
+            {/* <Skills /> */}
+            <Technology />
             <Projects />
             <HomeBlogs />
             <Quotes />

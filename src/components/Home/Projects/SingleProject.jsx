@@ -14,11 +14,11 @@ const SingleProject = ({ project, setSingleProject }) => {
             data-aos-offset="20"
             className={`single-project mx-auto shadow-xl rounded-lg transform rotate-30 hover:rotate-0 transition-transform duration-300 my-5 lg:my-8`}>
             <figure
-                className={`relative flex items-center justify-center ${theme === "light" ? "img-container-light" : "img-container-dark"}`}
+                className={`relative flex items-center justify-center img-container-dark`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <Image blurDataURL="../../../assets/images/banner3.jpg" placeholder="blur" onLoad={(e) => console.log(e.target.naturalWidth)} height={250} width={250} src={project.image} alt="image" className="rounded-xl mx-auto hover:scale-105 duration-300 shadow-lg" />
+                <Image blurDataURL="../../../assets/images/banner3.jpg" placeholder="blur" onLoad={(e) => console.log(e.target.naturalWidth)} height={270} width={270} src={project.image} alt="image" className="rounded-xl mx-auto hover:scale-105 duration-300 shadow-lg" />
 
                 {/* Button inside the figure */}
                 <div className={`absolute h-full w-full ${isHovered ? "flex" : "hidden"} justify-center items-center bg-opacity-50 bg-black`}>
@@ -28,7 +28,7 @@ const SingleProject = ({ project, setSingleProject }) => {
                             window.my_modal_4.showModal();
                         }}
                         htmlFor="my-modal-5"
-                        className={`btn ${theme === "light" ? " border-white button-container-light text-white" : "button-container-dark  text-bandTernary"} transform duration-300 p-4 font-bold`}
+                        className={`btn button-container-dark  text-bandTernary transform duration-300 p-4 font-bold`}
                     >
                         Details
                     </label>

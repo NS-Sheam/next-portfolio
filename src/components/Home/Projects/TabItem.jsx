@@ -26,11 +26,11 @@ const TabItem = ({ setSingleProject }) => {
             })
     }, [])
     const { theme } = useGlovalContext();
-    const buttonCss = `${theme === "dark" && "border-2 border-white"} gradient-btn text-xs lg:text-xl font-bold px-2 lg:px-6 py-2 rounded-full text-white bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary`
+    const buttonCss = `hover:scale-105 duration-150 border-2 border-white gradient-btn text-xs lg:text-xl font-bold px-2 lg:px-6 py-2 rounded-full text-white bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary`
     return (
         <>
             <Tabs className=" mx-auto">
-                <TabList className="border-none outline-none flex justify-center items-center flex-wrap">
+                <TabList className="border-none outline-none flex justify-center items-center flex-wrap ">
                     <Tab><p className={buttonCss}>ReactJS</p></Tab>
                     <Tab><p className={buttonCss}>Javascript</p></Tab>
                     <Tab><p className={buttonCss}>HTML & CSS</p></Tab>

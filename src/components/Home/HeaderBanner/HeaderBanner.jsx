@@ -6,7 +6,7 @@ import "./HeaderBanner.css";
 const HeaderBanner = () => {
 
     return (
-        <div className='w-screen mx-auto header-banner bg-fixed min-h-screen'>
+        <div className='w-screen mx-auto bg-bandTernary bg-fixed'>
             {/* Glowing ball css effect  */}
             {/* <div className='absolute top-0 right-0'>
                 <div className="glowing">
