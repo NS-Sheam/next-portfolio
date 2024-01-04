@@ -5,6 +5,8 @@ import { AiFillGithub } from 'react-icons/ai';
 import { FiLink } from 'react-icons/fi';
 import Image from "next/image";
 import Link from 'next/link';
+import { FaGithub, FaInstagram, FaLink, FaWindowClose } from 'react-icons/fa';
+
 
 const imageLoader = ({ src, width, quality }) => {
     return `https://example.com/${src}?w=${width}&q=${quality || 75}`
@@ -12,7 +14,10 @@ const imageLoader = ({ src, width, quality }) => {
 
 
 const ProjectModal = ({ projectData }) => {
+    console.log(projectData);
     const { projectName, technology, description, liveSite, image, clientSite, serverSite } = projectData;
+    console.log(clientSite, liveSite);
+
     return (
         <div>
             {/* The button to open modal */}
@@ -39,34 +44,35 @@ const ProjectModal = ({ projectData }) => {
                                     }
                                 </ul>
                                 <h3 className="text-xl lg:text-2xl font-bold text-bandYellow">Technologies: </h3>
-                                <ul className="text-white text-base list-disc">
+                                <ul className="text-white text-base list-disc z-10">
                                     {
                                         technology?.map((tec, i) => <li key={i}>
                                             {tec}
                                         </li>)
                                     }
                                 </ul>
-                                <div className="flex items-center gap-3 h-8 text-bandYellow">
-                                    <Link className="transform transition-all duration-200 hover:text-4xl text-2xl" href={liveSite}>
+
+                                <div className="social-buttons flex items-center justify-start gap-6 z-20">
+                                    <a href={liveSite} className="social-button social-button--instagram " aria-label="Instagram">
                                         <RxOpenInNewWindow />
-                                    </Link>
-                                    <Link className="transform transition-all duration-200  hover:text-4xl text-2xl" href={clientSite}>
-                                        <AiFillGithub />
-                                    </Link>
+                                    </a>
+                                    <a href={clientSite} className="social-button social-button--github" aria-label="GitHub">
+                                        <FaGithub />
+                                    </a>
+
                                     {
-                                        serverSite && <Link className="transform transition-all duration-200 hover:text-4xl text-2xl" href={serverSite}>
-                                            <FiLink />
-                                        </Link>
+                                        serverSite && <a href={serverSite} className="social-button social-button--hire-me" aria-label="Server Site">
+                                            <FaLink />
+                                        </a>
                                     }
                                 </div>
                             </div>
                         </div>
-                        {/* if there is a button, it will close the modal */}
                     </div>
-                    <button className="btn text-black btn-sm btn-circle btn-ghost absolute right-2 top-2 bg-white hover:bg-warning border-none rounded-full w-8 h-8">✕</button>
+                    <button className="btn text-white bg-pink-600 hover:scale-110 duration-200 font-extrabold btn-sm btn-circle btn-ghost absolute right-2 top-2  hover:bg-warning border-none rounded-full w-8 h-8">✕</button>
                 </form>
             </dialog>
-        </div>
+        </div >
     );
 };
 

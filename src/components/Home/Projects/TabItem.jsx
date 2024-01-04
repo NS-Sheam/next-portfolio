@@ -2,7 +2,6 @@
 "use client"
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import SingleTabItem from "./SingleTabItem";
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
 import { useEffect, useState } from "react";
 
 const TabItem = ({ setSingleProject }) => {
@@ -23,9 +22,10 @@ const TabItem = ({ setSingleProject }) => {
                 // Filter projects made with HTML/CSS
                 const htmlCssProject = projects.filter(project => project.madeWith.includes('HTML') && project.madeWith.includes('CSS'));
                 setHtmlCssProjects(htmlCssProject);
+                console.log(projects);
+
             })
     }, [])
-    const { theme } = useGlovalContext();
     const buttonCss = `hover:scale-105 duration-150 border-2 border-white gradient-btn text-xs lg:text-xl font-bold px-2 lg:px-6 py-2 rounded-full text-white bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary`
     return (
         <>

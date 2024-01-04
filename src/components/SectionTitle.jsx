@@ -14,7 +14,7 @@ const SectionTitle = ({ heading, paragraph, punchLine }) => {
             <h2 className="text-xl md:text-3xl font-bold text-white text-center">
                 {punchLine}
             </h2>
-            <p className={`text-xl lg:text-xl lg:w-4/5 mx-auto text-white text-center`}>{paragraph}</p>
+            <p className={`text-xl lg:text-xl lg:w-4/5 mx-auto text-white text-justify md:text-center`}>{paragraph}</p>
         </div>
     );
 };

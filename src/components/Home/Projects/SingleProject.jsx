@@ -18,7 +18,7 @@ const SingleProject = ({ project, setSingleProject }) => {
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
             >
-                <Image blurDataURL="../../../assets/images/banner3.jpg" placeholder="blur" onLoad={(e) => console.log(e.target.naturalWidth)} height={270} width={270} src={project.image} alt="image" className="rounded-xl mx-auto hover:scale-105 duration-300 shadow-lg" />
+                <Image blurDataURL="../../../assets/images/banner3.jpg" placeholder="blur" height={270} width={270} src={project.image} alt="image" className="rounded-xl mx-auto hover:scale-105 duration-300 shadow-lg" />
 
                 {/* Button inside the figure */}
                 <div className={`absolute h-full w-full ${isHovered ? "flex" : "hidden"} justify-center items-center bg-opacity-50 bg-black`}>

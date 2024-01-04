@@ -3,7 +3,6 @@ import { useQuery } from '@tanstack/react-query';
 const localUrl = "http://localhost:3000"
 // const hostingUrl = import.meta.env.HOSTING_URL
 const hostingUrl = "https://my-portfolio-server-rho-three.vercel.app"
-console.log(hostingUrl);
 const useBlogsData = () => {
     const {
         refetch,

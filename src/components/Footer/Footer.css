@@ -1,12 +1,5 @@
 /* ----------------- social media button css start ------------------ */
 
-.social-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-}
-
 :root {
   --social-button-size: 3rem;
   --social-button-icon-size: 1.8rem;
@@ -85,6 +78,18 @@
   background: #3b5999;
 }
 
+.social-button--instagram {
+  color: #e4405f;
+}
+.social-button--instagram::after {
+  background: #e4405f;
+}
+.social-button--resume {
+  color: #292929;
+}
+.social-button--resume::after {
+  background: #8c8b8b;
+}
 .social-button--linkedin {
   color: #0077b5;
 }
@@ -107,6 +112,12 @@
 
 .social-button--youtube::after {
   background: #ff0000;
+}
+.social-button--hire-me {
+  color: #c50169;
+}
+.social-button--hire-me::after {
+  background: #c50169;
 }
 
 /* -------------------- social media button css ends ------------------ */

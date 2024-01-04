@@ -122,7 +122,7 @@ const Technology = () => {
             </Marquee>
 
 
-            <p className="text-xl lg:text-xl lg:w-4/5 mx-auto text-white text-center">
+            <p className="text-xl lg:text-xl lg:w-4/5 mx-auto text-white text-justify md:text-center">
                 Check out my extensive list of skills to get a comprehensive understanding of my expertise and capabilities. From front-end development to back-end programming, UI/UX design, database management, and more, my skills cover a wide range of areas in web development. Explore the skills section to see how my technical proficiencies align with your project requirements and discover the value I can bring to your team.
             </p>
             <div className='md:grid grid-cols-3 gap-5 items-start justify-start'>

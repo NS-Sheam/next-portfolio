@@ -54,9 +54,9 @@ const ExperienceCard = () => {
     ]
     return (
         <div className="bg-bandTernary inner-container space-y-6 py-4 lg:py-8">
-            <p className='font-extrabold text-3xl text-white text-center'>Experience Highlights </p>
+            <p className='font-extrabold text-xl md:text-3xl text-white text-center'>Experience Highlights </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
                 {
                     cardData.map(({ image, heading, description, gradientClass, imageCss, textCss }, index) =>
                         <div className="card" key={index}>
