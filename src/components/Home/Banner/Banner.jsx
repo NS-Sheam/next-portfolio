@@ -9,23 +9,20 @@ import TypedComponent from "@/components/Typed";
 import { useState } from "react";
 import { handleDownloadResume } from "@/components/utils";
 import BannerSvg from "./BannerSvg";
+import CircularText from "@/components/CurcularText/CircularText";
 const Banner = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <>
             {/* for dextop  */}
-            <section className='min-h-screen hidden inner-container lg:flex justify-around items-center border-b border-white'>
+            <section className='py-8 lg:py-14 hidden inner-container lg:flex justify-around items-start border-b border-white'>
                 <div
                     data-aos="fade-right"
                     data-aos-anchor="#example-anchor"
                     data-aos-duration="500"
-                    className='w-1/2 space-y-6'
+                    className='w-1/2 space-y-4'
                 >
-
-                    <BannerSvg />
-
-                    {/* <h2 className='text-xl font-semibold tracking-widest text-bandYellow border-bandYellow rounded-md px-4 py-2 mb-2 w-3/4 banner-img'>Welcome to my portfolio</h2> */}
                     <h2 className='text-5xl font-light text-white'>HI! I am <span className='font-semibold mb-2 banner-name-font text-6xl'>Nazmus Sakib</span></h2>
                     <div className='w-full'>
                         <p className='text-white text-4xl text-scrollbar'>I am a &nbsp;
@@ -44,6 +41,7 @@ const Banner = () => {
                     <div className="my-8">
                         <button onClick={handleDownloadResume} className="text-white uppercase font-bold flex items-center gap-2 gradient-btn py-2 px-3 rounded-full border-2 border-white">Download Resume <AiOutlineCloudDownload /></button>
                     </div>
+                    <CircularText />
                 </div>
                 <div className='relative w-[25rem] h-[25rem]'
                     onMouseEnter={() => setIsHovered(true)}
@@ -54,11 +52,10 @@ const Banner = () => {
                         data-aos-anchor="#example-anchor"
                         data-aos-duration="500"
                         // className='wavecontainer banner-img '
-                        className='img-container-dark banner-img '
+                        className='img-container-dark banner-img h-[20rem] w-[20rem] '
                     >
                         <Image blurDataURL="../../../assets/images/banner3.jpg" placeholder="blur" onLoad={(e) => console.log(e.target.naturalWidth)} src={myImg} alt="image" className="rounded-xl mx-auto hover:scale-105 duration-300 shadow-lg" />
-                        {/* <Image placeholder="blur" className=''
-                            src={myImg} alt="" /> */}
+
                         <div className={`absolute h-full w-full ${isHovered ? "flex" : "hidden"} justify-center items-center bg-opacity-50 bg-black top-0 right-0`}>
                             <label
                                 className={`btn button-container-dark  text-bandTernary transform duration-300 p-4 font-bold`}

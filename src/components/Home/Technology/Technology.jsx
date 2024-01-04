@@ -68,7 +68,7 @@ const Technology = () => {
             backend: [
                 {
                     name: 'Node',
-                    image: nodeImage
+                    image: skillImg7
                 },
                 {
                     name: 'Express',
