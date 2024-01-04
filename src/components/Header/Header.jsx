@@ -116,7 +116,7 @@ const Header = () => {
         </ul>
     </div>
 
-    const goToTopIcon = <div onClick={() => setScrollToTop(true)} className={`${isHeaderFixed ? "fixed bottom-4 right-6 h-14 w-14 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden" : "hidden"}`}>
+    const goToTopIcon = <div onClick={() => setScrollToTop(true)} className={`${isHeaderFixed ? "fixed bottom-20 md:bottom-4 right-2 md:right-6 h-10 w-10 md:h-14 md:w-14 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden" : "hidden"}`}>
         <BiArrowToTop className='go-to-top-btn' /></div>
     const spring = {
         type: "spring",
