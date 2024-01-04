@@ -6,9 +6,9 @@ import Link from "next/link";
 const BlogCard = ({ blog }) => {
     const { theme } = useGlovalContext();
     return (
-        <div className={` bg-base-100 shadow-black text-left h-full w-full mx-auto  rounded-lg `}>
+        <div className={` bg-base-100 shadow-slate-500 shadow-sm text-left h-full border-2 w-full mx-auto  rounded-lg `}>
 
-            <div className="blog-card space-y-2 mt-2 relative">
+            <div className="blog-card space-y-2 relative h-full">
                 <Image src={blog?.image} alt={`blog-${blog._id}`} width={400} height={200} className="rounded-xl  h-60 mx-auto w-full"
                 />
                 <div className="details bg-bandPrimary bg-opacity-80 absolute h-4/5 p-4 space-y-3">

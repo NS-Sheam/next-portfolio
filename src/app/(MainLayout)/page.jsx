@@ -7,6 +7,7 @@ import Projects from '@/components/Home/Projects/Projects';
 import Quotes from '@/components/Home/Quotes/Quotes';
 import Skills from '@/components/Home/Skills/Skills';
 import Technology from '@/components/Home/Technology/Technology';
+import Testimonial from '@/components/Home/Testimonial/Testimonial';
 import LoadingComponent from '@/components/LoadingComponent';
 import { Suspense } from 'react';
 // import React, { Suspense } from 'react';
@@ -25,6 +26,7 @@ const HomePage = () => {
             </Suspense>
             <HomeBlogs />
             {/* <MyServices /> */}
+            <Testimonial />
             <Quotes />
         </div >
     );
