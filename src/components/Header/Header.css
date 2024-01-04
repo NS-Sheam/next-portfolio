@@ -59,3 +59,27 @@
   --_p: 75%;
   filter: grayscale(0%);
 }
+
+/* ----------go to top button start---------------- */
+.go-to-top-btn {
+  animation: go-to-top-btn-animation 3s infinite;
+}
+@keyframes go-to-top-btn-animation {
+  0% {
+    transform: translateY(120%);
+  }
+  50% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(-120%);
+  }
+}
+/* ----------go to top button ends---------------- */
+
+/* ----------------- social media button css start ------------------ */
+
+/* -------------------- social media button css ends ------------------ */

@@ -1,21 +1,21 @@
 "use client"
-import { useEffect, useState } from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper core and required modules
-import SwiperCore from 'swiper'
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+// import { useEffect, useState } from 'react';
+// import { CircularProgressbar } from 'react-circular-progressbar';
+// import 'react-circular-progressbar/dist/styles.css';
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// // Import Swiper core and required modules
+// import SwiperCore from 'swiper'
+// // Import Swiper styles
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// import 'swiper/css/scrollbar';
 
-import Image from 'next/image';
+// import Image from 'next/image';
+// import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
-// Install Swiper modules
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
+// // Install Swiper modules
+// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const Slide = () => {
     const [skills, setSkills] = useState([]); // Initialize skills as an array
@@ -63,7 +63,7 @@ const Slide = () => {
 
     return (
         <div className='my-6'>
-            <Swiper
+            {/* <Swiper
                 spaceBetween={50}
                 slidesPerView={slidesPerView}
                 navigation={false}
@@ -85,7 +85,7 @@ const Slide = () => {
                         </SwiperSlide>
                     ))
                 }
-            </Swiper>
+            </Swiper> */}
         </div>
     );
 };

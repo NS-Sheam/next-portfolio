@@ -1,8 +1,9 @@
 
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import { FaFacebook, FaLinkedin, FaYoutube } from 'react-icons/fa';
-
+import { FaFacebook, FaGithub, FaLinkedin, FaSnapchat, FaYoutube } from 'react-icons/fa';
+import "./Footer.css";
 
 const Footer = () => {
     return (
@@ -18,12 +19,28 @@ const Footer = () => {
                 <p>Copyright © 2023 - All right reserved by Nazmus Sakib</p>
             </div>
             <div>
-                <div className="flex justify-center gap-4 text-3xl my-4">
+                {/* <div className="flex justify-center gap-4 text-3xl my-4">
                     <Link className='transform transition-all duration-200 hover:text-4xl text-3xl hover:text-blue-400 hover:bg-white rounded-full' href="https://www.facebook.com/nazmus.sheam.sakib"><FaFacebook /></Link>
                     <Link className='transform transition-all duration-200 hover:text-4xl text-3xl hover:text-blue-800 hover:bg-white rounded-md' href="https://www.linkedin.com/in/nazmus-sakib-sheam"><FaLinkedin /></Link>
                     <Link className='transform transition-all duration-200 hover:text-4xl text-3xl hover:text-red-500 hover:bg-white rounded-lg' href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw"><FaYoutube /></Link>
+                </div> */}
+                <div className="social-buttons">
+                    <Link href="https://www.facebook.com/nazmus.sheam.sakib" className="social-button social-button--facebook" aria-label="Facebook">
+                        <FaFacebook />
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/nazmus-sakib-sheam" className="social-button social-button--linkedin" aria-label="LinkedIn">
+                        <FaLinkedin />
+                    </Link>
+                    <Link href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw" className="social-button social-button--youtube" aria-label="Snapchat">
+                        <FaYoutube />
+                    </Link>
+                    <Link href="https://www.github.com/NS-Sheam" className="social-button social-button--github" aria-label="GitHub">
+                        <FaGithub />
+                    </Link>
+
                 </div>
             </div>
+
         </footer>
     );
 };

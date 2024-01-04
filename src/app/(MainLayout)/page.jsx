@@ -1,4 +1,5 @@
 
+import Footer from '@/components/Footer/Footer';
 import ExperienceCard from '@/components/Home/ExperienceCard/ExperienceCard';
 import HeaderBanner from '@/components/Home/HeaderBanner/HeaderBanner';
 import HomeBlogs from '@/components/Home/HomeBlogs/HomeBlogs';
@@ -9,8 +10,7 @@ import Skills from '@/components/Home/Skills/Skills';
 import Technology from '@/components/Home/Technology/Technology';
 import Testimonial from '@/components/Home/Testimonial/Testimonial';
 import LoadingComponent from '@/components/LoadingComponent';
-import { Suspense } from 'react';
-// import React, { Suspense } from 'react';
+import React, { Suspense } from 'react';
 // import { Blocks } from 'react-loader-spinner';
 
 const HomePage = () => {
@@ -26,8 +26,9 @@ const HomePage = () => {
             </Suspense>
             <HomeBlogs />
             {/* <MyServices /> */}
-            <Testimonial />
+            {/* <Testimonial /> */}
             <Quotes />
+            <Footer />
         </div >
     );
 };

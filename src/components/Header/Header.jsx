@@ -4,7 +4,7 @@ import "./Header.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { AiFillCustomerService, AiOutlineCloudDownload, AiOutlineHome, AiOutlineMail, AiOutlineProject } from 'react-icons/ai';
-import { BiMoon, BiSun } from 'react-icons/bi';
+import { BiArrowToTop, BiMoon, BiSun } from 'react-icons/bi';
 import { SiAboutdotme } from 'react-icons/si';
 import { LiaBlogSolid } from 'react-icons/lia';
 import { motion } from "framer-motion";
@@ -15,12 +15,14 @@ import ActiveLink from '@/components/ActiveLink/ActiveLink';
 import Link from 'next/link';
 import { handleDownloadResume } from '../utils';
 import myImg from "@/assets/images/my-img.jpg"
+import { FaFacebook } from 'react-icons/fa';
 
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+    const [scrollToTop, setScrollToTop] = useState(false);
 
     const { theme, setTheme } = useGlovalContext();
 
@@ -66,7 +68,7 @@ const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const scrollPosition = window.pageYOffset;
+            const scrollPosition = window.scrollY;
 
             if (scrollPosition > 0) {
                 setIsHeaderFixed(true);
@@ -74,13 +76,23 @@ const Header = () => {
                 setIsHeaderFixed(false);
             }
         };
+        if (scrollToTop) {
+            // Smoothly scroll to the top of the page
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+
+            // Reset the state variable to avoid continuous scrolling
+            setScrollToTop(false);
+        }
 
         window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [scrollToTop]);
     const floatingMenu = <div
         className={`${isHeaderFixed && `fixed bottom-2 md:bottom-auto left-2 right-2 md:left-2 md:w-11 md:top-1/3 rounded-full bg-bandPrimary z-50 shadow-md shadow-white`}`}>
         <ul className={`header-list flex gap-6 ${isHeaderFixed && "flex-row md:flex-col p-3 text-2xl items-center justify-center"} ${theme == "light" ? "text-bandTernary" : "text-bandFont"}`}>
@@ -103,6 +115,9 @@ const Header = () => {
 
         </ul>
     </div>
+
+    const goToTopIcon = <div onClick={() => setScrollToTop(true)} className={`${isHeaderFixed ? "fixed bottom-4 right-6 h-14 w-14 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden" : "hidden"}`}>
+        <BiArrowToTop className='go-to-top-btn' /></div>
     const spring = {
         type: "spring",
         stiffness: 700,
@@ -110,6 +125,7 @@ const Header = () => {
     };
     return (
         <>
+
             {/* For dextop */}
             <section className={`${isHeaderFixed && "hidden"} hidden lg:flex justify-around items-center inner-container py-4`}>
                 <div className='flex justify-center items-center gap-2'>
@@ -193,6 +209,7 @@ const Header = () => {
                 </div>
             </section>
             {floatingMenu}
+            {goToTopIcon}
         </>
     );
 };
