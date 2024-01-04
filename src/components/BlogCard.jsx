@@ -6,18 +6,20 @@ import Link from "next/link";
 const BlogCard = ({ blog }) => {
     const { theme } = useGlovalContext();
     return (
-        <div className={`blog-card card bg-base-100 shadow-black text-left h-full p-5 rounded-lg`}>
-            <figure>
-                <Image src={blog?.image} alt={`blog-${blog._id}`} width={80} height={64} className="rounded-xl w-full object-cover"
+        <div className={` bg-base-100 shadow-black text-left h-full w-full mx-auto  rounded-lg `}>
+
+            <div className="blog-card space-y-2 mt-2 relative">
+                <Image src={blog?.image} alt={`blog-${blog._id}`} width={400} height={200} className="rounded-xl  h-60 mx-auto w-full"
                 />
-            </figure>
-            <div className="card-body space-y-2 mt-2">
-                <p className="font-semibold">{moment(blog.createdAt).format('MMMM DD YYYY')}</p>
-                <h2 className="card-title">{blog?.heading}</h2>
-                <div className="card-actions">
-                    <Link href={`/blog/${blog?._id}`}>
-                        <button className={`px-3 py-2 text-white gradient-btn ${theme === "dark" && "border-2 border-white"}  font-bold rounded-md ms-auto `}>Read Blog</button>
-                    </Link>
+                <div className="details bg-bandPrimary bg-opacity-80 absolute h-4/5 p-4 space-y-3">
+                    <p className="font-semibold text-bandYellow">{moment(blog.createdAt).format('MMMM DD YYYY')}</p>
+                    <h2 className="card-title text-white font-extrabold text-xl">{blog?.heading}</h2>
+                    <div className="card-actions">
+                        <Link href={`/blog/${blog?._id}`}>
+                            <button className={`btn button-container-dark  text-bandTernary transform duration-300 p-4 font-bold `}>Read Blog</button>
+                        </Link>
+
+                    </div>
                 </div>
             </div>
         </div>

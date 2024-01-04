@@ -29,15 +29,6 @@ const Banner = () => {
                     <h2 className='text-5xl font-light text-white'>HI! I am <span className='font-semibold mb-2 banner-name-font text-6xl'>Nazmus Sakib</span></h2>
                     <div className='w-full'>
                         <p className='text-white text-4xl text-scrollbar'>I am a &nbsp;
-                            {/* <p
-                            data-aos="fade-up"
-                            data-aos-anchor="#example-anchor"
-                            data-aos-duration="500"
-                            className='ms-6 text-5xl font-bold font-gradient underline banner-text-underline'>
-
-                            <TypedComponent />
-                        </p> */}
-
                             <span className="text-5xl font-bold py-2 ">
                                 Full Stack Developer<br />
                                 Backend Developer<br />

@@ -14,6 +14,7 @@ import Image from 'next/image';
 import ActiveLink from '@/components/ActiveLink/ActiveLink';
 import Link from 'next/link';
 import { handleDownloadResume } from '../utils';
+import myImg from "@/assets/images/my-img.jpg"
 
 
 const Header = () => {
@@ -83,6 +84,12 @@ const Header = () => {
     const floatingMenu = <div
         className={`${isHeaderFixed && `fixed bottom-2 md:bottom-auto left-2 right-2 md:left-2 md:w-11 md:top-1/3 rounded-full bg-bandPrimary z-50 shadow-md shadow-white`}`}>
         <ul className={`header-list flex gap-6 ${isHeaderFixed && "flex-row md:flex-col p-3 text-2xl items-center justify-center"} ${theme == "light" ? "text-bandTernary" : "text-bandFont"}`}>
+            <Link href="/"
+
+            >
+                <Image className={`${isHeaderFixed ? "block wavecontainer w-10 h-8 bg-transparent mx-auto" : "hidden"}`}
+                    src={myImg} alt="" />
+            </Link>
 
 
             {

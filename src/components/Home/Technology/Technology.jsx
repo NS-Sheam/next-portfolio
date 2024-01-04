@@ -105,7 +105,7 @@ const Technology = () => {
     ]
 
     return (
-        <section className='inner-container space-y-4 py-6 lg:py-14 bg-bandTernary relative '>
+        <section className='inner-container space-y-4 pt-4 pb-8 lg:pb-14 bg-bandTernary relative '>
 
 
             <h1 className="text-3xl md:text-6xl font-bold text-bandOrange text-center">Skills</h1>
@@ -125,7 +125,7 @@ const Technology = () => {
             <p className="text-xl lg:text-xl lg:w-4/5 mx-auto text-white text-center">
                 Check out my extensive list of skills to get a comprehensive understanding of my expertise and capabilities. From front-end development to back-end programming, UI/UX design, database management, and more, my skills cover a wide range of areas in web development. Explore the skills section to see how my technical proficiencies align with your project requirements and discover the value I can bring to your team.
             </p>
-            <div className='md:grid grid-cols-3 gap-5 items-center'>
+            <div className='md:grid grid-cols-3 gap-5 items-start justify-start'>
                 {/* button side  */}
                 <div className='col-span-1 flex flex-col justify-center items-center gap-8'>
                     {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (

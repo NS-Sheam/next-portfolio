@@ -14,7 +14,7 @@ const Projects = () => {
     return (
         <>
             <div
-                className='text-center bg-gradient-to-tr from-bandPrimary to-bandSecondary inner-container min-h-screen p-4 lg:p-6'>
+                className='text-center bg-gradient-to-tr from-bandPrimary to-bandSecondary inner-container min-h-screen py-8 lg:py-14'>
 
                 <SectionTitle
                     heading="Projects"

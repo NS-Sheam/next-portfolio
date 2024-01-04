@@ -16,7 +16,7 @@ import Image from 'next/image';
 const Skills = () => {
     const skills = [skillImg1, skillImg2, skillImg3, skillImg4, skillImg5, skillImg6, skillImg7, skillImg8, skillImg9]
     return (
-        <section className='relative bg-gradient-to-tr from-bandPrimary to-bandSecondary inner-container lg:min-h-screen p-4 lg:p-6 z-20'>
+        <section className='relative bg-gradient-to-tr from-bandPrimary to-bandSecondary inner-container lg:min-h-screen py-4 lg:py-6 z-20'>
             <div
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
