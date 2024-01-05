@@ -49,7 +49,6 @@ const Footer = () => {
                             </Link>
                             <p className='text-white text-sm text-center font-extrabold'>Download my resume</p>
                         </p>
-
                     </div>
                 </div>
                 <p className='text-center py-4'>Copyright © 2023 - All right reserved by Nazmus Sakib</p>
