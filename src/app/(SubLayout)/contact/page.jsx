@@ -31,8 +31,8 @@ const Contact = () => {
             <div
                 className="bg-bandTernary inner-container py-8 lg:py-14">
                 <h1 className="font-extrabold mb-2 banner-name-font text-6xl text-center">Contact me!</h1>
-                <p className={`text-white text-justify md:text-center w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}>Let's connect! If you have any questions or would like to discuss potential collaborations, feel free to reach out using the contact details below. I'm eager to hear from you and explore exciting opportunities together. Don't hesitate to get in touch!</p>
-                <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-16">
+                <p className={`text-white text-justify md:text-center lg:w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}>Let's connect! If you have any questions or would like to discuss potential collaborations, feel free to reach out using the contact details below. I'm eager to hear from you and explore exciting opportunities together. Don't hesitate to get in touch!</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-16">
                     <div
                         data-aos="fade-right"
                         data-aos-anchor="#example-anchor"
@@ -69,30 +69,28 @@ const Contact = () => {
                     </div>
                     <div>
                         {/* for dextop  */}
-                        {/* <div className="lg:block ">
-                            <div>
-                                <CircularText
-                                    text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
-                                    degree={8}
-                                    circleSize="400px"
-                                    logoSize={"320px"}
-                                    logoUrl={myImg2}
-                                    origin="200px"
-                                    textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
-                                    animationSpeed="10s"
-                                />
-                            </div>
-                        </div> */}
-                        {/* for mobile */}
-                        <div className="lg:block ">
+                        <div className="hidden lg:flex items-center justify-center">
                             <CircularText
-                                text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
+                                text="&nbsp; --Hey There! Send &nbsp; me &nbsp; your &nbsp; thoughts-- &nbsp;"
                                 degree={8}
-                                circleSize="200px"
+                                circleSize="390px"
+                                logoSize={"300px"}
+                                logoUrl={myImg2}
+                                origin="195px"
+                                textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white "
+                                animationSpeed="10s"
+                            />
+                        </div>
+                        {/* for mobile */}
+                        <div className="flex lg:hidden order-first items-center justify-center">
+                            <CircularText
+                                text="&nbsp; --Hey There! Send &nbsp; me &nbsp; your &nbsp; thoughts-- &nbsp;"
+                                degree={9}
+                                circleSize="210px"
                                 logoSize={"140px"}
                                 logoUrl={myImg2}
-                                origin="100px"
-                                textClass="text-2xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
+                                origin="105px"
+                                textClass="text-2xl text-green-500 font-bold uppercase shadow-md shadow-white"
                                 animationSpeed="10s"
                             />
                         </div>

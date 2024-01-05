@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./CircularText.css";
 
 const CircularText = ({
@@ -12,18 +12,17 @@ const CircularText = ({
   filter,
   animationSpeed,
 }) => {
+  const textRef = useRef();
   useEffect(() => {
-    const text = document.querySelector(".text p");
-    text.innerHTML = text.innerText
+    const textElement = textRef.current;
+    textElement.innerHTML = text
       .split("")
       .map(
         (char, i) =>
-          `<span style="transform:rotate(${
-            i * degree
-          }deg); transform-origin: 0 ${origin};">${char}</span>`,
+          `<span style="transform:rotate(${i * degree}deg); transform-origin: 0 ${origin};">${char}</span>`,
       )
       .join("");
-  });
+  }, [text, degree, origin]);
   // /* filter: brightness(1.5) contrast(1.5); */
   // animation: rotateText 10s linear infinite;
   return (
@@ -51,7 +50,7 @@ const CircularText = ({
           animation: `rotateText ${animationSpeed || "10s"} linear infinite`,
         }}
       >
-        <p className={`${textClass}`}>{text}</p>
+        <p ref={textRef} className={`${textClass}`}>{text}</p>
       </div>
     </div>
   );
