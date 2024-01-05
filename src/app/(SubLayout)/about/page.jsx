@@ -19,11 +19,6 @@ const About = () => {
       "https://drive.google.com/u/0/uc?id=1XhOOmSn6iqDiaA-DNsgsBg3HS7YFNtfa&export=download",
     );
   };
-  const handleDownloadCv = () => {
-    window.open(
-      "https://drive.google.com/u/0/uc?id=1R7LXM_2AP6UaZMsIprypvUJhMB0MYUyS&export=download",
-    );
-  };
 
   const mySkills = {
     Expertise: [
@@ -161,8 +156,6 @@ const About = () => {
           data-aos-duration="1000"
           className={`grid grid-cols-2 items-center md:text-xl text-white space-y-3 w-full md:w-1/2 text-left`}
         >
-
-
           <ul className="col-span-2 space-y-2">
             <p className="text-2xl md:text-4xl font-extrabold">Experience</p>
             <hr />
@@ -211,56 +204,56 @@ const About = () => {
             <hr />
             <p>Bengali, English, Hindi</p>
           </div>
-        </div>
-        <div className="col-span-2 grid grid-cols-2 gap-4 justify-center items-center">
-          <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
-            <Link
-              href="https://www.linkedin.com/in/nazmus-sakib-sheam"
-              className="social-button social-button--linkedin"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedin />
-            </Link>
-            <p className="text-white text-sm text-center font-extrabold">
-              Connect with Linkedin
+          <div className="col-span-2 grid grid-cols-2 gap-4 justify-center items-center">
+            <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
+              <Link
+                href="https://www.linkedin.com/in/nazmus-sakib-sheam"
+                className="social-button social-button--linkedin"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </Link>
+              <p className="text-white text-sm text-center font-extrabold">
+                Connect with Linkedin
+              </p>
             </p>
-          </p>
-          <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
-            <Link
-              href="https://www.github.com/NS-Sheam"
-              className="social-button social-button--github"
-              aria-label="Github"
-            >
-              <FaGithub />
-            </Link>
-            <p className="text-white text-sm text-center font-extrabold">
-              Explore my Github
+            <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
+              <Link
+                href="https://www.github.com/NS-Sheam"
+                className="social-button social-button--github"
+                aria-label="Github"
+              >
+                <FaGithub />
+              </Link>
+              <p className="text-white text-sm text-center font-extrabold">
+                Explore my Github
+              </p>
             </p>
-          </p>
-          <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
-            <Link
-              href=""
-              className="social-button social-button--hire-me"
-              aria-label="Hire me"
-            >
-              <FaUser />
-            </Link>
-            <p className="text-white text-sm text-center font-extrabold">
-              Hire me
+            <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
+              <Link
+                href=""
+                className="social-button social-button--hire-me"
+                aria-label="Hire me"
+              >
+                <FaUser />
+              </Link>
+              <p className="text-white text-sm text-center font-extrabold">
+                Hire me
+              </p>
             </p>
-          </p>
-          <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
-            <Link
-              href="https://drive.google.com/file/d/1XhOOmSn6iqDiaA-DNsgsBg3HS7YFNtfa/view?usp=drive_link"
-              className="social-button social-button--resume"
-              aria-label="Resume"
-            >
-              <FaFile />
-            </Link>
-            <p className="text-white text-sm text-center font-extrabold">
-              Download my resume
+            <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
+              <figure
+                onClick={handleDownloadResume}
+                className="social-button social-button--resume"
+                aria-label="Resume"
+              >
+                <FaFile />
+              </figure>
+              <p className="text-white text-sm text-center font-extrabold">
+                Download my resume
+              </p>
             </p>
-          </p>
+          </div>
         </div>
       </div>
     </section >
