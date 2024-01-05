@@ -1,8 +1,53 @@
 import React from 'react';
 
 const OldHeader = () => {
+    const spring = {
+        type: "spring",
+        stiffness: 700,
+        damping: 30,
+    };
     return (
         <>
+            {/* --------------- old desktop menu start ------------------- */}
+            {/* For dextop */}
+            {/* <section
+        className={`${isHeaderFixed && "hidden"
+          } hidden lg:flex justify-around items-center inner-container py-4`}
+      >
+        <div className="flex justify-center items-center gap-2">
+          <Link href="/">
+            <Image className="w-24" src={logo} alt="logo" />
+          </Link>
+          <div
+            className="switch dark-switch"
+            data-ison={isOn}
+            onClick={toggleSwitch}
+          >
+            <motion.div
+              className={theme === "light" ? "dark-handle" : "light-handle"}
+              layout
+              transition={spring}
+            />
+          </div>
+        </div>
+        <div className="">
+          <ul className="header-list flex gap-6 text-bandFont text-2xl font-bold ">
+            {menuData.map(({ path, name }, index) => (
+              <li key={index} className="dextop-menu-btn">
+                <ActiveLink href={path}>{name}</ActiveLink>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <ActiveLink href="/contact">
+            <button className="font-semibold text-white bg-bandPrimary border-2 rounded-md py-2 px-3 hover:border-bandYellow hover:text-bandYellow text-2xl">
+              Hire me
+            </button>
+          </ActiveLink>
+        </div>
+            </section> */}
+            {/* --------------- old desktop menu end ------------------- */}
             {/* --------------- old mobile menu start ------------------- */}
             {/* <section className="lg:hidden my-container px-4 py-4 flex justify-between items-center">
                 <div className="flex justify-center items-center gap-2">

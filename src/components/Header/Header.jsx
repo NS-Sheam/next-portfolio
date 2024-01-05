@@ -113,9 +113,9 @@ const Header = () => {
     };
   }, [scrollToTop]);
 
-  const goToTopIcon = (
+  const mainMenu = (
     <div className="fixed bottom-20 md:bottom-4 right-2 md:right-6 space-y-3 z-20">
-      <div className={` overflow-hidden space-y-4 z-10`}>
+      <div className={`hidden md:block overflow-hidden space-y-4 z-10`}>
         {
           menuData.map(({ path, name, icon, className, label }, index) => <Link key={index}
             href={path}
@@ -151,61 +151,19 @@ const Header = () => {
     </div>
 
   );
-  const spring = {
-    type: "spring",
-    stiffness: 700,
-    damping: 30,
-  };
+
   return (
     <>
-      {/* For dextop */}
-      {/* <section
-        className={`${isHeaderFixed && "hidden"
-          } hidden lg:flex justify-around items-center inner-container py-4`}
-      >
-        <div className="flex justify-center items-center gap-2">
-          <Link href="/">
-            <Image className="w-24" src={logo} alt="logo" />
-          </Link>
-          <div
-            className="switch dark-switch"
-            data-ison={isOn}
-            onClick={toggleSwitch}
-          >
-            <motion.div
-              className={theme === "light" ? "dark-handle" : "light-handle"}
-              layout
-              transition={spring}
-            />
-          </div>
-        </div>
-        <div className="">
-          <ul className="header-list flex gap-6 text-bandFont text-2xl font-bold ">
-            {menuData.map(({ path, name }, index) => (
-              <li key={index} className="dextop-menu-btn">
-                <ActiveLink href={path}>{name}</ActiveLink>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <ActiveLink href="/contact">
-            <button className="font-semibold text-white bg-bandPrimary border-2 rounded-md py-2 px-3 hover:border-bandYellow hover:text-bandYellow text-2xl">
-              Hire me
-            </button>
-          </ActiveLink>
-        </div>
-      </section> */}
-
+      {mainMenu}
       {/* For Mobile  */}
-      <section className="lg:hidden my-container px-4 py-4 flex justify-between items-center">
+      <section className="z-10 md:hidden my-container px-4 py-4 flex justify-between items-center">
         <div className="flex justify-center items-center gap-2">
           <Link href="/">
             <Image className="w-12" src={logo} alt="logo" />
           </Link>
         </div>
         <div className="flex flex-col justify-center items-center z-20">
-          <div className=" w-4/5 mx-auto absolute top-14 right-0 left-0">
+          <div className="transform transition-all ease-linear duration-700 fixed w-4/5 mx-auto top-14 right-0 left-0">
             <ul
               className={` header-list text-bandFont mb-2 text-xl flex flex-col items-center gap-2 sm-menu-item transform duration-500 rounded-md border p-2 m-2 border-white z-20 bg-black bg-opacity-60 backdrop-blur-sm  ${isMenuOpen ? "visible" : "hidden"
                 }`}
@@ -242,8 +200,6 @@ const Header = () => {
 
         </div>
       </section>
-
-      {goToTopIcon}
     </>
   );
 };
