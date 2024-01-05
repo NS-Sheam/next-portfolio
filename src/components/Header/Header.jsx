@@ -32,7 +32,7 @@ const Header = () => {
   const { theme, setTheme } = useGlovalContext();
 
   const [isOn, setIsOn] = useState(false);
-  const menuButtonCommonClasses = `menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"}`
+  const menuButtonCommonClasses = `menu-button duration-300 ${isMenuOpen ? "top-0" : "top-96"}`
 
   const toggleSwitch = () => {
     setIsOn(!isOn);
@@ -44,37 +44,43 @@ const Header = () => {
       path: "/",
       name: "Home",
       icon: <FaHome />,
-      className: "menu-button--home"
+      className: "menu-button--home",
+      label: "Home"
     },
     {
       path: "/services",
       name: "Services",
-      icon: <AiFillCustomerService />,
-      className: "menu-button--services"
+      icon: < AiFillCustomerService />,
+      className: "menu-button--services",
+      label: "Services"
     },
     {
       path: "/projects",
       name: "Projects",
       icon: <AiOutlineProject />,
-      className: "menu-button--projects"
+      className: "menu-button--projects",
+      label: "Projects"
     },
     {
       path: "/about",
       name: "About",
       icon: <SiAboutdotme />,
-      className: "menu-button--about"
+      className: "menu-button--about",
+      label: "About"
     },
     {
       path: "/contact",
       name: "Contact",
       icon: <AiOutlineMail />,
-      className: "menu-button--contact"
+      className: "menu-button--contact",
+      label: "Contact"
     },
     {
       path: "/blogs",
       name: "Blogs",
       icon: <LiaBlogSolid />,
-      className: "menu-button--blog"
+      className: "menu-button--blog",
+      label: "Blogs"
     },
 
   ];
@@ -109,22 +115,41 @@ const Header = () => {
 
   const goToTopIcon = (
     <div className="fixed bottom-20 md:bottom-4 right-2 md:right-6 space-y-3 z-20">
+      <div className={` overflow-hidden space-y-4 z-10`}>
+        {
+          menuData.map(({ path, name, icon, className, label }, index) => <Link key={index}
+            href={path}
+            title={name}
+            className={`${menuButtonCommonClasses} ${className} mx-2`}
+            aria-label={label}
+          >
+            {icon}
+          </Link>
+          )}
+      </div>
       <div
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className={`h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold hamburger-button`}
-      >
-        <FiMenu className="" />
+        className="h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-gradient-to-t from-pink-500 to-purple-700 hover:from-purple-500 hover:to-pink-700 z-20 shadow-md shadow-white text-white text-4xl font-extrabold mx-2">
+        <svg id="hamburger" className="Header__toggle-svg" viewBox="0 0 60 40">
+          <g stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+            <path className={!isMenuOpen ? "open-top-line" : "close-top-line"} d="M10,10 L50,10 Z"></path>
+            <path className={!isMenuOpen ? "open-middle-line" : "close-middle-line"} d="M10,20 L50,20 Z"></path>
+            <path className={!isMenuOpen ? "open-bottom-line" : "close-bottom-line"} d="M10,30 L50,30 Z"></path>
+          </g>
+        </svg>
       </div>
       <div
         onClick={() => setScrollToTop(true)}
         className={`${isHeaderFixed
-          ? "h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden"
+          ? "h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-bandPrimary z-20 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden mx-2"
           : "hidden"
           }`}
       >
         <BiArrowToTop className="go-to-top-btn" />
       </div>
+
     </div>
+
   );
   const spring = {
     type: "spring",
@@ -134,7 +159,7 @@ const Header = () => {
   return (
     <>
       {/* For dextop */}
-      <section
+      {/* <section
         className={`${isHeaderFixed && "hidden"
           } hidden lg:flex justify-around items-center inner-container py-4`}
       >
@@ -170,7 +195,7 @@ const Header = () => {
             </button>
           </ActiveLink>
         </div>
-      </section>
+      </section> */}
 
       {/* For Mobile  */}
       <section className="lg:hidden my-container px-4 py-4 flex justify-between items-center">
@@ -245,51 +270,6 @@ const Header = () => {
       </section>
 
       {goToTopIcon}
-      <div className={`absolute overflow-hidden space-y-4 `}>
-        <Link
-          href="https://www.facebook.com/nazmus.sheam.sakib"
-          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--home`}
-          aria-label="Home"
-        >
-          <FaHome />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/nazmus-sakib-sheam"
-          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--services`}
-          aria-label="Services"
-        >
-          <FaLinkedin />
-        </Link>
-        <Link
-          href="https://www.github.com/NS-Sheam"
-          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--projects`}
-          aria-label="Projects"
-        >
-          <FaGithub />
-        </Link>
-        <Link
-          href={`https://www.instagram.com/nazmus_sakib_sheam/`}
-          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--about`}
-          aria-label="About"
-        >
-          <FaInstagram />
-        </Link>
-
-        <Link
-          href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw"
-          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--blog`}
-          aria-label="Blog"
-        >
-          <FaYoutube />
-        </Link>
-        <Link
-          href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw"
-          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--contact`}
-          aria-label="Contact"
-        >
-          <FaYoutube />
-        </Link>
-      </div>
     </>
   );
 };
