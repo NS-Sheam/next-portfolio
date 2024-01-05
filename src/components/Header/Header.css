@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-.switch[data-isOn="true"] {
+.switch[data-ison="true"] {
   justify-content: flex-end;
 }
 
@@ -35,7 +35,7 @@
   transition: transform 0.3s ease;
 }
 
-.switch[data-isOn="true"] .handle {
+.switch[data-ison="true"] .handle {
   transform: translateX(80px);
 }
 

@@ -6,7 +6,6 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import {
   AiFillCustomerService,
   AiOutlineCloudDownload,
-  AiOutlineHome,
   AiOutlineMail,
   AiOutlineProject,
 } from "react-icons/ai";
@@ -21,7 +20,6 @@ import ActiveLink from "@/components/ActiveLink/ActiveLink";
 import Link from "next/link";
 import { handleDownloadResume } from "../utils";
 import myImg from "@/assets/images/my-img.jpg";
-import { FaFacebook } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -100,24 +98,21 @@ const Header = () => {
   }, [scrollToTop]);
   const floatingMenu = (
     <div
-      className={`${
-        isHeaderFixed &&
+      className={`${isHeaderFixed &&
         `fixed bottom-2 md:bottom-auto left-2 right-2 md:left-2 md:w-11 md:top-1/3 rounded-full bg-bandPrimary z-50 shadow-md shadow-white`
-      }`}
+        }`}
     >
       <ul
-        className={`header-list flex gap-6 ${
-          isHeaderFixed &&
+        className={`header-list flex gap-6 ${isHeaderFixed &&
           "flex-row md:flex-col p-3 text-2xl items-center justify-center"
-        } ${theme == "light" ? "text-bandTernary" : "text-bandFont"}`}
+          } ${theme == "light" ? "text-bandTernary" : "text-bandFont"}`}
       >
         <Link href="/">
           <Image
-            className={`${
-              isHeaderFixed
-                ? "block wavecontainer w-10 h-8 bg-transparent mx-auto"
-                : "hidden"
-            }`}
+            className={`${isHeaderFixed
+              ? "block wavecontainer w-10 h-8 bg-transparent mx-auto"
+              : "hidden"
+              }`}
             src={myImg}
             alt=""
           />
@@ -140,11 +135,10 @@ const Header = () => {
   const goToTopIcon = (
     <div
       onClick={() => setScrollToTop(true)}
-      className={`${
-        isHeaderFixed
-          ? "fixed bottom-20 md:bottom-4 right-2 md:right-6 h-10 w-10 md:h-14 md:w-14 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden"
-          : "hidden"
-      }`}
+      className={`${isHeaderFixed
+        ? "fixed bottom-20 md:bottom-4 right-2 md:right-6 h-10 w-10 md:h-14 md:w-14 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden"
+        : "hidden"
+        }`}
     >
       <BiArrowToTop className="go-to-top-btn" />
     </div>
@@ -158,9 +152,8 @@ const Header = () => {
     <>
       {/* For dextop */}
       <section
-        className={`${
-          isHeaderFixed && "hidden"
-        } hidden lg:flex justify-around items-center inner-container py-4`}
+        className={`${isHeaderFixed && "hidden"
+          } hidden lg:flex justify-around items-center inner-container py-4`}
       >
         <div className="flex justify-center items-center gap-2">
           <Link href="/">
@@ -168,7 +161,7 @@ const Header = () => {
           </Link>
           <div
             className="switch dark-switch"
-            data-isOn={isOn}
+            data-ison={isOn}
             onClick={toggleSwitch}
           >
             <motion.div
@@ -204,7 +197,7 @@ const Header = () => {
           </Link>
           <div
             className="switch dark-switch"
-            data-isOn={isOn}
+            data-ison={isOn}
             onClick={toggleSwitch}
           >
             <motion.div
@@ -232,9 +225,8 @@ const Header = () => {
           </div>
           <div className=" w-4/5 mx-auto absolute top-14 right-0 left-0">
             <ul
-              className={` header-list text-bandFont mb-2 text-xl flex flex-col items-center gap-2 sm-menu-item transform duration-500 rounded-md border p-2 m-2 border-white z-20 bg-black bg-opacity-60 backdrop-blur-sm  ${
-                isMenuOpen ? "visible" : "hidden"
-              }`}
+              className={` header-list text-bandFont mb-2 text-xl flex flex-col items-center gap-2 sm-menu-item transform duration-500 rounded-md border p-2 m-2 border-white z-20 bg-black bg-opacity-60 backdrop-blur-sm  ${isMenuOpen ? "visible" : "hidden"
+                }`}
             >
               {menuData?.map(({ path, name, icon }, index) => {
                 return (
@@ -264,7 +256,7 @@ const Header = () => {
           </div>
         </div>
       </section>
-      {floatingMenu}
+      {/* {floatingMenu} */}
       {goToTopIcon}
     </>
   );
