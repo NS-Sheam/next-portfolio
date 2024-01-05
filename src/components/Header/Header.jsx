@@ -118,6 +118,7 @@ const Header = () => {
       <div className={`hidden md:block overflow-hidden space-y-4 z-10`}>
         {
           menuData.map(({ path, name, icon, className, label }, index) => <Link key={index}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
             href={path}
             title={name}
             className={`${menuButtonCommonClasses} ${className} mx-2`}

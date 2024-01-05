@@ -56,14 +56,14 @@ const Banner = () => {
             </button>
           </div>
           <CircularText
-            text="&nbsp; -Welcome &nbsp; to &nbsp; my &nbsp; portfolio- &nbsp;"
-            degree={7}
+            text=" -Welcome-to-my-portfolio-"
+            degree={15}
             circleSize="150px"
             logoSize={"100px"}
             logoUrl={myImg2}
             origin="75px"
-            textClass="text-xl text-bandYellow font-bold uppercase shadow-md shadow-white -leading-4"
-            animationSpeed="10s"
+            textClass="text-xl text-bandYellow font-bold uppercase shadow-md shadow-white"
+            animationSpeed="7s"
           />
         </div>
         <div
