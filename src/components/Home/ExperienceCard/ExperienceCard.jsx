@@ -86,7 +86,7 @@ const ExperienceCard = () => {
                   {heading[1]}
                 </p>
 
-                <p className=" text-xl font-extrabold text-white">
+                <p className=" md:text-xl font-extrabold text-white">
                   {description}
                 </p>
               </div>

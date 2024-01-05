@@ -150,7 +150,7 @@ const Header = () => {
     <>
       {mainMenu}
       {/* For Mobile  */}
-      <section className="z-10 md:hidden my-container px-4 py-4 flex justify-between items-center">
+      <section className="z-10 md:hidden inner-container py-4 flex justify-center items-center">
         <div className="flex justify-center items-center gap-2">
           <Link href="/">
             <Image className="w-12" src={logo} alt="logo" />
@@ -189,9 +189,6 @@ const Header = () => {
               </div>
             </ul>
           </div>
-        </div>
-        <div className="bg-white">
-
         </div>
       </section>
     </>
