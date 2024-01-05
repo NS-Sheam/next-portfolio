@@ -76,8 +76,8 @@ const About = () => {
         >
           <div className="flex justify-center items-center">
             <CircularText
-              text="&nbsp; Welcome &nbsp; to &nbsp; the &nbsp; sky --"
-              degree={9}
+              text="- Welcome - to - the - sky -"
+              degree={13}
               circleSize="250px"
               logoSize={"180px"}
               logoUrl={myImg}

@@ -129,7 +129,13 @@ const Header = () => {
           )}
       </div>
       <div
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        onClick={() => {
+          setIsMenuOpen(!isMenuOpen);
+          setTimeout(() => {
+            setIsMenuOpen(false);
+          }, 10000)
+        }}
+        on
         className="h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-gradient-to-t from-pink-500 to-purple-700 hover:from-purple-500 hover:to-pink-700 z-20 shadow-md shadow-white text-white text-4xl font-extrabold mx-2">
         <svg id="hamburger" className="Header__toggle-svg" viewBox="0 0 60 40">
           <g stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
