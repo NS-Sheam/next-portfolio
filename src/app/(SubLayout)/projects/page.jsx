@@ -10,12 +10,10 @@ const ProjectsPage = () => {
     fetch("projectData.json")
       .then((res) => res.json())
       .then((projects) => {
-        // console.log(projects);
 
         setProjects(projects);
       });
   }, []);
-  console.log(projects);
 
   return (
     <section className="bg-bandTernary inner-container py-8 lg:py-14">
@@ -28,7 +26,7 @@ const ProjectsPage = () => {
           My Projects
         </h1>
         <p
-          className={`text-white text-center w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}
+          className={`text-white text-justify md:text-center w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}
         >
           Browse through my portfolio to explore a diverse range of projects
           that demonstrate my skills in web development. From interactive React
