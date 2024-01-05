@@ -20,6 +20,7 @@ import ActiveLink from "@/components/ActiveLink/ActiveLink";
 import Link from "next/link";
 import { handleDownloadResume } from "../utils";
 import myImg from "@/assets/images/my-img.jpg";
+import Navigation from "./Navigation";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -255,6 +256,9 @@ const Header = () => {
               </div>
             </ul>
           </div>
+        </div>
+        <div className="bg-white">
+
         </div>
       </section>
       {/* {floatingMenu} */}
