@@ -18,48 +18,48 @@
 // SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const Slide = () => {
-  const [skills, setSkills] = useState([]); // Initialize skills as an array
-  useEffect(() => {
-    fetch("skill.json")
-      .then((res) => res.json())
-      .then((skills) => {
-        setSkills(skills);
-      });
-  }, []);
+  // const [skills, setSkills] = useState([]); // Initialize skills as an array
+  // useEffect(() => {
+  //   fetch("skill.json")
+  //     .then((res) => res.json())
+  //     .then((skills) => {
+  //       setSkills(skills);
+  //     });
+  // }, []);
 
-  const [slidesPerView, setSlidesPerView] = useState(3);
+  // const [slidesPerView, setSlidesPerView] = useState(3);
 
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      if (width >= 1024) {
-        setSlidesPerView(3);
-      } else if (width >= 768) {
-        setSlidesPerView(2);
-      } else {
-        setSlidesPerView(1);
-      }
-    };
-    handleResize(); // call the function once on mount
-    window.addEventListener("resize", handleResize); // listen for resize events
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     const width = window.innerWidth;
+  //     if (width >= 1024) {
+  //       setSlidesPerView(3);
+  //     } else if (width >= 768) {
+  //       setSlidesPerView(2);
+  //     } else {
+  //       setSlidesPerView(1);
+  //     }
+  //   };
+  //   handleResize(); // call the function once on mount
+  //   window.addEventListener("resize", handleResize); // listen for resize events
 
-    return () => window.removeEventListener("resize", handleResize); // remove the event listener on unmount
-  }, []);
+  //   return () => window.removeEventListener("resize", handleResize); // remove the event listener on unmount
+  // }, []);
 
-  // call the function once on mount
-  const styles = {
-    path: {
-      stroke: "#ffd60a", // Green color
-    },
-    trail: {
-      stroke: "#000814", // Grey color
-    },
-    text: {
-      fill: "#ffffff", // White color
-      fontSize: "1.5rem",
-      fontWeight: "700",
-    },
-  };
+  // // call the function once on mount
+  // const styles = {
+  //   path: {
+  //     stroke: "#ffd60a", // Green color
+  //   },
+  //   trail: {
+  //     stroke: "#000814", // Grey color
+  //   },
+  //   text: {
+  //     fill: "#ffffff", // White color
+  //     fontSize: "1.5rem",
+  //     fontWeight: "700",
+  //   },
+  // };
 
   return (
     <div className="my-6">

@@ -57,14 +57,14 @@ export const GlovalContextProvider = ({ children }) => {
   //     };
   // }, []);
 
-  const showDeveloperToolsAlert = () => {
-    Swal.fire({
-      icon: "warning",
-      title: "Developer Tools Blocked",
-      text: "Please refrain from using developer tools on this website.",
-      confirmButtonText: "OK",
-    });
-  };
+  // const showDeveloperToolsAlert = () => {
+  //   Swal.fire({
+  //     icon: "warning",
+  //     title: "Developer Tools Blocked",
+  //     text: "Please refrain from using developer tools on this website.",
+  //     confirmButtonText: "OK",
+  //   });
+  // };
 
   // Developer aleart ends --------------------------------
   return (

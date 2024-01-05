@@ -4,7 +4,6 @@ import './PostBlog.css';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 const img_hosting_token = import.meta.env.VITE_IMAGE_HOSTIONG_TOKEN;
-const localUrl = "http://localhost:3000"
 const hostingUrl = import.meta.env.VITE_HOSTING_URL
 const PostBlog = () => {
   const [selectedText, setSelectedText] = useState('');
@@ -19,6 +18,8 @@ const PostBlog = () => {
   const handleTextSelection = () => {
     const text = window.getSelection().toString();
     setSelectedText(text);
+    console.log(selectedText);
+
   };
 
   const handleKeyDown = (event) => {

@@ -1,7 +1,6 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 
-const localUrl = "http://localhost:3000"
 const hostingUrl = process.env.NEXT_PUBLIC_HOSTING_URL;
 
 const useBlogsData = () => {

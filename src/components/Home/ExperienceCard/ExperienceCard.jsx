@@ -2,7 +2,6 @@
 import React from "react";
 import experienceImg from "@/assets/experiences/experience.png";
 import clients from "@/assets/experiences/clients.png";
-import engineer from "@/assets/experiences/engineer.png";
 import success from "@/assets/experiences/success.png";
 import ongoing from "@/assets/experiences/ongoing.png";
 import "./ExperienceCard.css";

@@ -1,7 +1,6 @@
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
 
 const SectionTitle = ({ heading, paragraph, punchLine }) => {
-  const { theme } = useGlovalContext();
+
   return (
     <div
       data-aos="zoom-in"

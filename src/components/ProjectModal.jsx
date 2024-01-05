@@ -1,13 +1,11 @@
 import { RxOpenInNewWindow } from "react-icons/rx";
-import { AiFillGithub } from "react-icons/ai";
-import { FiLink } from "react-icons/fi";
-import Image from "next/image";
-import Link from "next/link";
-import { FaGithub, FaInstagram, FaLink, FaWindowClose } from "react-icons/fa";
 
-const imageLoader = ({ src, width, quality }) => {
-  return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
-};
+import Image from "next/image";
+import { FaGithub, FaLink } from "react-icons/fa";
+
+// const imageLoader = ({ src, width, quality }) => {
+//   return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
+// };
 
 const ProjectModal = ({ projectData }) => {
   const {

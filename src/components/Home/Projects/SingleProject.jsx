@@ -1,11 +1,9 @@
 import { useState } from "react";
 import "./SingleProject.css";
 import Image from "next/image";
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
 
 const SingleProject = ({ project, setSingleProject }) => {
   // const [liFold, setLiFold] = useState(true);
-  const { theme } = useGlovalContext();
   const [isHovered, setIsHovered] = useState(false);
   return (
     <div
@@ -31,9 +29,8 @@ const SingleProject = ({ project, setSingleProject }) => {
 
         {/* Button inside the figure */}
         <div
-          className={`absolute h-full w-full ${
-            isHovered ? "flex" : "hidden"
-          } justify-center items-center bg-opacity-50 bg-black`}
+          className={`absolute h-full w-full ${isHovered ? "flex" : "hidden"
+            } justify-center items-center bg-opacity-50 bg-black`}
         >
           <label
             onClick={() => {

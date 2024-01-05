@@ -1,13 +1,11 @@
 "use client";
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import "react-tabs/style/react-tabs.css";
 import TabItem from "./TabItem";
 import SectionTitle from "../../../components/SectionTitle";
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
 import ProjectModal from "@/components/ProjectModal";
 
 const Projects = () => {
-  const { theme } = useGlovalContext();
   const [singleProject, setSingleProject] = useState(null);
   return (
     <>

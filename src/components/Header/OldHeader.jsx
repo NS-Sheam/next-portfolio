@@ -1,11 +1,11 @@
 import React from 'react';
 
 const OldHeader = () => {
-    const spring = {
-        type: "spring",
-        stiffness: 700,
-        damping: 30,
-    };
+    // const spring = {
+    //     type: "spring",
+    //     stiffness: 700,
+    //     damping: 30,
+    // };
     return (
         <>
             {/* --------------- old desktop menu start ------------------- */}

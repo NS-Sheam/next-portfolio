@@ -7,7 +7,6 @@ import maintenanceImage from "@/assets/services/maintanence-website.jpg";
 import redesignImage from "@/assets/services/redesign-website.jpg";
 
 import Image from "next/image";
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
 const Services = () => {
   // const { theme } = useGlovalContext();
   const theme = "light";
@@ -66,9 +65,8 @@ const Services = () => {
             ({ title, description, image }, index) => (
               <div
                 key={index}
-                className={`${
-                  theme === "dark" ? "bg-white" : "bg-slate-400"
-                } p-6 rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105 shadow-2xl border-2 border-band-orange`}
+                className={`${theme === "dark" ? "bg-white" : "bg-slate-400"
+                  } p-6 rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105 shadow-2xl border-2 border-band-orange`}
               >
                 <div className="relative w-full h-48 mb-4 rounded-lg border-2 border-band-orange">
                   <Image

@@ -1,12 +1,9 @@
 "use client";
 import SectionTitle from "../../../components/SectionTitle";
 import BlogCard from "../../../components/BlogCard";
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
 import useBlogsData from "@/app/hooks/useBlogsData";
 
 const HomeBlogs = () => {
-  // const { theme } = useGlovalContext();
-  const theme = "light";
   const { blogs } = useBlogsData();
   return (
     <div className="bg-gradient-to-tr bg-bandTernary inner-container min-h-screen py-8 lg:p-14 ">

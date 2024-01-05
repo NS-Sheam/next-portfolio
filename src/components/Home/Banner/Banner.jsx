@@ -2,7 +2,7 @@
 import "./Banner.css";
 import myImg from "@/assets/images/my-img.jpg";
 import myImg2 from "@/assets/images/my-img-2.jpg";
-import blurImageUrl from "@/assets/images/banner3.jpg";
+// import blurImageUrl from "@/assets/images/banner3.jpg";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import Image from "next/image";
 import { useState } from "react";

@@ -5,7 +5,6 @@ import htmlImage from "../../../assets/technology-image/html.png";
 import cssImage from "../../../assets/technology-image/css.png";
 import jsImage from "../../../assets/technology-image/js.png";
 import reactImage from "../../../assets/technology-image/react.png";
-import nodeImage from "../../../assets/technology-image/nodejs.png";
 import expressImage from "../../../assets/technology-image/expressjs.png";
 import mongodbImage from "../../../assets/technology-image/mongodb.png";
 import postgresImage from "../../../assets/technology-image/postgres.png";
@@ -152,11 +151,10 @@ const Technology = () => {
             <button
               onClick={() => setShowedTechnology(item.toLowerCase())}
               key={index}
-              className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${
-                showedTechnology === item.toLowerCase()
+              className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
                   ? "bg-bandYellow text-bandTernary"
                   : "text-white"
-              }`}
+                }`}
             >
               {item}
             </button>
@@ -164,7 +162,7 @@ const Technology = () => {
         </div>
         {/* Data side */}
         <div className="col-span-2 py-4">
-          {technologies.map((technology, index) => {
+          {technologies.map((technology) => {
             return Object.keys(technology).map((key, index) => {
               return (
                 key === showedTechnology && (

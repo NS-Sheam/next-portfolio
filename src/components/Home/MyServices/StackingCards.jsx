@@ -9,7 +9,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const StackingCards = () => {
-  const [services, setServices] = useState([
+  // const [services, setServices] = useState([
+  const services = [
     {
       id: 1,
       title: "Custom Software Development",
@@ -58,7 +59,7 @@ const StackingCards = () => {
       imageUrl: maintenance,
       cardColor: "bg-gradient-to-r from-indigo-500 to-indigo-700 bg-indigo-500",
     },
-  ]);
+  ]
 
   const [scrollY, setScrollY] = useState(0);
 
