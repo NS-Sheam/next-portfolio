@@ -14,31 +14,31 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        // emailjs.sendForm(`${import.meta.env.VITE_SERVICE_ID}`, `${import.meta.env.VITE_TAMPLATE_ID}`, form.current, `${import.meta.env.VITE_PUBLIC_KEY}`)
-        //     .then((result) => {
-        //         toast.success("Your email sent successfully", {
-        //             position: "top-right",
-        //             autoClose: 2500,
-        //             hideProgressBar: false,
-        //             closeOnClick: true,
-        //             pauseOnHover: true,
-        //             draggable: true,
-        //             progress: undefined,
-        //             theme: "dark"
-        //         })
-        //     }, (error) => {
-        //         // console.log(error.text);
-        //         toast.success(error.text, {
-        //             position: "top-right",
-        //             autoClose: 2500,
-        //             hideProgressBar: false,
-        //             closeOnClick: true,
-        //             pauseOnHover: true,
-        //             draggable: true,
-        //             progress: undefined,
-        //             theme: "dark"
-        //         })
-        //     });
+        emailjs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TAMPLATE_ID}`, form.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
+            .then((result) => {
+                toast.success("Your email sent successfully", {
+                    position: "top-right",
+                    autoClose: 2500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                })
+            }, (error) => {
+                // console.log(error.text);
+                toast.success(error.text, {
+                    position: "top-right",
+                    autoClose: 2500,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark"
+                })
+            });
     };
     const commonInputClass = `w-full p-3 rounded-md border-b-2 bg-transparent outline-none`
 
@@ -75,11 +75,12 @@ const Contact = () => {
                                 data-aos-anchor="#example-anchor"
                                 data-aos-duration="1500"
                                 placeholder="your message" name="message" className={`${commonInputClass} col-span-2`} required></textarea>
-                            <div
+                            <button
+                                type="submit"
                                 className={`w-32 py-1 rounded-md flex items-center justify-center gradient-btn bg-bandPrimary shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden`}
                             >
                                 <BiArrowToRight className="go-to-right-btn" />
-                            </div>
+                            </button>
                         </form>
                     </div>
                     <div
