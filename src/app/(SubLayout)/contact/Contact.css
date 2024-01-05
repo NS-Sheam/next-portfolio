@@ -1,0 +1,25 @@
+@keyframes contactAnim {
+    0% {
+      /* transform: scale(1); */
+      transform: translate(0%, 0%);
+      border-color: white;
+    }
+    50% {
+      /* transform: scale(1); */
+      transform: translate(0%, -10%);
+      border-color: #009FBD;
+    }
+    100% {
+      /* transform: scale(1); */
+      transform: translate(0%, 0%);
+      border-color: white;
+    }
+  }
+  
+  /* .banner-img {
+    position: relative;
+  } */
+  
+  .contact-img {
+    animation: contactAnim 3s ease-in infinite;
+  }
