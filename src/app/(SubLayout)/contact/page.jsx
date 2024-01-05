@@ -1,4 +1,4 @@
-import Header from "../shared/Header/Header";
+"use client";
 import emailjs from '@emailjs/browser';
 import img from "@/assets/images/contact-image/contact_us.png"
 import "./Contact.css"
@@ -39,51 +39,52 @@ const Contact = () => {
         //         })
         //     });
     };
+    const commonInputClass = `w-full p-3 rounded-md border-b-2 bg-transparent outline-none`
 
     return (
         <>
             <div
-                className="hero min-h-screen w-full lg:py-6">
-                <div className="hero-content flex-col lg:flex-row justify-between gap-16 lg:w-4/5">
+                className="bg-bandTernary inner-container py-8 lg:py-14">
+                <h1 className="font-extrabold mb-2 banner-name-font text-6xl text-center">Contact me!</h1>
+                <p className={`text-white text-justify md:text-center w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}>Let's connect! If you have any questions or would like to discuss potential collaborations, feel free to reach out using the contact details below. I'm eager to hear from you and explore exciting opportunities together. Don't hesitate to get in touch!</p>
+                <div className="grid grid-cols-1 lg:grid-cols-2 justify-center items-center gap-16">
                     <div
                         data-aos="fade-right"
                         data-aos-anchor="#example-anchor"
                         data-aos-duration="1000"
-                        className="bg-transparent w-full lg:w-1/2">
+                        className="bg-transparent col-span-1">
                         <form
-                            ref={form} onSubmit={sendEmail} className="space-y-4 lg:space-y-6 text-justify">
-                            <h1 className="text-center text-3xl lg:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text italic">Contact me!</h1>
-                            <p className={`text-white text-center`}>Let's connect! If you have any questions or would like to discuss potential collaborations, feel free to reach out using the contact details below. I'm eager to hear from you and explore exciting opportunities together. Don't hesitate to get in touch!</p>
+                            ref={form} onSubmit={sendEmail} className="space-y-4 lg:space-y-6 text-justify grid grid-cols-2 items-center justify-center gap-4">
                             <div
                                 data-aos="flip-right"
                                 data-aos-anchor="#example-anchor"
                                 data-aos-duration="1500"
                                 className="form-control">
-                                <input type="text" placeholder="name" name="from_name" className={`input input-bordered shadow-md ${theme == "light" ? "bg-slate-800 shadow-slate-800 text-white" : "bg-white"}`} required />
+                                <input type="text" placeholder="name" name="from_name" className={commonInputClass} required />
                             </div>
                             <div
                                 data-aos="flip-right"
                                 data-aos-anchor="#example-anchor"
                                 data-aos-duration="1500"
                                 className="form-control">
-                                <input type="text" placeholder="email" name="from_email" className={`input input-bordered shadow-md ${theme == "light" ? "bg-slate-800 shadow-slate-800 text-white" : "bg-white"}`} required />
+                                <input type="text" placeholder="email" name="from_email" className={commonInputClass} required />
                             </div>
                             <textarea
                                 data-aos="flip-right"
                                 data-aos-anchor="#example-anchor"
                                 data-aos-duration="1500"
-                                placeholder="your message" name="message" className={`p-3 text-base textarea textarea-bordered textarea-lg w-full ${theme == "light" ? "bg-slate-800 shadow-slate-800 text-white" : "bg-white"}`} required></textarea>
+                                placeholder="your message" name="message" className={`${commonInputClass} col-span-2`} required></textarea>
                             <div
                                 data-aos="flip-right"
                                 data-aos-anchor="#example-anchor"
                                 data-aos-duration="1500"
                                 className="form-control mt-6">
-                                <button className={`btn gradient-btn ${theme === "dark" && "border-2 border-white"} text-white hover:bg-opacity-25 border`}>Send</button>
+                                <button className={`btn gradient-btn border-2 border-white text-white hover:bg-opacity-25`}>Send</button>
                             </div>
                         </form>
                     </div>
                     <div
-                        className="contact-img text-center lg:text-left w-full lg:w-1/2">
+                        className="contact-img text-center lg:text-left col-span-1">
                         <Image
                             src={img}
                             alt="contact"
