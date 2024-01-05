@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   /* font-family: "Roboto Condensed", sans-serif; */
 }
 
@@ -23,7 +28,14 @@ body {
 
 .font-gradient {
   /* background: linear-gradient(to right top, #d207d9, #ac05ca, #ebbdfe, #be9fd7, #c1aaed); */
-  background: linear-gradient(to right top, #ffc300, #ffd60a, #eadb90, #fff9de, #f9f6e6);
+  background: linear-gradient(
+    to right top,
+    #ffc300,
+    #ffd60a,
+    #eadb90,
+    #fff9de,
+    #f9f6e6
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -159,8 +171,10 @@ c1aaed */
   @scroll-timeline cards-element-scrolls-in-body {
     source: selector(body);
     scroll-offsets:
-			/* Start when the start edge touches the top of the scrollport */ selector(#cards) start 1,
-      /* End when the start edge touches the start of the scrollport */ selector(#cards) start 0;
+			/* Start when the start edge touches the top of the scrollport */
+      selector(#cards) start 1,
+      /* End when the start edge touches the start of the scrollport */
+        selector(#cards) start 0;
     start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
     end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
     time-range: 4s;
@@ -170,7 +184,9 @@ c1aaed */
     display: none;
     --index0: calc(var(--index) - 1); /* 0-based index */
     --reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-    --reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+    --reverse-index0: calc(
+      var(--reverse-index) - 1
+    ); /* 0-based reverse index */
   }
 
   @keyframes scale {
@@ -189,9 +205,20 @@ c1aaed */
   transform: translate(50%, -50%);
 
   color: #ffffff;
-  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191,
-    1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191,
-    1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+  text-shadow:
+    1px 1px 1px #919191,
+    1px 2px 1px #919191,
+    1px 3px 1px #919191,
+    1px 4px 1px #919191,
+    1px 5px 1px #919191,
+    1px 6px 1px #919191,
+    1px 7px 1px #919191,
+    1px 8px 1px #919191,
+    1px 9px 1px #919191,
+    1px 10px 1px #919191,
+    1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2),
+    1px 25px 35px rgba(16, 16, 16, 0.2),
     1px 30px 60px rgba(16, 16, 16, 0.4);
 }
 /* -----------------------------------Shading font Css ends----------------------------------------- */
@@ -204,14 +231,23 @@ c1aaed */
 
 /* ----------------------------------------banner css starts----------------------------------------- */
 .banner-name-font {
-  background: linear-gradient(to right, #ffc300 20%, #ffd60a 30%, #baff0a 70%, #89ff0a 80%);
+  background: linear-gradient(
+    to right,
+    #ffc300 20%,
+    #ffd60a 30%,
+    #baff0a 70%,
+    #89ff0a 80%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 500% auto;
   animation: textShine 5s ease-in-out infinite alternate;
 
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.2), 3px 3px 6px rgba(0, 0, 0, 0.2);
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.2),
+    2px 2px 4px rgba(0, 0, 0, 0.2),
+    3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 @keyframes textShine {
   0% {

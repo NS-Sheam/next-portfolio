@@ -3,7 +3,10 @@
     "id": 1,
     "projectName": "G3 Artechture",
     "technology": ["HTML5", "CSS3", "Tailwind css"],
-    "description": ["Use HTML, CSS and Bootstrap", "Use Bootstrap as css framework"],
+    "description": [
+      "Use HTML, CSS and Bootstrap",
+      "Use Bootstrap as css framework"
+    ],
     "clientSite": "https://github.com/NS-Sheam/milest-2-Assignment-2",
     "liveSite": "https://ns-sheam.github.io/milest-2-Assignment-2/",
     "image": "https://i.ibb.co/TTnLTh0/g3-artecture.png",
@@ -13,7 +16,10 @@
     "id": 2,
     "projectName": "IT Services",
     "technology": ["HTML5", "CSS3"],
-    "description": ["Use HTML, CSS and Bootstrap", "Use Bootstrap as css framework"],
+    "description": [
+      "Use HTML, CSS and Bootstrap",
+      "Use Bootstrap as css framework"
+    ],
     "clientSite": "https://github.com/NS-Sheam/influencer-gear-mod-10",
     "liveSite": "https://ns-sheam.github.io/influencer-gear-mod-10/",
     "image": "https://i.ibb.co/r5whx1t/it-service-2.png",
@@ -22,7 +28,15 @@
   {
     "id": 3,
     "projectName": "Travel Guru",
-    "technology": ["React.js", "Javascript", "HTML5", "CSS3", "Tailwind css", "Firebase", "Swiper.js"],
+    "technology": [
+      "React.js",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Tailwind css",
+      "Firebase",
+      "Swiper.js"
+    ],
     "description": [
       "Travel Guru is a hotel booking site",
       "Added Swiper.js for slider",
@@ -39,7 +53,10 @@
     "id": 4,
     "projectName": "Justice",
     "technology": ["HTML5", "CSS3", "Bootstrap"],
-    "description": ["Use HTML, CSS and Bootstrap", "Use Bootstrap as css framework"],
+    "description": [
+      "Use HTML, CSS and Bootstrap",
+      "Use Bootstrap as css framework"
+    ],
     "clientSite": "https://github.com/NS-Sheam/justice-legal-house",
     "liveSite": "https://justice-legal.netlify.app/",
     "image": "https://i.ibb.co/Rbdcbkx/justic-legal.png",
@@ -86,7 +103,14 @@
   {
     "id": 8,
     "projectName": "Knowledge Cafe",
-    "technology": ["React.js", "Javascript", "HTML5", "CSS3", "Tailwind css", "Firebase"],
+    "technology": [
+      "React.js",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Tailwind css",
+      "Firebase"
+    ],
     "description": [
       "Knowledge Cafe site is for searching books",
       "Implemented react router",
@@ -141,7 +165,16 @@
   {
     "id": 12,
     "projectName": "Heroverse",
-    "technology": ["React.js", "Express.js", "Javascript", "Mongodb", "Firebase", "HTML5", "CSS3", "Tailwind css"],
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Javascript",
+      "Mongodb",
+      "Firebase",
+      "HTML5",
+      "CSS3",
+      "Tailwind css"
+    ],
     "description": [
       "Full stack project with MERN technology",
       "Added backend functionality with Express.js",
@@ -158,7 +191,15 @@
   {
     "id": 13,
     "projectName": "Chef Recipe",
-    "technology": ["React.js", "Express.js", "Javascript", "Firebase", "HTML5", "CSS3", "React Boostrap"],
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Javascript",
+      "Firebase",
+      "HTML5",
+      "CSS3",
+      "React Boostrap"
+    ],
     "description": [
       "Full stack project with MERN technology",
       "Added backend functionality with Express.js",
@@ -175,7 +216,14 @@
   {
     "id": 14,
     "projectName": "News Dragon",
-    "technology": ["React.js", "Express.js", "Firebase", "HTML5", "CSS3", "React Boostrap"],
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Firebase",
+      "HTML5",
+      "CSS3",
+      "React Boostrap"
+    ],
     "description": [
       "Full stack project with MERN technology",
       "Added backend functionality with Express.js",
@@ -191,7 +239,14 @@
   {
     "id": 15,
     "projectName": "Car Doctor",
-    "technology": ["React.js", "Express.js", "Firebase", "HTML5", "CSS3", "Tailwind css"],
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Firebase",
+      "HTML5",
+      "CSS3",
+      "Tailwind css"
+    ],
     "description": [
       "Full stack project with MERN technology",
       "Added backend functionality with Express.js",

@@ -4,7 +4,10 @@ import { GlovalContextProvider } from "./Provider/GlovalContext";
 
 import "aos/dist/aos.css";
 
-const roboto = Roboto_Condensed({ subsets: ["latin"], weight: ["300", "400", "700"] });
+const roboto = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
 
 export const metadata = {
   title: "Create Next App",
