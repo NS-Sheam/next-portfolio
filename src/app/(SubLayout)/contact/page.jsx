@@ -37,7 +37,7 @@ const Contact = () => {
                         data-aos="fade-right"
                         data-aos-anchor="#example-anchor"
                         data-aos-duration="1000"
-                        className="bg-transparent col-span-1">
+                        className="bg-transparent col-span-1 order-last lg:order-first">
                         <form
                             ref={form} onSubmit={sendEmail} className="text-justify md:grid grid-cols-2 items-center justify-center gap-6 space-y-3 md:space-y-0">
                             <div
@@ -70,30 +70,33 @@ const Contact = () => {
                     <div>
                         {/* for dextop  */}
                         <div className="lg:block ">
-                            <CircularText
-                                text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
-                                degree={8}
-                                circleSize="400px"
-                                logoSize={"320px"}
-                                logoUrl={myImg2}
-                                origin="200px"
-                                textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
-                                animationSpeed="10s"
-                            />
+                            <div>
+                                <CircularText
+                                    text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
+                                    degree={8}
+                                    circleSize="400px"
+                                    logoSize={"320px"}
+                                    logoUrl={myImg2}
+                                    origin="200px"
+                                    textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
+                                    animationSpeed="10s"
+                                />
+                            </div>
                         </div>
                         {/* for mobile */}
-                        <div className="md:hidden">
-                            <CircularText
-                                text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
-                                degree={8}
-                                circleSize="400px"
-                                logoSize={"320px"}
-                                logoUrl={myImg2}
-                                origin="200px"
-                                textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
-                                animationSpeed="10s"
-
-                            />
+                        <div className="lg:block ">
+                            <div>
+                                <CircularText
+                                    text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
+                                    degree={8}
+                                    circleSize="400px"
+                                    logoSize={"320px"}
+                                    logoUrl={myImg2}
+                                    origin="200px"
+                                    textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
+                                    animationSpeed="10s"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
