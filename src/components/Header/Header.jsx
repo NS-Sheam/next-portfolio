@@ -203,34 +203,8 @@ const Header = () => {
           <Link href="/">
             <Image className="w-12" src={logo} alt="logo" />
           </Link>
-          <div
-            className="switch dark-switch"
-            data-ison={isOn}
-            onClick={toggleSwitch}
-          >
-            <motion.div
-              className={theme == "light" ? "dark-handle" : "light-handle"}
-              layout
-              transition={spring}
-            />
-          </div>
         </div>
         <div className="flex flex-col justify-center items-center z-20">
-          <div className="p-2 bg-bandPrimary w-10 h-10 flex justify-center items-center">
-            {isMenuOpen ? (
-              <FontAwesomeIcon
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={"text-2xl text-white font-extrabold"}
-                icon={faXmark}
-              />
-            ) : (
-              <FontAwesomeIcon
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className={"text-2xl text-white font-extrabold"}
-                icon={faBars}
-              />
-            )}
-          </div>
           <div className=" w-4/5 mx-auto absolute top-14 right-0 left-0">
             <ul
               className={` header-list text-bandFont mb-2 text-xl flex flex-col items-center gap-2 sm-menu-item transform duration-500 rounded-md border p-2 m-2 border-white z-20 bg-black bg-opacity-60 backdrop-blur-sm  ${isMenuOpen ? "visible" : "hidden"
