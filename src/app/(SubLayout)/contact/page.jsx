@@ -1,11 +1,8 @@
 "use client";
-
-import img from "@/assets/images/contact-image/contact_us.png"
 import "./Contact.css"
 import { useRef } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import Image from "next/image";
 import { BiArrowToRight } from 'react-icons/bi';
 import { sendEmailWithEmailJS } from "./contact.utils";
 import myImg2 from "@/assets/images/my-img-2.jpg";
