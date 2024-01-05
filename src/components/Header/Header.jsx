@@ -1,27 +1,21 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import "./Header.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import {
   AiFillCustomerService,
   AiOutlineCloudDownload,
   AiOutlineMail,
   AiOutlineProject,
 } from "react-icons/ai";
-import { BiArrowToTop, BiMoon, BiSun } from "react-icons/bi";
+import { BiArrowToTop } from "react-icons/bi";
 import { SiAboutdotme } from "react-icons/si";
 import { LiaBlogSolid } from "react-icons/lia";
-import { motion } from "framer-motion";
 import logo from "@/assets/images/ns-logo.png";
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
 import Image from "next/image";
 import ActiveLink from "@/components/ActiveLink/ActiveLink";
 import Link from "next/link";
 import { handleDownloadResume } from "../utils";
-import myImg from "@/assets/images/my-img.jpg";
-import { FaFacebook, FaGithub, FaHome, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import { FiMenu } from "react-icons/fi";
+import { FaHome } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,15 +23,8 @@ const Header = () => {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
   const [scrollToTop, setScrollToTop] = useState(false);
 
-  const { theme, setTheme } = useGlovalContext();
-
-  const [isOn, setIsOn] = useState(false);
   const menuButtonCommonClasses = `menu-button duration-300 ${isMenuOpen ? "top-0" : "top-96"}`
 
-  const toggleSwitch = () => {
-    setIsOn(!isOn);
-    theme == "light" ? setTheme("dark") : setTheme("light");
-  };
 
   const menuData = [
     {
@@ -175,7 +162,7 @@ const Header = () => {
               className={` header-list text-bandFont mb-2 text-xl flex flex-col items-center gap-2 sm-menu-item transform duration-500 rounded-md border p-2 m-2 border-white z-20 bg-black bg-opacity-60 backdrop-blur-sm  ${isMenuOpen ? "visible" : "hidden"
                 }`}
             >
-              {menuData?.map(({ path, name, icon }, index) => {
+              {menuData?.map(({ path, name }, index) => {
 
                 return (
                   <React.Fragment key={index}>
