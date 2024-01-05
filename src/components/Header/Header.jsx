@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -229,13 +229,14 @@ const Header = () => {
                 }`}
             >
               {menuData?.map(({ path, name, icon }, index) => {
+
                 return (
-                  <>
-                    <li key={index} className="w-full text-center">
+                  <React.Fragment key={index}>
+                    <li className="w-full text-center">
                       <ActiveLink href={path}>{name}</ActiveLink>
                     </li>
                     <hr className="w-full" />
-                  </>
+                  </React.Fragment>
                 );
               })}
 
