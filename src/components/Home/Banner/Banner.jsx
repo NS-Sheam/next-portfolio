@@ -2,6 +2,7 @@
 "use client"
 import "./Banner.css"
 import myImg from "@/assets/images/my-img.jpg"
+import myImg2 from "@/assets/images/my-img-2.jpg"
 import blurImageUrl from "@/assets/images/banner3.jpg"
 import { AiOutlineCloudDownload } from 'react-icons/ai';
 import Image from "next/image";
@@ -9,6 +10,7 @@ import TypedComponent from "@/components/Typed";
 import { useState } from "react";
 import { handleDownloadResume } from "@/components/utils";
 import BannerSvg from "./BannerSvg";
+
 import CircularText from "@/components/CurcularText/CircularText";
 const Banner = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -41,7 +43,7 @@ const Banner = () => {
                     <div className="my-8">
                         <button onClick={handleDownloadResume} className="text-white uppercase font-bold flex items-center gap-2 gradient-btn py-2 px-3 rounded-full border-2 border-white">Download Resume <AiOutlineCloudDownload /></button>
                     </div>
-                    <CircularText />
+                    <CircularText text="&nbsp; Welcome &nbsp; to &nbsp; my &nbsp; portfolio!! &nbsp;" degree={9} circleSize="150px" logoSize={"100px"} logoUrl={myImg2} origin="75px" textClass="text-xl text-bandYellow font-bold uppercase shadow-md shadow-white -leading-4" />
                 </div>
                 <div className='relative w-[25rem] h-[25rem]'
                     onMouseEnter={() => setIsHovered(true)}

@@ -22,7 +22,6 @@ const TabItem = ({ setSingleProject }) => {
                 // Filter projects made with HTML/CSS
                 const htmlCssProject = projects.filter(project => project.madeWith.includes('HTML') && project.madeWith.includes('CSS'));
                 setHtmlCssProjects(htmlCssProject);
-                console.log(projects);
 
             })
     }, [])

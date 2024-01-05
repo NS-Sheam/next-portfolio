@@ -1,6 +1,10 @@
 "use client"
+import Image from "next/image";
 import Link from "next/link";
-
+import myImg from "@/assets/images/my-img.jpg"
+import { FaArrowRight, FaCheck, FaFile, FaGithub, FaLinkedin, FaUser } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
+import CircularText from "@/components/CurcularText/CircularText";
 
 const About = () => {
     const handleDownloadResume = () => {
@@ -9,10 +13,106 @@ const About = () => {
     const handleDownloadCv = () => {
         window.open("https://drive.google.com/u/0/uc?id=1R7LXM_2AP6UaZMsIprypvUJhMB0MYUyS&export=download");
     };
+    //     Expertise: HTML5 | CSS3 | JavaScript ES6 | React.js | Tailwind | Bootstrap | React Bootstrap | DaisiUI | Flowbite | Relationship
+    // Building | Team Collaboration
+    // Comfortable: Communication & Networking | Career Counseling | Mentoring & Guidance | Project Management | Express and
+    // Node.js | Rest API | Devtool and Debugging | MongoDB | JWT | React Hook Form
+    // Familiar: Git | Adobe Photoshop | Adobe Illustrator
+    // Tools: GitHub | Visual Studio Code | Firebase | React Router | Netlify | Surge | Vercel | Dotenv | Figma | Chrome Dev Tools |
+    // Canva
+
+    const mySkills =
+    {
+        expertise: [
+            "HTML5", "CSS3", "JavaScript ES6", "React.js", "Tailwind", "Bootstrap", "React Bootstrap", "DaisiUI", "Flowbite", "Relationship Building", "Team Collaboration"
+        ],
+        comfortable: [
+            "Communication & Networking", "Career Counseling", "Mentoring & Guidance", "Project Management", "Express and Node.js", "Rest API", "Devtool and Debugging", "MongoDB", "JWT", "React Hook Form"
+        ],
+        familiar: [
+            "Git", "Adobe Photoshop", "Adobe Illustrator"
+        ],
+        tools: [
+            "GitHub", "Visual Studio Code", "Firebase", "React Router", "Netlify", "Surge", "Vercel", "Dotenv", "Figma", "Chrome Dev Tools", "Canva"
+        ]
+    }
+
+
+
     return (
         <section className="bg-bandTernary inner-container py-8 lg:py-14">
             <h1 className="font-extrabold banner-name-font text-6xl text-center">About me!</h1>
-            <div className="py-5 md:py-8 space-y-4 flex flex-col md:flex-row-reverse bg-bandSecondary items-center justify-between">
+            <div className="py-5 md:py-8 space-y-4 flex flex-col md:flex-row bg-bandSecondary items-start justify-between">
+                <div
+                    data-aos="fade-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-duration="1000"
+                    className="bg-bandSecondary text-white p-6 rounded-lg w-full md:w-1/2 space-y-8">
+                    <CircularText text="&nbsp; Welcome &nbsp; to &nbsp; the &nbsp; sky--" degree={9} circleSize="350px" logoSize={"260px"} logoUrl={myImg} origin="175px"
+                        textClass="text-5xl font-bold text-bandYellow uppercase "
+                        filter="brightness(1.2) contrast(1.2)"
+                        animationSpeed="8s"
+                    />
+                    <div className='grid grid-cols-2 gap-4 justify-center items-center'>
+
+                        <p className='bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44'
+                        >
+                            <Link href="https://www.linkedin.com/in/nazmus-sakib-sheam" className="social-button social-button--linkedin" aria-label="LinkedIn">
+                                <FaLinkedin />
+                            </Link>
+                            <p className='text-white text-sm text-center font-extrabold'>Connect with Linkedin</p>
+                        </p>
+                        <p className='bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44'>
+                            <Link href="https://www.github.com/NS-Sheam" className="social-button social-button--github" aria-label="Github">
+                                <FaGithub />
+                            </Link>
+                            <p className='text-white text-sm text-center font-extrabold'>Explore my Github</p>
+                        </p>
+                        <p className='bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44'
+                        >
+                            <Link href="" className="social-button social-button--hire-me" aria-label="Hire me">
+                                <FaUser />
+                            </Link>
+                            <p className='text-white text-sm text-center font-extrabold'>Hire me</p>
+                        </p>
+                        <p className='bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44'>
+                            <Link href="https://drive.google.com/file/d/1XhOOmSn6iqDiaA-DNsgsBg3HS7YFNtfa/view?usp=drive_link" className="social-button social-button--resume" aria-label="Resume">
+                                <FaFile />
+                            </Link>
+                            <p className='text-white text-sm text-center font-extrabold'>Download my resume</p>
+                        </p>
+
+                    </div>
+                    <div className="space-y-2">
+                        <p className="text-xl font-extrabold">Skills:</p>
+                        <hr />
+
+                        <div className="grid grid-cols-2 gap-4">
+                            {
+                                Object.keys(mySkills).map((skill, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <h2 className="text-2xl font-bold underline">{skill}:</h2>
+
+                                            <ul className=" pl-4">
+                                                {
+                                                    mySkills[skill].map((item, index) => {
+                                                        return (
+                                                            <li className="banner-name-font font-bold" key={index}><FiArrowUpRight className="text-xs inline text-bandYellow" /> {item}</li>
+                                                        )
+                                                    })
+                                                }
+                                            </ul>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+
+
+
+                    </div>
+                </div>
                 <div
                     data-aos="fade-right"
                     data-aos-anchor="#example-anchor"
@@ -69,25 +169,6 @@ const About = () => {
                     <button onClick={handleDownloadCv} className={`gradient-btn border-2 border-white mx-auto w-56 block py-2 px-5 rounded-full text-white font-bold`}>Download CV</button>
 
                 </div>
-                <div
-                    data-aos="fade-left"
-                    data-aos-anchor="#example-anchor"
-                    data-aos-duration="1000"
-                    className="bg-bandSecondary text-white p-6 rounded-lg w-full md:w-1/2 text-center">
-                    <p className="text-xl md:text-3xl font-bold text-white">Hello! I am </p>
-                    <p className="text-xl md:text-3xl"><span className="font-bold text-green-500">MD. Nazmus Sakib Sheam</span></p>
-                    <p className="text-justify">I am a <span className="font-bold text-green-500">MERN Stack Developer</span>. As a MERN stack developer, I have a good understanding of HTML, CSS, and JavaScript, and I have successfully worked on over 30 projects. With my expertise in these core technologies, I specialize in building dynamic and responsive web applications.
-
-                        In my portfolio, I have developed a diverse range of projects, including e-commerce websites, social media platforms, content management systems, and more. Each project has provided me with valuable experience in implementing different features, integrating APIs, and optimizing performance.
-
-                        Throughout these projects, I have demonstrated my ability to effectively collaborate with clients, designers, and other team members to bring their visions to life. I am skilled at translating requirements into functional and visually appealing web applications, while adhering to best practices and ensuring code quality.
-
-                        My experience spans the entire development lifecycle, from initial planning and design to deployment and maintenance. I am proficient in version control using Git, which enables me to work efficiently in a team environment and ensure smooth collaboration.
-
-                        I am constantly expanding my knowledge and staying up to date with the latest advancements in the MERN stack and web development industry. This allows me to incorporate the most relevant and cutting-edge techniques into my projects, ensuring they are modern, performant, and user-friendly.
-
-                        Overall, my experience of working on 30+ projects as a MERN stack developer has provided me with a strong foundation in HTML, CSS, and JavaScript, as well as a deep understanding of the MERN stack. I am committed to delivering high-quality web applications that meet client requirements and provide an exceptional user experience.</p>
-                </div>
             </div>
         </section >
     );
@@ -96,48 +177,3 @@ const About = () => {
 export default About;
 
 
-
-// Objective_______________________________________________________________________________
-// Passionate and dedicated web developer with a strong foundation in HTML5, CSS3, and JavaScript. Skilled in creating dynamic web applications using React, Express, Node.js, and MongoDB. Committed to delivering exceptional code quality, driving innovation, and providing seamless user experiences. Seeking a challenging role where I can leverage my skills and contribute to cutting-edge projects in a collaborative and growth-oriented environment.
-// Skills___________________________________________________________________________________
-// Expertise: HTML5 | CSS3 | JavaScript ES6 | React.js | Tailwind | Bootstrap | React Bootstrap | DaisiUI | Flowbite
-// Comfortable: Express and Node.js | Typescript | Rest API | Mongoose | Devtool and Debugging | MongoDB | JWT | React Hook Form
-// Familiar: Prisma | Redux | Next.js | PostgreSQL | Git | Adobe Photoshop | Adobe Illustrator
-// Tools: GitHub | Visual Studio Code | Firebase | React Router | Netlify | Surge | Vercel | Dotenv | Figma | Chrome Dev Tools | Canva
-// Projects________________________________________________________________________________
-// Magic Learner (A summer camp music school website) Client Site | Server Site | Live Site
-// Time Period: 10-12 days
-// Key Features:
-// • Implemented payment system.
-// • Integrated real-time data using Express, MongoDB and Firebase.
-// • Implemented different dashboard for admin, instructor and user.
-// Heroverse (A superhero toy marketplace website) Client Site | Server Site | Live Site
-// Time Period: 7-10 days
-// Key Features:
-// • Implemented responsive design using React and CSS3.
-// • Integrated real-time data using Express, MongoDB and Firebase.
-// • Optimized website performance for fast loading speed.
-// Chef Universe (Chef’s details related website) Client Site | Server Site | Live Site
-// Time Period: 7-10 days
-// Key Features:
-// • Designed and implemented interactive user interface using React and CSS3.
-// • Integrated backend functionalities using Express and Firebase.
-// • Implemented dynamic data filtering functionality using React and Express
-// Experience______________________________________________________________________________
-// Jun 2023 – Oct 2023 | MERN Stack Developer Intern, Fastbooks
-// Bihar, India
-// Oct 2020 – Jul 2021 | IT Incharge, The Daily Provat Alo
-// Feni Pouroshova, Feni
-// Education_______________________________________________________________________________
-// Green University of Bangladesh, B.Sc in CSE
-// Duration: Feb 2021 to present
-// Achievement/Courses/Certificates__________________________________________________________
-// -Jun 2023 – Oct 2023 | Fastbooks | MERN Stack Development Internship
-// - Dec 2022 – June 2023 | Programming Hero | Complete Web Development Course With Jhankar Mahbub (batch-7)
-// - Feb 2020 – May 2020 | Atova Technology | MikroTik Routing & Security
-// - Jan 2018 – May 2018 | Computer Village & Multimedia | Microsoft Office Management
-// Hobbies and Interests_____________________________________________________________________
-// - Learning unknown programming languages
-// - Watching movies
-// Languages______________________________________________________________________________
-// Bangla (Native) | English (Comfortable) | Hindi (Familiar)

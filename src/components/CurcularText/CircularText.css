@@ -2,29 +2,22 @@
   border-radius: 50%;
 }
 .logo {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  background: url("../../assets/images/my-img-2.jpg");
-  background-size: cover;
-  border-radius: 50%;
   /* filter: brightness(1.5) contrast(1.5); */
 }
 .text {
-  animation: rotateText 10s linear infinite;
+  /* animation: rotateText 10s linear infinite; */
 }
 .text span {
   position: absolute;
   left: 50%;
-  transform-origin: 0 75px;
 }
 
 @keyframes rotateText {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
 
