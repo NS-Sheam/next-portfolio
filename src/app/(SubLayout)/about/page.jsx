@@ -1,10 +1,7 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import myImg from "@/assets/images/my-img.jpg";
 import {
-  FaArrowRight,
-  FaCheck,
   FaFile,
   FaGithub,
   FaLinkedin,

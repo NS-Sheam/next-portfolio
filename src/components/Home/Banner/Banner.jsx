@@ -80,7 +80,7 @@ const Banner = () => {
             <Image
               blurDataURL="../../../assets/images/banner3.jpg"
               placeholder="blur"
-              onLoad={(e) => console.log(e.target.naturalWidth)}
+              // onLoad={(e) => console.log(e.target.naturalWidth)}
               src={myImg}
               alt="image"
               className="rounded-xl mx-auto hover:scale-105 duration-300 shadow-lg"
