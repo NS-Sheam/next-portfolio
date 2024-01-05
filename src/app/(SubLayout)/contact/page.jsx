@@ -1,5 +1,5 @@
 "use client";
-import emailjs from '@emailjs/browser';
+
 import img from "@/assets/images/contact-image/contact_us.png"
 import "./Contact.css"
 import { useRef } from "react";
@@ -7,38 +7,21 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Image from "next/image";
 import { BiArrowToRight } from 'react-icons/bi';
+import { sendEmailWithEmailJS } from "./contact.utils";
 
 const Contact = () => {
     const form = useRef();
     // console.log(object);
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
+        const result = await sendEmailWithEmailJS(form.current);
+        console.log(result.status);
 
-        emailjs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TAMPLATE_ID}`, form.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
-            .then((result) => {
-                toast.success("Your email sent successfully", {
-                    position: "top-right",
-                    autoClose: 2500,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark"
-                })
-            }, (error) => {
-                // console.log(error.text);
-                toast.success(error.text, {
-                    position: "top-right",
-                    autoClose: 2500,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark"
-                })
-            });
+        if (result?.status === 200) {
+            form.current.reset();
+        }
+
+
     };
     const commonInputClass = `w-full p-3 rounded-md border-b-2 bg-transparent outline-none`
 
