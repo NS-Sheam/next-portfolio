@@ -67,16 +67,35 @@ const Contact = () => {
                             </button>
                         </form>
                     </div>
-                    <CircularText
-                        text="&nbsp; -Welcome &nbsp; to &nbsp; my &nbsp; portfolio- &nbsp;"
-                        degree={7}
-                        circleSize="150px"
-                        logoSize={"100px"}
-                        logoUrl={myImg2}
-                        origin="75px"
-                        textClass="text-xl text-bandYellow font-bold uppercase shadow-md shadow-white -leading-4"
-                        animationSpeed="10s"
-                    />
+                    <div>
+                        {/* for dextop  */}
+                        <div className="lg:block ">
+                            <CircularText
+                                text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
+                                degree={8}
+                                circleSize="400px"
+                                logoSize={"320px"}
+                                logoUrl={myImg2}
+                                origin="200px"
+                                textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
+                                animationSpeed="10s"
+                            />
+                        </div>
+                        {/* for mobile */}
+                        <div className="md:hidden">
+                            <CircularText
+                                text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
+                                degree={8}
+                                circleSize="400px"
+                                logoSize={"320px"}
+                                logoUrl={myImg2}
+                                origin="200px"
+                                textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
+                                animationSpeed="10s"
+
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
             <ToastContainer
