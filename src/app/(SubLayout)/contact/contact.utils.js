@@ -2,7 +2,7 @@ import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 export const sendEmailWithEmailJS = async (formData) => {
   try {
-    const response = await toast.promise(
+    const result = await toast.promise(
       emailjs.sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TAMPLATE_ID,
@@ -16,7 +16,7 @@ export const sendEmailWithEmailJS = async (formData) => {
       },
     );
 
-    return response.value;
+    return result;
   } catch (error) {
     toast.error("Something went wrong", {
       position: "top-right",

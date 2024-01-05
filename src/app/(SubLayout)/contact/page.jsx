@@ -13,7 +13,6 @@ const Contact = () => {
     const sendEmail = async (e) => {
         e.preventDefault();
         const result = await sendEmailWithEmailJS(form.current);
-        console.log(result.status);
 
         if (result?.status === 200) {
             form.current.reset();
