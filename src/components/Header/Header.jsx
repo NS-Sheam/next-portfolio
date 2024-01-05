@@ -264,7 +264,7 @@ const Header = () => {
       {/* {floatingMenu} */}
 
       {goToTopIcon}
-      <div className="social-buttons flex flex-wrap justify-center md:justify-start gap-2">
+      <div className="social-buttons space-y-4">
         <Link
           href="https://www.facebook.com/nazmus.sheam.sakib"
           className="social-button social-button--facebook"
