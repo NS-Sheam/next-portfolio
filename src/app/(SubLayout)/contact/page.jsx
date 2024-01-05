@@ -69,7 +69,7 @@ const Contact = () => {
                     </div>
                     <div>
                         {/* for dextop  */}
-                        <div className="lg:block ">
+                        {/* <div className="lg:block ">
                             <div>
                                 <CircularText
                                     text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
@@ -82,21 +82,19 @@ const Contact = () => {
                                     animationSpeed="10s"
                                 />
                             </div>
-                        </div>
+                        </div> */}
                         {/* for mobile */}
                         <div className="lg:block ">
-                            <div>
-                                <CircularText
-                                    text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
-                                    degree={8}
-                                    circleSize="400px"
-                                    logoSize={"320px"}
-                                    logoUrl={myImg2}
-                                    origin="200px"
-                                    textClass="text-4xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
-                                    animationSpeed="10s"
-                                />
-                            </div>
+                            <CircularText
+                                text="&nbsp; -Send &nbsp; me &nbsp; your &nbsp; thoughts- &nbsp;"
+                                degree={8}
+                                circleSize="200px"
+                                logoSize={"140px"}
+                                logoUrl={myImg2}
+                                origin="100px"
+                                textClass="text-2xl text-green-500 font-bold uppercase shadow-md shadow-white -leading-4"
+                                animationSpeed="10s"
+                            />
                         </div>
                     </div>
                 </div>
