@@ -7,7 +7,6 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 import Image from "next/image";
 import { useState } from "react";
 import { handleDownloadResume } from "@/components/utils";
-import BannerSvg from "./BannerSvg";
 
 import CircularText from "@/components/CurcularText/CircularText";
 const Banner = () => {
