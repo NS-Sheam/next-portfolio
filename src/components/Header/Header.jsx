@@ -243,7 +243,6 @@ const Header = () => {
 
         </div>
       </section>
-      {/* {floatingMenu} */}
 
       {goToTopIcon}
       <div className={`absolute overflow-hidden space-y-4 `}>
