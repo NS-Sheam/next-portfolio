@@ -9,6 +9,7 @@ import Image from "next/image";
 import { BiArrowToRight } from 'react-icons/bi';
 import { sendEmailWithEmailJS } from "./contact.utils";
 import myImg2 from "@/assets/images/my-img-2.jpg";
+import CircularText from "@/components/CurcularText/CircularText";
 const Contact = () => {
     const form = useRef();
     // console.log(object);
@@ -78,7 +79,6 @@ const Contact = () => {
                     />
                 </div>
             </div>
-        </div >
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
