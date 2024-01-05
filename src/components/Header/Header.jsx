@@ -20,7 +20,8 @@ import ActiveLink from "@/components/ActiveLink/ActiveLink";
 import Link from "next/link";
 import { handleDownloadResume } from "../utils";
 import myImg from "@/assets/images/my-img.jpg";
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaHome, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import "./Header.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -264,40 +265,47 @@ const Header = () => {
       {/* {floatingMenu} */}
 
       {goToTopIcon}
-      <div className="social-buttons space-y-4">
+      <div className="menu-buttons space-y-4">
         <Link
           href="https://www.facebook.com/nazmus.sheam.sakib"
-          className="social-button social-button--facebook"
-          aria-label="Facebook"
+          className="menu-button social-button--home"
+          aria-label="Home"
         >
-          <FaFacebook />
+          <FaHome />
         </Link>
         <Link
           href="https://www.linkedin.com/in/nazmus-sakib-sheam"
-          className="social-button social-button--linkedin"
-          aria-label="LinkedIn"
+          className="menu-button menu-button--services"
+          aria-label="Services"
         >
           <FaLinkedin />
         </Link>
         <Link
           href="https://www.github.com/NS-Sheam"
-          className="social-button social-button--github"
-          aria-label="GitHub"
+          className="menu-button menu-button--projects"
+          aria-label="Projects"
         >
           <FaGithub />
         </Link>
         <Link
           href="https://www.instagram.com/nazmus_sakib_sheam/"
-          className="social-button social-button--instagram"
-          aria-label="Instagram"
+          className="menu-button menu-button--about"
+          aria-label="About"
         >
           <FaInstagram />
         </Link>
 
         <Link
           href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw"
-          className="social-button social-button--youtube"
-          aria-label="Snapchat"
+          className="menu-button menu-button--blog"
+          aria-label="Blog"
+        >
+          <FaYoutube />
+        </Link>
+        <Link
+          href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw"
+          className="menu-button menu-button--contact"
+          aria-label="Contact"
         >
           <FaYoutube />
         </Link>

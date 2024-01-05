@@ -87,4 +87,111 @@
 
 /* ----------------- floating menu  css start ------------------ */
 
+:root {
+  --menu-button-size: 3rem;
+  --menu-button-icon-size: 1.8rem;
+  --menu-button-background: #fff;
+  --menu-button-active-color: #fff;
+  --menu-button-transition-time: 0.3s;
+}
+
+.menu-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  width: var(--menu-button-size);
+  height: var(--menu-button-size);
+  text-decoration: none;
+  border-radius: 100%;
+  background: var(--menu-button-background);
+  text-align: center;
+}
+
+.menu-button::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  transition: var(--menu-button-transition-time);
+}
+
+.menu-button:focus,
+.menu-button:hover {
+  color: var(--menu-button-active-color);
+}
+
+.menu-button:focus::after,
+.menu-button:hover::after {
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  margin-left: calc(-50% - 1px);
+}
+
+.menu-button i,
+.menu-button svg {
+  position: relative;
+  z-index: 1;
+  transition: var(--menu-button-transition-time);
+}
+
+.menu-button i {
+  font-size: var(--menu-button-icon-size);
+}
+
+.menu-button svg {
+  height: var(--menu-button-icon-size);
+  width: var(--menu-button-icon-size);
+}
+
+.menu-btn--home {
+  color: #0072c6;
+}
+
+.menu-btn--home::after {
+  background: #0072c6;
+}
+
+.menu-btn--services {
+  color: #c50169;
+}
+
+.menu-btn--services::after {
+  background: #c50169;
+}
+
+.menu-btn--projects {
+  color: #3b5999;
+}
+.menu-btn--projects::after {
+  background: #3b5999;
+}
+.menu-btn--about {
+  color: #bc00b5;
+}
+.menu-btn--about::after {
+  background: #bc00b5;
+}
+
+.menu-btn--contact {
+  color: #6e5494;
+}
+
+.menu-btn--contact::after {
+  background: #6e5494;
+}
+
+.menu-btn--blog {
+  color: #ff0000;
+}
+
+.menu-btn--blog::after {
+  background: #ff0000;
+}
+
 /* -------------------- floating menu  css ends ------------------ */
