@@ -1,0 +1,10 @@
+.textarea[data-placeholder]:empty:before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    pointer-events: none;
+  }
+  
+  .textarea:focus:before {
+    display: none;
+  }
+  

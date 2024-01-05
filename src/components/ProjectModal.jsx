@@ -10,7 +10,6 @@ const imageLoader = ({ src, width, quality }) => {
 };
 
 const ProjectModal = ({ projectData }) => {
-  console.log(projectData);
   const {
     projectName,
     technology,
@@ -20,7 +19,6 @@ const ProjectModal = ({ projectData }) => {
     clientSite,
     serverSite,
   } = projectData;
-  console.log(clientSite, liveSite);
 
   return (
     <div>

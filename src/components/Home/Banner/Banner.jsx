@@ -57,13 +57,14 @@ const Banner = () => {
             </button>
           </div>
           <CircularText
-            text="&nbsp; Welcome &nbsp; to &nbsp; my &nbsp; portfolio!! &nbsp;"
-            degree={9}
+            text="&nbsp; -Welcome &nbsp; to &nbsp; my &nbsp; portfolio- &nbsp;"
+            degree={7}
             circleSize="150px"
             logoSize={"100px"}
             logoUrl={myImg2}
             origin="75px"
             textClass="text-xl text-bandYellow font-bold uppercase shadow-md shadow-white -leading-4"
+            animationSpeed="10s"
           />
         </div>
         <div
@@ -88,9 +89,8 @@ const Banner = () => {
             />
 
             <div
-              className={`absolute h-full w-full ${
-                isHovered ? "flex" : "hidden"
-              } justify-center items-center bg-opacity-50 bg-black top-0 right-0`}
+              className={`absolute h-full w-full ${isHovered ? "flex" : "hidden"
+                } justify-center items-center bg-opacity-50 bg-black top-0 right-0`}
             >
               <label
                 className={`btn button-container-dark  text-bandTernary transform duration-300 p-4 font-bold`}
