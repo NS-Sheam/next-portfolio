@@ -4,7 +4,6 @@ import useBlogsData from "@/hooks/useBlogsData";
 
 const Blogs = () => {
     const { blogs } = useBlogsData();
-    console.log(blogs);
 
     // const navigation = useNavigation();
     // if (navigation.state === "loading") {
@@ -31,11 +30,11 @@ const Blogs = () => {
     //     </div>
     // }
     return (
-        <div className="bg-bandTernary py-8 lg:py-14 space-y-6">
+        <div className="bg-bandTernary py-8 lg:py-14 space-y-6 inner-container">
 
             <h1 className=" font-extrabold banner-name-font text-6xl text-center">My Blogs</h1>
-            <p className={`text-white text-justify md:text-center w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}>Browse through my portfolio to explore a diverse range of projects that demonstrate my skills in web development. From interactive React applications to functional JavaScript projects and visually appealing HTML/CSS interfaces, you will find a showcase of my expertise in various web technologies.</p>
-            <div className="inner-container">
+            <p className={`text-white text-justify md:text-center w-full md:w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}>Browse through my portfolio to explore a diverse range of projects that demonstrate my skills in web development. From interactive React applications to functional JavaScript projects and visually appealing HTML/CSS interfaces, you will find a showcase of my expertise in various web technologies.</p>
+            <div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-end mx-auto my-5 gap-5 -mt-8 ">
                     {blogs.map(blog => <BlogCard key={blog._id} blog={blog} />)}
                 </div>

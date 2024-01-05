@@ -39,8 +39,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* d207d9
-c1aaed */
+
 .react-tabs__tab--selected {
   border: none !important;
   background: transparent !important;

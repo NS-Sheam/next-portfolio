@@ -258,6 +258,7 @@ const Header = () => {
         </div>
       </section>
       {/* {floatingMenu} */}
+
       {goToTopIcon}
     </>
   );

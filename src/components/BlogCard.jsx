@@ -1,13 +1,11 @@
 import moment from "moment";
 import Image from "next/image";
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
 import Link from "next/link";
 
 const BlogCard = ({ blog }) => {
-  const { theme } = useGlovalContext();
   return (
     <div
-      className={` bg-base-100 shadow-slate-500 shadow-sm text-left h-full border-2 w-full mx-auto  rounded-lg `}
+      className={`card bg-base-100 shadow-slate-500 shadow-sm text-left h-full border-2 w-full mx-auto  rounded-lg `}
     >
       <div className="blog-card space-y-2 relative h-full">
         <Image
