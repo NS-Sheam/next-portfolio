@@ -20,6 +20,7 @@ import ActiveLink from "@/components/ActiveLink/ActiveLink";
 import Link from "next/link";
 import { handleDownloadResume } from "../utils";
 import myImg from "@/assets/images/my-img.jpg";
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -263,6 +264,44 @@ const Header = () => {
       {/* {floatingMenu} */}
 
       {goToTopIcon}
+      <div className="social-buttons flex flex-wrap justify-center md:justify-start gap-2">
+        <Link
+          href="https://www.facebook.com/nazmus.sheam.sakib"
+          className="social-button social-button--facebook"
+          aria-label="Facebook"
+        >
+          <FaFacebook />
+        </Link>
+        <Link
+          href="https://www.linkedin.com/in/nazmus-sakib-sheam"
+          className="social-button social-button--linkedin"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
+        </Link>
+        <Link
+          href="https://www.github.com/NS-Sheam"
+          className="social-button social-button--github"
+          aria-label="GitHub"
+        >
+          <FaGithub />
+        </Link>
+        <Link
+          href="https://www.instagram.com/nazmus_sakib_sheam/"
+          className="social-button social-button--instagram"
+          aria-label="Instagram"
+        >
+          <FaInstagram />
+        </Link>
+
+        <Link
+          href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw"
+          className="social-button social-button--youtube"
+          aria-label="Snapchat"
+        >
+          <FaYoutube />
+        </Link>
+      </div>
     </>
   );
 };
