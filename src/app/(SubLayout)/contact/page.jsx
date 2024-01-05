@@ -54,7 +54,7 @@ const Contact = () => {
                         data-aos-duration="1000"
                         className="bg-transparent col-span-1">
                         <form
-                            ref={form} onSubmit={sendEmail} className="space-y-4 lg:space-y-6 text-justify grid grid-cols-2 items-center justify-center gap-4">
+                            ref={form} onSubmit={sendEmail} className="text-justify grid grid-cols-2 items-center justify-center gap-6">
                             <div
                                 data-aos="flip-right"
                                 data-aos-anchor="#example-anchor"
@@ -78,7 +78,7 @@ const Contact = () => {
                                 data-aos="flip-right"
                                 data-aos-anchor="#example-anchor"
                                 data-aos-duration="1500"
-                                className="form-control mt-6">
+                                className="form-control">
                                 <button className={`btn gradient-btn border-2 border-white text-white hover:bg-opacity-25`}>Send</button>
                             </div>
                         </form>
