@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Image from "next/image";
 import { BiArrowToRight } from 'react-icons/bi';
 import { sendEmailWithEmailJS } from "./contact.utils";
-
+import myImg2 from "@/assets/images/my-img-2.jpg";
 const Contact = () => {
     const form = useRef();
     // console.log(object);
@@ -66,20 +66,19 @@ const Contact = () => {
                             </button>
                         </form>
                     </div>
-                    <div
-                        className="hidden lg:block contact-img text-center lg:text-left col-span-1">
-                        <Image
-                            src={img}
-                            alt="contact"
-                            width={500}
-                            height={500}
-                            data-aos="fade-left"
-                            data-aos-anchor="#example-anchor"
-                            data-aos-duration="1000"
-                        />
-                    </div>
+                    <CircularText
+                        text="&nbsp; -Welcome &nbsp; to &nbsp; my &nbsp; portfolio- &nbsp;"
+                        degree={7}
+                        circleSize="150px"
+                        logoSize={"100px"}
+                        logoUrl={myImg2}
+                        origin="75px"
+                        textClass="text-xl text-bandYellow font-bold uppercase shadow-md shadow-white -leading-4"
+                        animationSpeed="10s"
+                    />
                 </div>
             </div>
+        </div >
             <ToastContainer
                 position="top-right"
                 autoClose={5000}
