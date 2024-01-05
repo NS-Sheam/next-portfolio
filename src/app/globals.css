@@ -299,3 +299,23 @@ body {
   }
 }
 /* ----------------------------------------wavecontainer css ends-----------------------------------------  */
+
+/* ------------------------------------------- go-to-right-btn css starts----------------------------------------- */
+.go-to-right-btn {
+  animation: go-to-right-btn-animation 3s infinite;
+}
+@keyframes go-to-right-btn-animation {
+  0% {
+    transform: translateX(-200%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+/* ------------------------------------------- go-to-right-btn css ends----------------------------------------- */

@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Image from "next/image";
+import { BiArrowToRight } from 'react-icons/bi';
 
 const Contact = () => {
     const form = useRef();
@@ -54,7 +55,7 @@ const Contact = () => {
                         data-aos-duration="1000"
                         className="bg-transparent col-span-1">
                         <form
-                            ref={form} onSubmit={sendEmail} className="text-justify grid grid-cols-2 items-center justify-center gap-6">
+                            ref={form} onSubmit={sendEmail} className="text-justify md:grid grid-cols-2 items-center justify-center gap-6 space-y-3 md:space-y-0">
                             <div
                                 data-aos="flip-right"
                                 data-aos-anchor="#example-anchor"
@@ -75,16 +76,14 @@ const Contact = () => {
                                 data-aos-duration="1500"
                                 placeholder="your message" name="message" className={`${commonInputClass} col-span-2`} required></textarea>
                             <div
-                                data-aos="flip-right"
-                                data-aos-anchor="#example-anchor"
-                                data-aos-duration="1500"
-                                className="form-control">
-                                <button className={`btn gradient-btn border-2 border-white text-white hover:bg-opacity-25`}>Send</button>
+                                className={`w-32 py-1 rounded-md flex items-center justify-center gradient-btn bg-bandPrimary shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden`}
+                            >
+                                <BiArrowToRight className="go-to-right-btn" />
                             </div>
                         </form>
                     </div>
                     <div
-                        className="contact-img text-center lg:text-left col-span-1">
+                        className="hidden lg:block contact-img text-center lg:text-left col-span-1">
                         <Image
                             src={img}
                             alt="contact"
