@@ -21,7 +21,7 @@ import Link from "next/link";
 import { handleDownloadResume } from "../utils";
 import myImg from "@/assets/images/my-img.jpg";
 import { FaFacebook, FaGithub, FaHome, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
-import "./Header.css";
+import { FiMenu } from "react-icons/fi";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +32,7 @@ const Header = () => {
   const { theme, setTheme } = useGlovalContext();
 
   const [isOn, setIsOn] = useState(false);
+  const menuButtonCommonClasses = `menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"}`
 
   const toggleSwitch = () => {
     setIsOn(!isOn);
@@ -39,36 +40,43 @@ const Header = () => {
   };
 
   const menuData = [
-    // {
-    //     path: "/",
-    //     name: "Home",
-    //     icon: <AiOutlineHome />
-    // },
     {
-      path: "/projects",
-      name: "Projects",
-      icon: <AiOutlineProject />,
-    },
-    {
-      path: "/blogs",
-      name: "Blogs",
-      icon: <LiaBlogSolid />,
+      path: "/",
+      name: "Home",
+      icon: <FaHome />,
+      className: "menu-button--home"
     },
     {
       path: "/services",
       name: "Services",
       icon: <AiFillCustomerService />,
+      className: "menu-button--services"
+    },
+    {
+      path: "/projects",
+      name: "Projects",
+      icon: <AiOutlineProject />,
+      className: "menu-button--projects"
     },
     {
       path: "/about",
       name: "About",
       icon: <SiAboutdotme />,
+      className: "menu-button--about"
     },
     {
       path: "/contact",
       name: "Contact",
       icon: <AiOutlineMail />,
+      className: "menu-button--contact"
     },
+    {
+      path: "/blogs",
+      name: "Blogs",
+      icon: <LiaBlogSolid />,
+      className: "menu-button--blog"
+    },
+
   ];
 
   useEffect(() => {
@@ -98,51 +106,24 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [scrollToTop]);
-  const floatingMenu = (
-    <div
-      className={`${isHeaderFixed &&
-        `fixed bottom-2 md:bottom-auto left-2 right-2 md:left-2 md:w-11 md:top-1/3 rounded-full bg-bandPrimary z-50 shadow-md shadow-white`
-        }`}
-    >
-      <ul
-        className={`header-list flex gap-6 ${isHeaderFixed &&
-          "flex-row md:flex-col p-3 text-2xl items-center justify-center"
-          } ${theme == "light" ? "text-bandTernary" : "text-bandFont"}`}
-      >
-        <Link href="/">
-          <Image
-            className={`${isHeaderFixed
-              ? "block wavecontainer w-10 h-8 bg-transparent mx-auto"
-              : "hidden"
-              }`}
-            src={myImg}
-            alt=""
-          />
-        </Link>
-
-        {menuData.map(({ path, icon }, index) => (
-          <li key={index}>
-            <ActiveLink exact={path === "/"} href={path}>
-              {isHeaderFixed && icon}
-            </ActiveLink>
-          </li>
-        ))}
-        <li onClick={toggleSwitch} className="text-bandYellow">
-          {isHeaderFixed && <p>{theme == "light" ? <BiMoon /> : <BiSun />}</p>}
-        </li>
-      </ul>
-    </div>
-  );
 
   const goToTopIcon = (
-    <div
-      onClick={() => setScrollToTop(true)}
-      className={`${isHeaderFixed
-        ? "fixed bottom-20 md:bottom-4 right-2 md:right-6 h-10 w-10 md:h-14 md:w-14 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden"
-        : "hidden"
-        }`}
-    >
-      <BiArrowToTop className="go-to-top-btn" />
+    <div className="fixed bottom-20 md:bottom-4 right-2 md:right-6 space-y-3 z-20">
+      <div
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className={`h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold hamburger-button`}
+      >
+        <FiMenu className="" />
+      </div>
+      <div
+        onClick={() => setScrollToTop(true)}
+        className={`${isHeaderFixed
+          ? "h-10 w-10 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-bandPrimary z-50 shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden"
+          : "hidden"
+          }`}
+      >
+        <BiArrowToTop className="go-to-top-btn" />
+      </div>
     </div>
   );
   const spring = {
@@ -265,31 +246,31 @@ const Header = () => {
       {/* {floatingMenu} */}
 
       {goToTopIcon}
-      <div className="menu-buttons space-y-4">
+      <div className={`absolute overflow-hidden space-y-4 `}>
         <Link
           href="https://www.facebook.com/nazmus.sheam.sakib"
-          className="menu-button social-button--home"
+          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--home`}
           aria-label="Home"
         >
           <FaHome />
         </Link>
         <Link
           href="https://www.linkedin.com/in/nazmus-sakib-sheam"
-          className="menu-button menu-button--services"
+          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--services`}
           aria-label="Services"
         >
           <FaLinkedin />
         </Link>
         <Link
           href="https://www.github.com/NS-Sheam"
-          className="menu-button menu-button--projects"
+          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--projects`}
           aria-label="Projects"
         >
           <FaGithub />
         </Link>
         <Link
-          href="https://www.instagram.com/nazmus_sakib_sheam/"
-          className="menu-button menu-button--about"
+          href={`https://www.instagram.com/nazmus_sakib_sheam/`}
+          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--about`}
           aria-label="About"
         >
           <FaInstagram />
@@ -297,14 +278,14 @@ const Header = () => {
 
         <Link
           href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw"
-          className="menu-button menu-button--blog"
+          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--blog`}
           aria-label="Blog"
         >
           <FaYoutube />
         </Link>
         <Link
           href="https://www.youtube.com/channel/UCdY7PHMDlimtznZZHBHlcHw"
-          className="menu-button menu-button--contact"
+          className={`menu-button duration-300 ${isMenuOpen ? "top-96" : "top-0"} menu-button--contact`}
           aria-label="Contact"
         >
           <FaYoutube />

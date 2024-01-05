@@ -148,50 +148,76 @@
   height: var(--menu-button-icon-size);
   width: var(--menu-button-icon-size);
 }
-
-.menu-btn--home {
-  color: #0072c6;
+.menu-button--home {
+  color: #bc00b5;
 }
 
-.menu-btn--home::after {
-  background: #0072c6;
+.menu-button--home::after {
+  background: linear-gradient(
+    45deg,
+    #bc00b5,
+    #ff99cc
+  ); /* Gradient background for the pseudo-element */
 }
 
-.menu-btn--services {
+.menu-button--services {
+  color: #3b5999;
+}
+
+.menu-button--services::after {
+  background: linear-gradient(
+    45deg,
+    #3b5999,
+    #6699ff
+  ); /* Gradient background for the pseudo-element */
+}
+
+.menu-button--projects {
   color: #c50169;
 }
 
-.menu-btn--services::after {
-  background: #c50169;
+.menu-button--projects::after {
+  background: linear-gradient(
+    45deg,
+    #c50169,
+    #ff005c
+  ); /* Gradient background for the pseudo-element */
 }
 
-.menu-btn--projects {
-  color: #3b5999;
-}
-.menu-btn--projects::after {
-  background: #3b5999;
-}
-.menu-btn--about {
-  color: #bc00b5;
-}
-.menu-btn--about::after {
-  background: #bc00b5;
+.menu-button--about {
+  color: #0072c6;
 }
 
-.menu-btn--contact {
-  color: #6e5494;
+.menu-button--about::after {
+  background: linear-gradient(
+    45deg,
+    #0072c6,
+    #00c2ff
+  ); /* Gradient background for the pseudo-element */
 }
 
-.menu-btn--contact::after {
-  background: #6e5494;
-}
-
-.menu-btn--blog {
+.menu-button--contact {
   color: #ff0000;
 }
 
-.menu-btn--blog::after {
-  background: #ff0000;
+.menu-button--contact::after {
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff6666
+  ); /* Gradient background for the pseudo-element */
+}
+
+.menu-button--blog {
+  color: #6e5494;
+}
+
+.menu-button--blog::after {
+  background: linear-gradient(
+    45deg,
+    #6e5494,
+    #b366cc
+  ); /* Gradient background for the pseudo-element */
 }
 
 /* -------------------- floating menu  css ends ------------------ */
