@@ -8,6 +8,7 @@ const layout = ({ children }) => {
       <div className="bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary">
         <Header />
       </div>
+
       <Suspense
         fallback={
           <div className="h-screen mx-auto">
