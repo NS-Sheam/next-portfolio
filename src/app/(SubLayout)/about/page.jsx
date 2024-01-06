@@ -11,8 +11,8 @@ import {
 } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import CircularText from "@/components/CurcularText/CircularText";
-import { downloadResumeForServerComponent, generateMetaDatas } from "@/components/utils";
-import CommonDownloadButton from "@/components/commonDownloadButton";
+import { generateMetaDatas } from "@/components/utils";
+import ResumeDownloadButton from "@/components/ResumeDownloadButton";
 
 
 
@@ -246,12 +246,11 @@ const About = () => {
               </p>
             </p>
             <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
-              <CommonDownloadButton
-                // downloadFn={downloadResumeForServerComponent}
+              <ResumeDownloadButton
                 className="social-button social-button--resume"
               >
                 <FaFile />
-              </CommonDownloadButton>
+              </ResumeDownloadButton>
               <p className="text-white text-sm text-center font-extrabold">
                 Download my resume
               </p>

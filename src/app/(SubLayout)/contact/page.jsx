@@ -1,26 +1,21 @@
-"use client";
+
 import "./Contact.css"
-import { useRef } from "react";
+// import { useRef } from "react";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { BiArrowToRight } from 'react-icons/bi';
-import { sendEmailWithEmailJS } from "./contact.utils";
 import myImg2 from "@/assets/images/my-img-2.jpg";
 import CircularText from "@/components/CurcularText/CircularText";
+import { generateMetaDatas } from "@/components/utils";
+import ContactForm from "./ContactForm";
+export const metadata = await generateMetaDatas(
+    "Contact",
+    "Let's connect! If you have any questions or would like to discuss potential collaborations, feel free to reach out using the contact details below. I'm eager to hear from you and explore exciting opportunities together. Don't hesitate to get in touch!",
+    myImg2,
+    "contact"
+
+)
 const Contact = () => {
-    const form = useRef();
-    // console.log(object);
-    const sendEmail = async (e) => {
-        e.preventDefault();
-        const result = await sendEmailWithEmailJS(form.current);
 
-        if (result?.status === 200) {
-            form.current.reset();
-        }
-
-
-    };
-    const commonInputClass = `w-full p-3 rounded-md border-b-2 bg-transparent outline-none`
 
     return (
         <>
@@ -34,34 +29,7 @@ const Contact = () => {
                         data-aos-anchor="#example-anchor"
                         data-aos-duration="1000"
                         className="bg-transparent col-span-1 order-last lg:order-first">
-                        <form
-                            ref={form} onSubmit={sendEmail} className="text-justify md:grid grid-cols-2 items-center justify-center gap-6 space-y-3 md:space-y-0">
-                            <div
-                                data-aos="flip-right"
-                                data-aos-anchor="#example-anchor"
-                                data-aos-duration="1500"
-                                className="form-control">
-                                <input type="text" placeholder="name" name="from_name" className={commonInputClass} required />
-                            </div>
-                            <div
-                                data-aos="flip-right"
-                                data-aos-anchor="#example-anchor"
-                                data-aos-duration="1500"
-                                className="form-control">
-                                <input type="text" placeholder="email" name="from_email" className={commonInputClass} required />
-                            </div>
-                            <textarea
-                                data-aos="flip-right"
-                                data-aos-anchor="#example-anchor"
-                                data-aos-duration="1500"
-                                placeholder="your message" name="message" className={`${commonInputClass} col-span-2`} required></textarea>
-                            <button
-                                type="submit"
-                                className={`w-32 py-1 rounded-md flex items-center justify-center gradient-btn bg-bandPrimary shadow-md shadow-white text-white text-4xl font-extrabold overflow-hidden`}
-                            >
-                                <BiArrowToRight className="go-to-right-btn" />
-                            </button>
-                        </form>
+                        <ContactForm />
                     </div>
                     <div>
                         {/* for dextop  */}
