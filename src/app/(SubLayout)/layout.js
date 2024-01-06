@@ -2,8 +2,6 @@ import AnimationPageContainer from "@/components/AnimationPageContainer";
 import Footer from "@/components/Footer/Footer";
 import GlowingBall from "@/components/GlowingBall";
 import Header from "@/components/Header/Header";
-import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 
 import { Suspense } from "react";
 
