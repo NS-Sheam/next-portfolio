@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import CircularText from "@/components/CurcularText/CircularText";
+import { generateMetaDatas } from "@/components/utils";
 
 const About = () => {
   const handleDownloadResume = () => {
@@ -16,6 +17,13 @@ const About = () => {
       "https://drive.google.com/u/0/uc?id=1XhOOmSn6iqDiaA-DNsgsBg3HS7YFNtfa&export=download",
     );
   };
+  const metadata = generateMetaDatas(
+    "About | Nazmus Sakib Sheam",
+    "Nazmus Sakib Sheam is a Full Stack Developer, Backend Developer, React Specialist, Javascript Developer",
+    myImg,
+    "about",
+
+  )
 
   const mySkills = {
     Expertise: [

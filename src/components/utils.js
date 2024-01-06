@@ -1,3 +1,4 @@
+import myimg from "../assets/images/my-img.jpg";
 export const handleDownloadResume = () => {
   const url =
     "https://drive.google.com/u/0/uc?id=1XhOOmSn6iqDiaA-DNsgsBg3HS7YFNtfa&export=download";
@@ -8,4 +9,22 @@ export const handleDownloadResume = () => {
   link.rel = "noopener noreferrer";
   link.download = fileName;
   link.click();
+};
+
+export const generateMetaDatas = async (
+  title,
+  description,
+  image,
+  path,
+  type,
+) => {
+  return {
+    title: "Nazmus Sakib|" + title || "Nazmus Sakib",
+    description: description || "Welcome to the sky of Nazmus Sakib",
+    image: image || myimg,
+    url: "https://nazmus-sakib.me/" + path || "https://nazmus-sakib.me/",
+    type: "Nazmus Sakib" + type || "Nazmus Sakib",
+    siteName: "Nazmus Sakib",
+    facebook: "https://www.facebook.com/nazmus.sakib.sheam/",
+  };
 };
