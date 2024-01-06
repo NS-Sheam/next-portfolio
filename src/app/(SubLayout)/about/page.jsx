@@ -1,4 +1,4 @@
-"use client";
+
 import Link from "next/link";
 import myImg from "@/assets/images/my-img.jpg";
 import {
@@ -10,6 +10,7 @@ import {
 import { FiArrowUpRight } from "react-icons/fi";
 import CircularText from "@/components/CurcularText/CircularText";
 import { generateMetaDatas } from "@/components/utils";
+// import { metadata } from "@/app/layout"
 
 const About = () => {
   const handleDownloadResume = () => {
@@ -17,13 +18,13 @@ const About = () => {
       "https://drive.google.com/u/0/uc?id=1XhOOmSn6iqDiaA-DNsgsBg3HS7YFNtfa&export=download",
     );
   };
-  const metadata = generateMetaDatas(
-    "About | Nazmus Sakib Sheam",
-    "Nazmus Sakib Sheam is a Full Stack Developer, Backend Developer, React Specialist, Javascript Developer",
-    myImg,
-    "about",
+  // const metadata = generateMetaDatas(
+  //   "About | Nazmus Sakib Sheam",
+  //   "Nazmus Sakib Sheam is a Full Stack Developer, Backend Developer, React Specialist, Javascript Developer",
+  //   myImg,
+  //   "about",
 
-  )
+  // )
 
   const mySkills = {
     Expertise: [
@@ -214,7 +215,6 @@ const About = () => {
               <Link
                 href="https://www.linkedin.com/in/nazmus-sakib-sheam"
                 className="social-button social-button--linkedin"
-                aria-label="LinkedIn"
               >
                 <FaLinkedin />
               </Link>
@@ -226,7 +226,6 @@ const About = () => {
               <Link
                 href="https://www.github.com/NS-Sheam"
                 className="social-button social-button--github"
-                aria-label="Github"
               >
                 <FaGithub />
               </Link>
@@ -238,29 +237,28 @@ const About = () => {
               <Link
                 href=""
                 className="social-button social-button--hire-me"
-                aria-label="Hire me"
+            "
               >
-                <FaUser />
-              </Link>
-              <p className="text-white text-sm text-center font-extrabold">
-                Hire me
-              </p>
+              <FaUser />
+            </Link>
+            <p className="text-white text-sm text-center font-extrabold">
+              Hire me
             </p>
-            <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
-              <figure
-                onClick={handleDownloadResume}
-                className="social-button social-button--resume"
-                aria-label="Resume"
-              >
-                <FaFile />
-              </figure>
-              <p className="text-white text-sm text-center font-extrabold">
-                Download my resume
-              </p>
+          </p>
+          <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
+            <figure
+              onClick={handleDownloadResume}
+              className="social-button social-button--resume"
+            >
+              <FaFile />
+            </figure>
+            <p className="text-white text-sm text-center font-extrabold">
+              Download my resume
             </p>
-          </div>
+          </p>
         </div>
       </div>
+    </div>
     </section >
   );
 };
