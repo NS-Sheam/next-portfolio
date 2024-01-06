@@ -11,7 +11,6 @@ import { BiArrowToTop } from "react-icons/bi";
 import { SiAboutdotme } from "react-icons/si";
 import { LiaBlogSolid } from "react-icons/lia";
 import logo from "@/assets/images/ns-logo.png";
-import Image from "next/image";
 import ActiveLink from "@/components/ActiveLink/ActiveLink";
 import Link from "next/link";
 import { handleDownloadResume } from "../utils";
