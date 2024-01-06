@@ -3,8 +3,6 @@ import "./globals.css";
 import { GlovalContextProvider } from "./Provider/GlovalContext";
 
 import "aos/dist/aos.css";
-import { AnimatePresence, motion } from "framer-motion";
-import { Router } from "next/router";
 
 const roboto = Roboto_Condensed({
   subsets: ["latin"],
@@ -20,26 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${roboto.className} max-w-screen-2xl mx-auto`}>
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={Router.route}
-            initial="pageInitial"
-            animate="pageAnimate"
-            variants={{
-              pageInitial: {
-                opacity: 0,
-              },
-              pageAnimate: {
-                opacity: 1,
-              },
-            }}
-            transition={{
-              duration: 0.5,
-            }}
-          >
-            <GlovalContextProvider>{children}</GlovalContextProvider>
-          </motion.div>
-        </AnimatePresence>
+        <GlovalContextProvider>{children}</GlovalContextProvider>
       </body>
     </html>
   );
