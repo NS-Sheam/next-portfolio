@@ -7,7 +7,7 @@ const ResumeDownloadButton = ({ className, children }) => {
     return (
         <figure
             className={className}
-            onClick={handleDownloadResume()}
+            onClick={() => handleDownloadResume()}
         >
 
             {children}
