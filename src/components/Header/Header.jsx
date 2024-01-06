@@ -164,7 +164,7 @@ const Header = () => {
 
       </div>
       {/* For Mobile  */}
-      <section className="z-10 md:hidden inner-container lg:py-4 flex justify-center items-center bg-bandTernary">
+      <section className="z-10 md:hidden inner-container pt-2 lg:pt-0 lg:py-4 flex justify-center items-center bg-bandTernary">
         <div className="flex justify-center items-center">
           <CircularText
             text=" -Welcome-to-the-sky-"
