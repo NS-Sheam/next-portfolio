@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer/Footer";
+import GlowingBall from "@/components/GlowingBall";
 import ExperienceCard from "@/components/Home/ExperienceCard/ExperienceCard";
 import HeaderBanner from "@/components/Home/HeaderBanner/HeaderBanner";
 import HomeBlogs from "@/components/Home/HomeBlogs/HomeBlogs";
@@ -15,35 +16,7 @@ import React, { Suspense } from "react";
 const HomePage = () => {
   return (
     <div className="relative overflow-hidden">
-      {/* Glowing ball css effect  */}
-      <div className='absolute top-0 left-0 bottom-0 right-0'>
-        <div className="glowing">
-          <span style={{ '--i': 1 }}></span>
-          <span style={{ '--i': 2 }}></span>
-          <span style={{ '--i': 3 }}></span>
-          <span style={{ '--i': 3 }}></span>
-        </div>
-        <div className="glowing">
-          <span style={{ '--i': 1 }}></span>
-          <span style={{ '--i': 2 }}></span>
-          <span style={{ '--i': 3 }}></span>
-          <span style={{ '--i': 3 }}></span>
-        </div>
-
-        <div className="glowing">
-          <span style={{ '--i': 1 }}></span>
-          <span style={{ '--i': 2 }}></span>
-          <span style={{ '--i': 3 }}></span>
-          <span style={{ '--i': 3 }}></span>
-        </div>
-
-        <div className="glowing">
-          <span style={{ '--i': 1 }}></span>
-          <span style={{ '--i': 2 }}></span>
-          <span style={{ '--i': 3 }}></span>
-          <span style={{ '--i': 3 }}></span>
-        </div>
-      </div>
+      <GlowingBall />
       <HeaderBanner />
       {/* <Skills /> */}
       <ExperienceCard />

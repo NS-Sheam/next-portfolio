@@ -1,5 +1,6 @@
 import AnimationPageContainer from "@/components/AnimationPageContainer";
 import Footer from "@/components/Footer/Footer";
+import GlowingBall from "@/components/GlowingBall";
 import Header from "@/components/Header/Header";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
@@ -25,9 +26,11 @@ const layout = ({ children }) => {
     //       duration: 0.5,
     //     }}
     //   >
-    <div className={` min-h-screen max-w-screen-xl mx-auto `}>
+    <div
+      className={` min-h-screen max-w-screen-xl mx-auto relative overflow-hidden`}
+    >
+      <GlowingBall />
       <Header />
-
       <Suspense
         fallback={
           <div className="h-screen mx-auto">
