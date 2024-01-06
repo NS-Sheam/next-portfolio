@@ -1,4 +1,6 @@
 
+
+
 import Link from "next/link";
 import myImg from "@/assets/images/my-img.jpg";
 import {
@@ -9,22 +11,21 @@ import {
 } from "react-icons/fa";
 import { FiArrowUpRight } from "react-icons/fi";
 import CircularText from "@/components/CurcularText/CircularText";
-import { generateMetaDatas } from "@/components/utils";
-// import { metadata } from "@/app/layout"
+import { downloadResumeForServerComponent, generateMetaDatas } from "@/components/utils";
+import CommonDownloadButton from "@/components/commonDownloadButton";
+
+
+
+export const metadata = await generateMetaDatas(
+  "About",
+  "I am a Full Stack Developer, Backend Developer, React Specialist, Javascript Developer. Building Tomorrow's Web Today – Where Imagination Meets Innovation in Full Stack, Backend, and React Development.",
+  myImg,
+  "about",
+
+)
+
 
 const About = () => {
-  const handleDownloadResume = () => {
-    window.open(
-      "https://drive.google.com/u/0/uc?id=1XhOOmSn6iqDiaA-DNsgsBg3HS7YFNtfa&export=download",
-    );
-  };
-  // const metadata = generateMetaDatas(
-  //   "About | Nazmus Sakib Sheam",
-  //   "Nazmus Sakib Sheam is a Full Stack Developer, Backend Developer, React Specialist, Javascript Developer",
-  //   myImg,
-  //   "about",
-
-  // )
 
   const mySkills = {
     Expertise: [
@@ -237,28 +238,27 @@ const About = () => {
               <Link
                 href=""
                 className="social-button social-button--hire-me"
-            "
               >
-              <FaUser />
-            </Link>
-            <p className="text-white text-sm text-center font-extrabold">
-              Hire me
+                <FaUser />
+              </Link>
+              <p className="text-white text-sm text-center font-extrabold">
+                Hire me
+              </p>
             </p>
-          </p>
-          <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
-            <figure
-              onClick={handleDownloadResume}
-              className="social-button social-button--resume"
-            >
-              <FaFile />
-            </figure>
-            <p className="text-white text-sm text-center font-extrabold">
-              Download my resume
+            <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
+              <CommonDownloadButton
+                // downloadFn={downloadResumeForServerComponent}
+                className="social-button social-button--resume"
+              >
+                <FaFile />
+              </CommonDownloadButton>
+              <p className="text-white text-sm text-center font-extrabold">
+                Download my resume
+              </p>
             </p>
-          </p>
+          </div>
         </div>
       </div>
-    </div>
     </section >
   );
 };

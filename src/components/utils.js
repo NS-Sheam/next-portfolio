@@ -1,5 +1,5 @@
 import myimg from "../assets/images/my-img.jpg";
-export const handleDownloadResume = () => {
+const handleDownloadResume = () => {
   const url =
     "https://drive.google.com/u/0/uc?id=1XhOOmSn6iqDiaA-DNsgsBg3HS7YFNtfa&export=download";
   const fileName = "Nazmus-Sakib-Resume";
@@ -9,6 +9,10 @@ export const handleDownloadResume = () => {
   link.rel = "noopener noreferrer";
   link.download = fileName;
   link.click();
+};
+
+export const downloadResumeForServerComponent = () => {
+  handleDownloadResume();
 };
 
 export const generateMetaDatas = async (
