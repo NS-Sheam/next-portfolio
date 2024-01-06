@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { useRouter } from "next/navigation";
 
 const GlovalContext = createContext();
 const queryClient = new QueryClient();
@@ -9,10 +10,11 @@ const queryClient = new QueryClient();
 export const GlovalContextProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
   const [showWelcome, setShowWelcome] = useState(true);
+  const router = useRouter();
   useEffect(() => {
     AOS.init();
   }, [theme]);
-  const glovalData = { theme, setTheme, showWelcome };
+  const glovalData = { theme, setTheme, showWelcome, router };
   // const navigation = useNavigation();
 
   useEffect(() => {

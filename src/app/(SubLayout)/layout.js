@@ -1,5 +1,8 @@
+import AnimationPageContainer from "@/components/AnimationPageContainer";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
+import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 import { Suspense } from "react";
 
@@ -34,12 +37,10 @@ const layout = ({ children }) => {
           </div>
         }
       >
-        {children}
+        <AnimationPageContainer>{children}</AnimationPageContainer>
         <Footer />
       </Suspense>
     </div>
-    //   </motion.div>
-    // </AnimatePresence>
   );
 };
 
