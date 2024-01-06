@@ -15,7 +15,7 @@ const Banner = () => {
   return (
     <>
       {/* for dextop  */}
-      <section className="py-12 lg:py-16 hidden inner-container lg:flex justify-around items-start border-b border-white">
+      <section className="hidden inner-container lg:py-20 lg:flex justify-around items-start border-b border-white">
         <div
           data-aos="fade-right"
           data-aos-anchor="#example-anchor"
@@ -100,13 +100,13 @@ const Banner = () => {
         </div>
       </section>
       {/* For Mobile  */}
-      <section className="inner-container px-4 lg:hidden py-4 z-10 border-b border-white">
+      <section className="inner-container px-4 lg:hidden py-8 z-10 border-b border-white ">
         <div className="mx-auto">
           <div
             data-aos="fade-left"
             data-aos-anchor="#example-anchor"
             data-aos-duration="500"
-            className="wavecontainer w-28 h-28 bg-transparent mx-auto"
+            className="wavecontainer w-32 h-32 bg-transparent mx-auto"
           >
             <Image src={myImg} alt="" />
           </div>

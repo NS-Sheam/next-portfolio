@@ -112,7 +112,7 @@ const Technology = () => {
   ];
 
   return (
-    <section className="inner-container space-y-4 pt-4 pb-8 lg:pb-14 bg-bandTernary relative ">
+    <section className="inner-container space-y-4 pt-4 pb-8 lg:pb-14 bg-bandTernary  ">
       <h1 className="text-3xl md:text-6xl font-bold text-bandOrange text-center">
         Skills
       </h1>
@@ -146,14 +146,14 @@ const Technology = () => {
       </p>
       <div className="md:grid grid-cols-3 gap-5 items-start justify-start">
         {/* button side  */}
-        <div className="col-span-1 flex flex-col justify-center items-center gap-8">
+        <div className="col-span-1 flex flex-col justify-center items-center gap-8 z-10">
           {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
             <button
               onClick={() => setShowedTechnology(item.toLowerCase())}
               key={index}
               className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
-                  ? "bg-bandYellow text-bandTernary"
-                  : "text-white"
+                ? "bg-bandYellow text-bandTernary"
+                : "text-white"
                 }`}
             >
               {item}

@@ -9,7 +9,7 @@ const Projects = () => {
   const [singleProject, setSingleProject] = useState(null);
   return (
     <>
-      <div className="text-center bg-gradient-to-tr from-bandPrimary to-bandSecondary inner-container min-h-screen py-8 lg:py-14">
+      <div className="text-center bg-gradient-to-tr from-bandPrimary to-bandSecondary inner-container py-8 lg:py-14">
         <SectionTitle
           heading="Projects"
           punchLine={"Projects I've worked on"}
