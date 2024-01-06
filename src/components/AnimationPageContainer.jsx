@@ -1,10 +1,8 @@
 // import { AnimatePresence, motion } from "framer-motion";
-import { useGlovalContext } from "@/app/Provider/GlovalContext";
-import { usePathname } from "next/navigation";
-import { useRouter } from "next/navigation";
+
 
 const AnimationPageContainer = ({ children }) => {
-    const { router } = useGlovalContext();
+
 
 
     return (
