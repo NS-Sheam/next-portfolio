@@ -19,11 +19,11 @@ export const generateMetaDatas = async (
   type,
 ) => {
   return {
-    title: "Nazmus Sakib|" + title || "Nazmus Sakib",
+    title: title ? "Nazmus Sakib|" + title : "Nazmus Sakib",
     description: description || "Welcome to the sky of Nazmus Sakib",
-    image: image || myimg,
-    url: "https://nazmus-sakib.me/" + path || "https://nazmus-sakib.me/",
-    type: "Nazmus Sakib" + type || "Nazmus Sakib",
+    image: image ? image : myimg,
+    url: path ? "https://nazmus-sakib.me/" + path : "https://nazmus-sakib.me/",
+    type: type ? "Nazmus Sakib" + type : "Nazmus Sakib",
     siteName: "Nazmus Sakib",
     facebook: "https://www.facebook.com/nazmus.sakib.sheam/",
   };

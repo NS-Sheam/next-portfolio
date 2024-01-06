@@ -1,22 +1,17 @@
 
 import { generateMetaDatas } from "@/components/utils";
 import BlogCard from "../../../components/BlogCard";
+import { BlogFunction } from "@/components/utils/blogFn";
 export const metadata = await generateMetaDatas(
     "Blogs",
-    "Let's connect! If you have any questions or would like to discuss potential collaborations, feel free to reach out using the contact details below. I'm eager to hear from you and explore exciting opportunities together. Don't hesitate to get in touch!",
+    "Read my blogs on web development, JavaScript, React, Node.js, and more. I write about my experiences and learnings as a developer.",
     null,
     "contact"
 
 )
-async function allBlogs() {
-    let data = await fetch(`${process.env.NEXT_PUBLIC_PUBLIC_HOSTING_URL}/allblog`);
-    data = await data.json();
-    return data;
-}
 
-const Blogs = () => {
-    const { data } = await allBlogs();
-    console.log(blogs);
+const Blogs = async () => {
+    const { blogs } = await BlogFunction.allBlogs();
 
 
 
@@ -52,7 +47,7 @@ const Blogs = () => {
             <p className={`text-white text-justify md:text-center w-full md:w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}>Browse through my portfolio to explore a diverse range of projects that demonstrate my skills in web development. From interactive React applications to functional JavaScript projects and visually appealing HTML/CSS interfaces, you will find a showcase of my expertise in various web technologies.</p>
             <div>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-end mx-auto my-5 gap-5 -mt-8 ">
-                    {/* {blogs?.map(blog => <BlogCard key={blog._id} blog={blog} />)} */}
+                    {blogs?.map(blog => <BlogCard key={blog._id} blog={blog} />)}
                 </div>
             </div>
 
