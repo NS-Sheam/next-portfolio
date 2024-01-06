@@ -16,7 +16,7 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <section className="bg-bandTernary inner-container py-8 lg:py-14">
+    <section className="bg-bandTernary inner-container py-8 lg:pb-16 lg:pt-0 ">
       <div
         data-aos="zoom-in"
         data-aos-anchor="#example-anchor"

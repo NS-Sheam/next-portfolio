@@ -52,7 +52,7 @@ const Services = () => {
   ];
 
   return (
-    <section className={`${theme === "light" ? "bg-white" : "bg-bandTernary"}`}>
+    <section className={`py-8 lg:pb-16 lg:pt-0 ${theme === "light" ? "bg-white" : "bg-bandTernary"}`}>
       <div className="bg-bandOrange text-slate-800 pb-14 md:pb-20 pt-24 md:pt-36 text-center space-y-4">
         <h1 className="text-3xl md:text-5xl font-bold">Web Services</h1>
         <p className="text-xl md:text-2xl">

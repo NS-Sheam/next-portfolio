@@ -1,21 +1,19 @@
 "use client";
 import "./Banner.css";
 import myImg from "@/assets/images/my-img.jpg";
-import myImg2 from "@/assets/images/my-img-2.jpg";
 // import blurImageUrl from "@/assets/images/banner3.jpg";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import Image from "next/image";
 import { useState } from "react";
 import { handleDownloadResume } from "@/components/utils";
 
-import CircularText from "@/components/CurcularText/CircularText";
 const Banner = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
       {/* for dextop  */}
-      <section className="hidden inner-container lg:py-20 lg:flex justify-around items-start border-b border-white">
+      <section className="hidden inner-container min-h-[calc(100vh-20vh)] lg:flex justify-between items-center border-b border-white">
         <div
           data-aos="fade-right"
           data-aos-anchor="#example-anchor"
@@ -54,16 +52,6 @@ const Banner = () => {
               Download Resume <AiOutlineCloudDownload />
             </button>
           </div>
-          <CircularText
-            text=" -Welcome-to-my-portfolio-"
-            degree={15}
-            circleSize="150px"
-            logoSize={"100px"}
-            logoUrl={myImg2}
-            origin="75px"
-            textClass="text-xl text-bandYellow font-bold uppercase shadow-md shadow-white"
-            animationSpeed="7s"
-          />
         </div>
         <div
           className="relative w-[25rem] h-[25rem]"

@@ -60,11 +60,11 @@ const About = () => {
   };
 
   return (
-    <section className="bg-bandTernary inner-container py-8 lg:py-14">
+    <section className="bg-bandTernary inner-container py-8 lg:pb-16 lg:pt-0 ">
       <h1 className="font-extrabold banner-name-font text-6xl text-center">
         About me!
       </h1>
-      <div className="py-5 md:py-8 space-y-4 flex flex-col md:flex-row items-start justify-between">
+      <div className="py-5 space-y-4 flex flex-col md:flex-row items-start justify-between">
         <div
           data-aos="fade-right"
           data-aos-anchor="#example-anchor"

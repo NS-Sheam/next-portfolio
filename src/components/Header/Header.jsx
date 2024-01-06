@@ -16,6 +16,7 @@ import ActiveLink from "@/components/ActiveLink/ActiveLink";
 import Link from "next/link";
 import { handleDownloadResume } from "../utils";
 import { FaHome } from "react-icons/fa";
+import CircularText from "../CurcularText/CircularText";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -149,12 +150,34 @@ const Header = () => {
   return (
     <>
       {mainMenu}
+      {/* For Desktop */}
+      <div className="hidden md:flex justify-center items-center pt-6 bg-bandTernary">
+        <CircularText
+          text=" -Welcome-to-the-sky-"
+          degree={18}
+          circleSize="80px"
+          logoSize={"60px"}
+          logoUrl={logo}
+          origin="40px"
+          textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
+          animationSpeed="7s"
+        />
+
+      </div>
       {/* For Mobile  */}
-      <section className="z-10 md:hidden inner-container py-4 flex justify-center items-center">
-        <div className="flex justify-center items-center gap-2">
-          <Link href="/">
-            <Image className="w-12" src={logo} alt="logo" />
-          </Link>
+      <section className="z-10 md:hidden inner-container lg:py-4 flex justify-center items-center bg-bandTernary">
+        <div className="flex justify-center items-center">
+          <CircularText
+            text=" -Welcome-to-the-sky-"
+            degree={18}
+            circleSize="70px"
+            logoSize={"50px"}
+            logoUrl={logo}
+            origin="35px"
+            textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
+            animationSpeed="7s"
+          />
+
         </div>
         <div className="flex flex-col justify-center items-center z-20">
           <div className="transform transition-all ease-linear duration-700 fixed w-4/5 mx-auto top-14 right-0 left-0">

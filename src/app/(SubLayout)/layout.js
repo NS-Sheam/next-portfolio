@@ -26,9 +26,7 @@ const layout = ({ children }) => {
     //     }}
     //   >
     <div className={` min-h-screen max-w-screen-xl mx-auto `}>
-      <div className="bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary">
-        <Header />
-      </div>
+      <Header />
 
       <Suspense
         fallback={
