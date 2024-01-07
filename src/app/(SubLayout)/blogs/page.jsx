@@ -13,6 +13,7 @@ export const metadata = await generateMetaDatas(
 
 const Blogs = async () => {
     const { blogs, loading } = await BlogFunction.allBlogs();
+    console.log(blogs);
 
     return (
         <div className="bg-bandTernary space-y-6 inner-container py-8 lg:pb-16 lg:pt-0 ">
