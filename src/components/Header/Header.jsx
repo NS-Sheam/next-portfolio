@@ -192,18 +192,26 @@ const Header = () => {
                 return (
                   <React.Fragment key={index}>
                     <li className="w-full text-center">
-                      <ActiveLink href={path}>{name}</ActiveLink>
+                      <ActiveLink
+                        exact={path === "/"}
+                        href={path}
+                      >{name}</ActiveLink>
                     </li>
+                    {/* className={
+        isActive
+          ? "text-bandYellow no-underline "
+          : "text-white hover:text-bandYellow no-underline"
+      } */}
                     <hr className="w-full" />
                   </React.Fragment>
                 );
               })}
 
-              <ActiveLink href="/contact" className="">
-                <button className="font-semibold bg-bandPrimary text-white border-2 py-2 px-2 hover:border-bandYellow hover:text-bandYellow rounded-md text-xl">
+              <Link href="/contact" className="">
+                <button className="font-semibold text-white border-2 py-2 px-2 bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary hover:from-bandTernary hover:to-bandPrimary rounded-md text-xl">
                   Hire me
                 </button>
-              </ActiveLink>
+              </Link>
               <div className="my-2">
                 <button
                   onClick={handleDownloadResume}

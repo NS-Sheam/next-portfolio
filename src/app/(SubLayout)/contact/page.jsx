@@ -10,7 +10,7 @@ import ContactForm from "./ContactForm";
 export const metadata = await generateMetaDatas(
     "Contact",
     "Let's connect! If you have any questions or would like to discuss potential collaborations, feel free to reach out using the contact details below. I'm eager to hear from you and explore exciting opportunities together. Don't hesitate to get in touch!",
-    myImg2,
+    null,
     "contact"
 
 )
