@@ -21,7 +21,7 @@ const ProjectModal = ({ projectData }) => {
   return (
     <dialog
       id="my_modal_4"
-      className="fixed z-10 overflow-y-auto h-[calc(100vh-20vh)]"
+      className="fixed z-50 overflow-y-auto h-[calc(100vh-20vh)]"
     >
 
       <div className="modal-action p-4 lg:p-8">
@@ -58,7 +58,7 @@ const ProjectModal = ({ projectData }) => {
               ))}
             </ul>
 
-            <div className="social-buttons flex items-center justify-start gap-6 z-20">
+            <div className="social-buttons flex items-center justify-start gap-6 ">
               <a
                 href={liveSite}
                 className="social-button social-button--instagram "
@@ -88,6 +88,7 @@ const ProjectModal = ({ projectData }) => {
         </div>
       </div>
       <button
+        onClick={() => window.my_modal_4.close()}
         className="btn text-white bg-pink-600 hover:scale-110 duration-200 font-extrabold btn-sm btn-circle btn-ghost absolute right-2 top-2  hover:bg-warning border-none rounded-full w-8 h-8 z-20">
         ✕
       </button>
