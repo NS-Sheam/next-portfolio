@@ -8,23 +8,27 @@ import Projects from "@/components/Home/Projects/Projects";
 import Quotes from "@/components/Home/Quotes/Quotes";
 // import Skills from "@/components/Home/Skills/Skills";
 import Technology from "@/components/Home/Technology/Technology";
+import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
+import { Suspense } from "react";
 // import Testimonial from "@/components/Home/Testimonial/Testimonial";
 // import { Blocks } from 'react-loader-spinner';
 
 const HomePage = () => {
   return (
     <div className="relative overflow-hidden">
-      <GlowingBall />
-      <HeaderBanner />
-      {/* <Skills /> */}
-      <ExperienceCard />
-      <Technology />
-      <Projects />
-      <HomeBlogs />
-      {/* <MyServices /> */}
-      {/* <Testimonial /> */}
-      <Quotes />
-      <Footer />
+      <Suspense fallback={<CircularTextLoadingComponent />}>
+        <GlowingBall />
+        <HeaderBanner />
+        {/* <Skills /> */}
+        <ExperienceCard />
+        <Technology />
+        <Projects />
+        <HomeBlogs />
+        {/* <MyServices /> */}
+        {/* <Testimonial /> */}
+        <Quotes />
+        <Footer />
+      </Suspense>
     </div>
   );
 };

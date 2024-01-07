@@ -150,33 +150,36 @@ const Header = () => {
     <>
       {mainMenu}
       {/* For Desktop */}
-      <div className="hidden md:flex justify-center items-center pt-6 bg-bandTernary">
-        <CircularText
-          text=" -Welcome-to-the-sky-"
-          degree={18}
-          circleSize="80px"
-          logoSize={"60px"}
-          logoUrl={logo}
-          origin="40px"
-          textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
-          animationSpeed="7s"
-        />
-
+      <div
+        className="hidden md:flex justify-center items-center pt-6 bg-bandTernary">
+        <Link href="/">
+          <CircularText
+            text=" -Welcome-to-the-sky-"
+            degree={18}
+            circleSize="80px"
+            logoSize={"60px"}
+            logoUrl={logo}
+            origin="40px"
+            textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
+            animationSpeed="7s"
+          />
+        </Link>
       </div>
       {/* For Mobile  */}
       <section className="z-10 md:hidden inner-container pt-2 lg:pt-0 lg:py-4 flex justify-center items-center bg-bandTernary">
         <div className="flex justify-center items-center">
-          <CircularText
-            text=" -Welcome-to-the-sky-"
-            degree={18}
-            circleSize="70px"
-            logoSize={"50px"}
-            logoUrl={logo}
-            origin="35px"
-            textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
-            animationSpeed="7s"
-          />
-
+          <Link href="/">
+            <CircularText
+              text=" -Welcome-to-the-sky-"
+              degree={18}
+              circleSize="70px"
+              logoSize={"50px"}
+              logoUrl={logo}
+              origin="35px"
+              textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
+              animationSpeed="7s"
+            />
+          </Link>
         </div>
         <div className="flex flex-col justify-center items-center z-20">
           <div className="transform transition-all ease-linear duration-700 fixed w-4/5 mx-auto top-14 right-0 left-0">
