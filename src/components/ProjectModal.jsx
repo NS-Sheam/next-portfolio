@@ -32,7 +32,6 @@ const ProjectModal = ({ projectData }) => {
               placeholder="blur"
               height={700}
               width={700}
-              layout=""
               className="rounded-lg"
               src={image}
               alt=""
