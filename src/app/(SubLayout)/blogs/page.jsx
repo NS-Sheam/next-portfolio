@@ -10,9 +10,7 @@ export const metadata = await generateMetaDatas(
 
 )
 
-const Blogs = async () => {
-    const { blogs } = await BlogFunction.allBlogs();
-
+const Blogs = ({ blogs }) => {
 
 
 
@@ -54,5 +52,12 @@ const Blogs = async () => {
         </div>
     );
 };
+async function fetchData() {
+    const { blogs } = await BlogFunction.allBlogs();
+    console.log(blogs);
+
+    return { blogs };
+}
 
 export default Blogs;
+export { fetchData };
