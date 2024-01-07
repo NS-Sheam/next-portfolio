@@ -21,7 +21,7 @@ const ProjectModal = ({ projectData }) => {
   return (
     <dialog
       id="my_modal_4"
-      className="fixed z-50 overflow-y-auto h-[calc(100vh-20vh)]"
+      className="fixed z-10 overflow-y-auto h-[calc(100vh-20vh)]"
     >
 
       <div className="modal-action p-4 lg:p-8">
@@ -87,7 +87,8 @@ const ProjectModal = ({ projectData }) => {
           </div>
         </div>
       </div>
-      <button className="btn text-white bg-pink-600 hover:scale-110 duration-200 font-extrabold btn-sm btn-circle btn-ghost absolute right-2 top-2  hover:bg-warning border-none rounded-full w-8 h-8">
+      <button
+        className="btn text-white bg-pink-600 hover:scale-110 duration-200 font-extrabold btn-sm btn-circle btn-ghost absolute right-2 top-2  hover:bg-warning border-none rounded-full w-8 h-8 z-20">
         ✕
       </button>
 
