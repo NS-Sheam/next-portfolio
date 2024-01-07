@@ -24,6 +24,8 @@ const Blogs = async () => {
     return (
         <div className="bg-bandTernary space-y-6 inner-container py-8 lg:pb-16 lg:pt-0 ">
 
+
+
             <h1 className=" font-extrabold banner-name-font text-6xl text-center">My Blogs</h1>
             <p className={`text-white text-justify md:text-center w-full md:w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}>Browse through my portfolio to explore a diverse range of projects that demonstrate my skills in web development. From interactive React applications to functional JavaScript projects and visually appealing HTML/CSS interfaces, you will find a showcase of my expertise in various web technologies.</p>
             <div>
