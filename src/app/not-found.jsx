@@ -22,7 +22,7 @@ const NotFound = () => {
                 animationSpeed="9s"
             />
 
-            <h1 className='font-semibold mb-2 banner-name-font text-xl '>{process.env.NEXT_PUBLIC_PUBLIC_HOSTING_URL + path} not found</h1>
+            <h1 className='font-semibold mb-2 banner-name-font text-xl '>{"nazmus-sakib.me" + path} not found</h1>
             <AnimatedButton
                 htmlFor="my-modal-5"
                 className="text-bandTernary p-4 font-bold"
