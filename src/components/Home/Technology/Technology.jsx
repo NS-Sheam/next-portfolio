@@ -144,24 +144,23 @@ const Technology = () => {
         with your project requirements and discover the value I can bring to
         your team.
       </p>
-      <div className="md:grid grid-cols-3 gap-5 items-start justify-start">
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start justify-start">
         {/* button side  */}
-        <div className="col-span-1 flex flex-col justify-center items-center gap-8 z-10">
-          {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
-            <button
-              onClick={() => setShowedTechnology(item.toLowerCase())}
-              key={index}
-              className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
-                ? "bg-bandYellow text-bandTernary"
-                : "text-white"
-                }`}
-            >
-              {item}
-            </button>
-          ))}
-        </div>
+        {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
+          <button
+            onClick={() => setShowedTechnology(item.toLowerCase())}
+            key={index}
+            className={`md:col-span-1 ${showedTechnology === item.toLowerCase() ? "order-1" : "order-3"} z-30 text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
+              ? "bg-bandYellow text-bandTernary"
+              : "text-white"
+              }`}
+          >
+            {item}
+          </button>
+        ))}
         {/* Data side */}
-        <div className="col-span-2 py-4">
+        <div className="md:col-span-2 order-2 py-4">
           {technologies.map((technology) => {
             return Object.keys(technology).map((key, index) => {
               return (

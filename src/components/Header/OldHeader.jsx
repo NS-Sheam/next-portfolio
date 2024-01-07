@@ -125,3 +125,62 @@ const OldHeader = () => {
 };
 
 export default OldHeader;
+
+
+<div className="md:grid grid-cols-3 gap-5 items-start justify-start">
+    {/* button side  */}
+    <div className="col-span-1 flex flex-col justify-center items-center gap-8 z-10">
+        {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
+            <button
+                onClick={() => setShowedTechnology(item.toLowerCase())}
+                key={index}
+                className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
+                    ? "bg-bandYellow text-bandTernary"
+                    : "text-white"
+                    }`}
+            >
+                {item}
+            </button>
+        ))}
+    </div>
+    {/* Data side */}
+    <div className="col-span-2 py-4">
+        {technologies.map((technology) => {
+            return Object.keys(technology).map((key, index) => {
+                return (
+                    key === showedTechnology && (
+                        <div
+                            className="grid grid-cols-2 md:grid-cols-3 gap-8 md:w-2/3 mx-auto"
+                            key={index}
+                        >
+                            {technology[key].map((item, index) => {
+                                return (
+                                    <div
+                                        data-aos="zoom-in"
+                                        data-aos-duration="500"
+                                        className="flex flex-col justify-center items-center gap-8 bg-bandPrimary p-5 border border-text-bandYellow rounded-lg"
+                                        key={index}
+                                    >
+                                        <Image
+                                            className={
+                                                item.image === expressImage
+                                                    ? "bg-white p-2 rounded-lg"
+                                                    : ""
+                                            }
+                                            src={item.image}
+                                            width={100}
+                                            alt=""
+                                        />
+                                        <h3 className="text-xl font-bold text-bandYellow">
+                                            {item.name}
+                                        </h3>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )
+                );
+            });
+        })}
+    </div>
+</div>
