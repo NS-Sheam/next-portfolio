@@ -52,6 +52,7 @@ const Services = () => {
 
   return (
     <section className={`bg-bandTernary space-y-6 inner-container py-8 lg:pb-16 lg:pt-0`}>
+
       <h1 className=" font-extrabold banner-name-font text-6xl text-center">My Services</h1>
       <p className="text-white text-justify md:text-center w-full md:w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8">
         See all my services below. If you have any questions, please feel free to contact me.
