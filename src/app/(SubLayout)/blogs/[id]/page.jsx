@@ -26,8 +26,8 @@ const SingleBlog = async ({ params }) => {
                                 height={200}
                             />
                             <div className="p-4">
-                                <p className="font-semibold">{moment(blog.createdAt).format('MMMM DD YYYY')}</p>
-                                <h3 className="">{blog?.heading}</h3>
+                                <p className="font-semibold text-bandYellow">{moment(blog.createdAt).format('MMMM DD YYYY')}</p>
+                                <h3 className="text-white">{blog?.heading}</h3>
                             </div>
                         </div>
                     </Link>)
@@ -39,9 +39,9 @@ const SingleBlog = async ({ params }) => {
                     width={600}
                     height={250}
                 />
-                <p className="font-semibold">{moment(singleBlog.createdAt).format('MMMM DD YYYY')}</p>
-                <h1 className="text-xl lg:text-3xl font-bold ">{singleBlog?.heading}</h1>
-                <div dangerouslySetInnerHTML={{ __html: singleBlog?.description }} ></div>
+                <p className="font-semibold text-bandYellow">{moment(singleBlog.createdAt).format('MMMM DD YYYY')}</p>
+                <h1 className="text-xl lg:text-3xl font-bold text-white">{singleBlog?.heading}</h1>
+                <div className='text-white' dangerouslySetInnerHTML={{ __html: singleBlog?.description }} ></div>
             </div>
         </div>
     );
