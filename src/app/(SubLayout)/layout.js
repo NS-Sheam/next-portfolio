@@ -30,7 +30,7 @@ const layout = ({ children }) => {
     >
       <GlowingBall />
       <Header />
-      <Suspense fallback={<CircularTextLoadingComponent />}>
+      <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}>
         <AnimationPageContainer>{children}</AnimationPageContainer>
         <Footer />
       </Suspense>

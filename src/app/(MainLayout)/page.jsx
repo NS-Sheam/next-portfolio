@@ -16,7 +16,7 @@ import { Suspense } from "react";
 const HomePage = () => {
   return (
     <div className="relative overflow-hidden">
-      <Suspense fallback={<CircularTextLoadingComponent />}>
+      <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}>
         <GlowingBall />
         <HeaderBanner />
         {/* <Skills /> */}

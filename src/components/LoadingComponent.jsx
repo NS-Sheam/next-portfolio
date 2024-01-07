@@ -17,11 +17,11 @@ export const SquareLoadingComponent = () => {
   );
 };
 
-export const CircularTextLoadingComponent = () => {
+export const CircularTextLoadingComponent = ({ loadingObj }) => {
   return (
     <div className="min-h-[calc(100vh-20vh)] flex items-center justify-center bg-bandTernary">
       <CircularText
-        text="Please wait - sky  is  loading..."
+        text={`Please wait - ${loadingObj}  is  loading...`}
         degree={10.5}
         circleSize="100px"
         origin="50px"

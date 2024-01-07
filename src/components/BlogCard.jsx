@@ -23,7 +23,7 @@ const BlogCard = ({ blog }) => {
             {blog?.heading}
           </h2>
           <div className="card-actions">
-            <Link href={`/blog/${blog?._id}`}>
+            <Link href={`/blogs/${blog?._id}`}>
               <button
                 className={`btn button-container-dark text-bandTernary transform duration-300 lg:p-4 font-bold `}
               >
