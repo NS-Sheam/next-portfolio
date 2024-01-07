@@ -37,7 +37,7 @@ const CircularText = ({
       <div
         className="logo absolute"
         style={{
-          backgroundImage: `url(${logoUrl.src})`,
+          backgroundImage: `url(${logoUrl?.src})`,
           width: logoSize,
           height: logoSize,
           borderRadius: "50%",

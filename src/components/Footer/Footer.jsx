@@ -69,7 +69,7 @@ const Footer = () => {
                     <div className="col-span-2 grid grid-cols-2 gap-4 justify-center items-center">
                         <p className="bg-bandSecondary p-10 gradient-border border-2 justify-center items-center flex flex-col gap-2 h-44">
                             <Link
-                                href=""
+                                href="/contact"
                                 className="social-button social-button--hire-me"
                                 aria-label="Hire me"
                             >

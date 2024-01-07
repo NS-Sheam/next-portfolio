@@ -9,8 +9,6 @@ import Quotes from "@/components/Home/Quotes/Quotes";
 // import Skills from "@/components/Home/Skills/Skills";
 import Technology from "@/components/Home/Technology/Technology";
 // import Testimonial from "@/components/Home/Testimonial/Testimonial";
-import LoadingComponent from "@/components/LoadingComponent";
-import React, { Suspense } from "react";
 // import { Blocks } from 'react-loader-spinner';
 
 const HomePage = () => {
@@ -21,9 +19,7 @@ const HomePage = () => {
       {/* <Skills /> */}
       <ExperienceCard />
       <Technology />
-      <Suspense fallback={<LoadingComponent />}>
-        <Projects />
-      </Suspense>
+      <Projects />
       <HomeBlogs />
       {/* <MyServices /> */}
       {/* <Testimonial /> */}

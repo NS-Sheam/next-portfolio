@@ -2,6 +2,7 @@ import AnimationPageContainer from "@/components/AnimationPageContainer";
 import Footer from "@/components/Footer/Footer";
 import GlowingBall from "@/components/GlowingBall";
 import Header from "@/components/Header/Header";
+import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
 
 import { Suspense } from "react";
 
@@ -29,13 +30,7 @@ const layout = ({ children }) => {
     >
       <GlowingBall />
       <Header />
-      <Suspense
-        fallback={
-          <div className="h-screen mx-auto">
-            <p className="loading loading-infinity loading-lg text-band-orange"></p>
-          </div>
-        }
-      >
+      <Suspense fallback={<CircularTextLoadingComponent />}>
         <AnimationPageContainer>{children}</AnimationPageContainer>
         <Footer />
       </Suspense>
