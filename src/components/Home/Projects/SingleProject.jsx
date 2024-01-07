@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./SingleProject.css";
 import Image from "next/image";
+import AnimatedButton from "@/components/buttons/AnimatedButton";
 
 const SingleProject = ({ project, setSingleProject }) => {
   // const [liFold, setLiFold] = useState(true);
@@ -32,16 +33,16 @@ const SingleProject = ({ project, setSingleProject }) => {
           className={`absolute h-full w-full ${isHovered ? "flex" : "hidden"
             } justify-center items-center bg-opacity-50 bg-black`}
         >
-          <label
+          <AnimatedButton
             onClick={() => {
               setSingleProject(project);
               window.my_modal_4.showModal();
             }}
             htmlFor="my-modal-5"
-            className={`btn button-container-dark  text-bandTernary transform duration-300 p-4 font-bold`}
+            className="text-bandTernary p-4 font-bold"
           >
             Details
-          </label>
+          </AnimatedButton>
         </div>
       </figure>
       {/* <div className="card-body items-center text-center p-4 space-y-3 flex flex-col flex-grow justify-between">
