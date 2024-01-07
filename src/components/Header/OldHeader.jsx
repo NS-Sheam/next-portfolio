@@ -127,8 +127,8 @@ const OldHeader = () => {
 export default OldHeader;
 
 
-<div className="md:grid grid-cols-3 gap-5 items-start justify-start">
-    {/* button side  */}
+{/* <div className="md:grid grid-cols-3 gap-5 items-start justify-start">
+
     <div className="col-span-1 flex flex-col justify-center items-center gap-8 z-10">
         {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
             <button
@@ -143,7 +143,7 @@ export default OldHeader;
             </button>
         ))}
     </div>
-    {/* Data side */}
+
     <div className="col-span-2 py-4">
         {technologies.map((technology) => {
             return Object.keys(technology).map((key, index) => {
@@ -183,4 +183,4 @@ export default OldHeader;
             });
         })}
     </div>
-</div>
+</div> */}
