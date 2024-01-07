@@ -147,11 +147,27 @@ const Technology = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start justify-start">
         {/* button side  */}
+        {/* for dextop view */}
+
+        <div className="hidden col-span-1 md:flex flex-col justify-center items-center gap-8 z-10">
+          {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
+            <button
+              onClick={() => setShowedTechnology(item.toLowerCase())}
+              key={index}
+              className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
+                ? "bg-bandYellow text-bandTernary"
+                : "text-white"
+                }`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
         {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
           <button
             onClick={() => setShowedTechnology(item.toLowerCase())}
             key={index}
-            className={`md:col-span-1 ${showedTechnology === item.toLowerCase() ? "order-1" : "order-3"} z-30 text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
+            className={`md:hidden md:col-span-1 ${showedTechnology === item.toLowerCase() ? "order-1" : "order-3"} z-30 text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
               ? "bg-bandYellow text-bandTernary"
               : "text-white"
               }`}
