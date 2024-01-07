@@ -21,6 +21,9 @@ export const metadata = await generateMetaDatas(
   "I am a Full Stack Developer, Backend Developer, React Specialist, Javascript Developer. Building Tomorrow's Web Today – Where Imagination Meets Innovation in Full Stack, Backend, and React Development.",
   null,
   "about",
+  null,
+
+
 
 )
 

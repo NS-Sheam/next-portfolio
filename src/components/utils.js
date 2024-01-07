@@ -29,5 +29,16 @@ export const generateMetaDatas = async (
     type: type ? "Nazmus Sakib" + type : "Nazmus Sakib",
     siteName: "Nazmus Sakib",
     facebook: "https://www.facebook.com/nazmus.sakib.sheam/",
+    openGraph: {
+      type: "website",
+      locale: "en_IE",
+      url: path
+        ? "https://nazmus-sakib.me/" + path
+        : "https://nazmus-sakib.me/",
+      title: title ? "Nazmus Sakib|" + title : "Nazmus Sakib",
+      description: description || "Welcome to the sky of Nazmus Sakib",
+      image: image ? image : myimg,
+      site_name: "Nazmus Sakib",
+    },
   };
 };
