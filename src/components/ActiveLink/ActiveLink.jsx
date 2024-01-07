@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const ActiveLink = ({ href, children, exact = false, }) => {
+const ActiveLink = ({ href, children, exact = false }) => {
   const pathName = usePathname();
   const isActive = exact ? pathName === href : pathName.startsWith(href);
 
