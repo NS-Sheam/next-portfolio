@@ -18,7 +18,7 @@ const SingleBlog = async ({ params }) => {
         <div className={`bg-bandTernary space-y-6 inner-container py-8 lg:pb-16 lg:pt-4 grid grid-cols-2 md:grid-cols-3 gap-6`}>
             <div className="flex flex-col gap-4 col-span-3 md:col-span-1">
                 {
-                    filteredBlogs.map(blog => <Link key={blog?._id} href={`/blogs/${blog?._id}`}>
+                    filteredBlogs.map(blog => <Link className='cursor-pointer' key={blog?._id} href={`/blogs/${blog?._id}`}>
                         <div className="flex justify-center items-center gap-4 border rounded-lg px-4">
                             <Image className="w-40" src={blog?.image}
                                 alt={`blog-${blog._id}`}

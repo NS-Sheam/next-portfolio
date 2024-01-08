@@ -21,6 +21,8 @@ export const generateMetaDatas = async (
   path,
   type,
 ) => {
+  console.log(myimg);
+
   return {
     title: title ? "Nazmus Sakib|" + title : "Nazmus Sakib",
     description: description || "Welcome to the sky of Nazmus Sakib",
@@ -37,10 +39,12 @@ export const generateMetaDatas = async (
         : "https://nazmus-sakib.me/",
       title: title ? "Nazmus Sakib|" + title : "Nazmus Sakib",
       description: description || "Welcome to the sky of Nazmus Sakib",
-      image: {
-        url: image ? image : myimg,
-        alt: "Nazmus Sakib",
-      },
+      // image: image ? image : myimg,
+      images: [
+        {
+          url: image ? image : myimg.src,
+        },
+      ],
       site_name: "Nazmus Sakib",
     },
   };
