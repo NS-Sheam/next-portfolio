@@ -17,7 +17,7 @@ export const handleDownloadResume = () => {
 export const generateMetaDatas = async (
   title,
   description,
-  image,
+  image = myimg,
   path,
   type,
 ) => {
