@@ -37,7 +37,10 @@ export const generateMetaDatas = async (
         : "https://nazmus-sakib.me/",
       title: title ? "Nazmus Sakib|" + title : "Nazmus Sakib",
       description: description || "Welcome to the sky of Nazmus Sakib",
-      image: image ? image : myimg,
+      image: {
+        url: image ? image : myimg,
+        alt: "Nazmus Sakib",
+      },
       site_name: "Nazmus Sakib",
     },
   };
