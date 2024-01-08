@@ -2,9 +2,11 @@
 import { CircularTextLoadingComponent } from '@/components/LoadingComponent';
 import { BlogFunction } from '@/components/utils/blogFn';
 import moment from 'moment';
+import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+
 
 const SingleBlog = async ({ params }) => {
     const { filteredBlogs, singleBlog, loading } = await BlogFunction.loadBlogs(params?.id)
@@ -14,11 +16,16 @@ const SingleBlog = async ({ params }) => {
         return <CircularTextLoadingComponent loadingObj="blog" />
     }
 
+    const dynamicMetaTitle = singleBlog?.heading && `Blog - ${singleBlog.heading}`;
+
     return (
         <div className={`bg-bandTernary space-y-6 inner-container py-8 lg:pb-16 lg:pt-4 grid grid-cols-2 md:grid-cols-3 gap-6`}>
+            <Head>
+                <title>{dynamicMetaTitle}</title>
+            </Head>
             <div className="flex flex-col gap-4 col-span-3 md:col-span-1">
                 {
-                    filteredBlogs.map(blog => <Link className='cursor-pointer' key={blog?._id} href={`/blogs/${blog?._id}`}>
+                    filteredBlogs.map(blog => <Link className='cursor-pointer z-10' key={blog?._id} href={`/blogs/${blog?._id}`}>
                         <div className="flex justify-center items-center gap-4 border rounded-lg px-4">
                             <Image className="w-40" src={blog?.image}
                                 alt={`blog-${blog._id}`}
@@ -46,5 +53,6 @@ const SingleBlog = async ({ params }) => {
         </div>
     );
 };
+
 
 export default SingleBlog;

@@ -1,7 +1,6 @@
 "use client"
 
 import CircularText from '@/components/CurcularText/CircularText';
-import AnimatedButton from '@/components/buttons/AnimatedButton';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
@@ -23,12 +22,15 @@ const NotFound = () => {
             />
 
             <h1 className='font-semibold mb-2 banner-name-font text-xl '>{"nazmus-sakib.me" + path} not found</h1>
-            <AnimatedButton
-                htmlFor="my-modal-5"
-                className="text-bandTernary p-4 font-bold"
-            >
-                <Link href="/">Go to Home </Link>
-            </AnimatedButton>
+
+            <Link href="/">
+                <button
+                    htmlFor="my-modal-5"
+                    className="text-bandTernary p-4 font-bold button-container-dark transform duration-300 bg-bandYellow rounded-md hover:bg-yellow-600"
+                >
+                    Go to Home
+                </button>
+            </Link>
 
         </div>
     );
