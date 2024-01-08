@@ -2,7 +2,6 @@
 import { CircularTextLoadingComponent } from '@/components/LoadingComponent';
 import { BlogFunction } from '@/components/utils/blogFn';
 import moment from 'moment';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -16,13 +15,9 @@ const SingleBlog = async ({ params }) => {
         return <CircularTextLoadingComponent loadingObj="blog" />
     }
 
-    const dynamicMetaTitle = singleBlog?.heading && `Blog - ${singleBlog.heading}`;
 
     return (
         <div className={`bg-bandTernary space-y-6 inner-container py-8 lg:pb-16 lg:pt-4 grid grid-cols-2 md:grid-cols-3 gap-6`}>
-            <Head>
-                <title>{dynamicMetaTitle}</title>
-            </Head>
             <div className="flex flex-col gap-4 col-span-3 md:col-span-1">
                 {
                     filteredBlogs.map(blog => <Link className='cursor-pointer z-10' key={blog?._id} href={`/blogs/${blog?._id}`}>
