@@ -10,12 +10,13 @@ import {
 import { BiArrowToTop } from "react-icons/bi";
 import { SiAboutdotme } from "react-icons/si";
 import { LiaBlogSolid } from "react-icons/lia";
-import logo from "@/assets/images/ns-logo.png";
+import logo from "@/assets/images/ns-logo-3.png";
 import ActiveLink from "@/components/ActiveLink/ActiveLink";
 import Link from "next/link";
 import { handleDownloadResume } from "../utils";
 import { FaHome } from "react-icons/fa";
 import CircularText from "../CurcularText/CircularText";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -157,12 +158,13 @@ const Header = () => {
             text=" -Welcome-to-the-sky-"
             degree={18}
             circleSize="80px"
-            logoSize={"60px"}
+            logoSize={"65px"}
             logoUrl={logo}
             origin="40px"
             textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
             animationSpeed="7s"
           />
+
         </Link>
       </div>
       {/* For Mobile  */}

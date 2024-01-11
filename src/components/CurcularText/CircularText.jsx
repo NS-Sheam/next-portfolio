@@ -35,14 +35,14 @@ const CircularText = ({
       }}
     >
       <div
-        className="logo absolute"
+        className="logo absolute z-20"
         style={{
           backgroundImage: `url(${logoUrl?.src})`,
           width: logoSize,
           height: logoSize,
           borderRadius: "50%",
           backgroundSize: "cover",
-          filter: filter,
+          filter: filter
         }}
       ></div>
       <div
