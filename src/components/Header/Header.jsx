@@ -16,7 +16,6 @@ import Link from "next/link";
 import { handleDownloadResume } from "../utils";
 import { FaHome } from "react-icons/fa";
 import CircularText from "../CurcularText/CircularText";
-import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
