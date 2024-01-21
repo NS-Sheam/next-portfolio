@@ -6,9 +6,12 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 import Image from "next/image";
 import { useState } from "react";
 import { handleDownloadResume } from "@/components/utils";
+import AnimatedButton from "@/components/buttons/AnimatedButton";
+import { useRouter } from "next/navigation";
 
 const Banner = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const router = useRouter();
 
   return (
     <>
@@ -74,15 +77,17 @@ const Banner = () => {
               className="rounded-xl mx-auto hover:scale-105 duration-300 shadow-lg"
             />
 
+
             <div
               className={`absolute h-full w-full ${isHovered ? "flex" : "hidden"
                 } justify-center items-center bg-opacity-50 bg-black top-0 right-0`}
             >
-              <label
-                className={`btn button-container-dark  text-bandTernary transform duration-300 p-4 font-bold`}
+              <AnimatedButton
+                onClick={() => router.push("/contact")}
+                className={`text-bandTernary p-4 font-bold`}
               >
                 HIRE ME
-              </label>
+              </AnimatedButton>
             </div>
           </div>
         </div>
