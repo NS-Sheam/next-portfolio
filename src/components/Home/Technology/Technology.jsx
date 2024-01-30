@@ -24,6 +24,7 @@ import skillImg6 from "../../../assets/images/skill-icon/react.png";
 import skillImg7 from "../../../assets/images/skill-icon/node-js.png";
 import skillImg8 from "../../../assets/images/skill-icon/express.png";
 import skillImg9 from "../../../assets/images/skill-icon/mongodb.png";
+import Link from "next/link";
 const Technology = () => {
   const [showedTechnology, setShowedTechnology] = useState("frontend");
   const skills = [
@@ -145,13 +146,16 @@ const Technology = () => {
         your team.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start justify-start">
+      <div
+        id="technology"
+        className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start justify-start">
         {/* button side  */}
         {/* for dextop view */}
 
         <div className="hidden col-span-1 md:flex flex-col justify-center items-center gap-8 z-10">
           {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
             <button
+
               onClick={() => setShowedTechnology(item.toLowerCase())}
               key={index}
               className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
@@ -172,11 +176,13 @@ const Technology = () => {
               : "text-white"
               }`}
           >
-            {item}
+            <Link href="#technology">{item}</Link>
           </button>
         ))}
         {/* Data side */}
-        <div className="md:col-span-2 order-2 py-4">
+        <div
+
+          className="md:col-span-2 order-2 py-4">
           {technologies.map((technology) => {
             return Object.keys(technology).map((key, index) => {
               return (
@@ -188,6 +194,7 @@ const Technology = () => {
                     {technology[key].map((item, index) => {
                       return (
                         <div
+
                           data-aos="zoom-in"
                           data-aos-duration="500"
                           className="flex flex-col justify-center items-center gap-8 bg-bandPrimary p-5 border border-text-bandYellow rounded-lg"
