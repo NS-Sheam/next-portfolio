@@ -2,7 +2,8 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
+import logo from "@/assets/images/ns-logo-3.png";
+import CircularText from "@/components/CurcularText/CircularText";
 
 
 const GlovalContext = createContext();
@@ -21,7 +22,7 @@ export const GlovalContextProvider = ({ children }) => {
     // Hide the welcome message after 2 seconds
     const timer = setTimeout(() => {
       setShowWelcome(false);
-    }, 2500);
+    }, 1500);
 
     // Clear the timer when the component unmounts
     return () => clearTimeout(timer);
@@ -72,7 +73,20 @@ export const GlovalContextProvider = ({ children }) => {
   return (
     <GlovalContext.Provider value={glovalData}>
       {
-        showWelcome ? <CircularTextLoadingComponent loadingObj="Sky" /> :
+        showWelcome ? <div className="h-screen flex justify-center items-center w-full">
+
+          <CircularText
+            text=" -Welcome-to-the-sky-"
+            degree={18}
+            circleSize="80px"
+            logoSize={"65px"}
+            logoUrl={logo}
+            origin="40px"
+            textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
+            animationSpeed="7s"
+          />
+
+        </div> :
           <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
       }
     </GlovalContext.Provider>
