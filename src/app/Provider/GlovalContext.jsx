@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
 
 
 const GlovalContext = createContext();
@@ -70,7 +71,10 @@ export const GlovalContextProvider = ({ children }) => {
   // Developer aleart ends --------------------------------
   return (
     <GlovalContext.Provider value={glovalData}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+      {
+        showWelcome ? <CircularTextLoadingComponent loadingObj="Sky" /> :
+          <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+      }
     </GlovalContext.Provider>
   );
 };
