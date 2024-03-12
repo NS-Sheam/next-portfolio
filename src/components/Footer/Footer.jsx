@@ -12,8 +12,8 @@ import "./Footer.css";
 
 const Footer = () => {
     return (
-        <>
-            <footer className="inner-container pt-10 pb-14 md:pb:6 md:pt-20 md:pb-2 bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary text-white mx-auto ">
+        <footer className="pt-10 pb-14 md:pb:6 md:pt-20 md:pb-2 bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary">
+            <div className="container mx-auto inner-container text-white ">
                 <div className="gap-14 md:grid grid-cols-5 space-y-6">
                     <div className="col-span-3 space-y-3">
                         <h2 className="text-5xl font-extrabold banner-name-font text-center lg:text-left ">
@@ -96,8 +96,8 @@ const Footer = () => {
                 <p className="text-center py-4">
                     Copyright © 2023 - All right reserved by Nazmus Sakib
                 </p>
-            </footer>
-        </>
+            </div>
+        </footer>
     );
 };
 

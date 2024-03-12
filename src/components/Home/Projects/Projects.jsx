@@ -8,8 +8,8 @@ import ProjectModal from "@/components/ProjectModal";
 const Projects = () => {
   const [singleProject, setSingleProject] = useState(null);
   return (
-    <>
-      <div className="text-center bg-gradient-to-tr from-bandPrimary to-bandSecondary inner-container py-8 lg:py-14">
+    <section className="bg-gradient-to-tr from-bandPrimary to-bandSecondary  py-8 lg:py-14">
+      <div className="container mx-auto text-center  inner-container">
         <SectionTitle
           heading="Projects"
           punchLine={"Projects I've worked on"}
@@ -20,7 +20,7 @@ const Projects = () => {
         </div>
       </div>
       {singleProject && <ProjectModal projectData={singleProject} />}
-    </>
+    </section>
   );
 };
 

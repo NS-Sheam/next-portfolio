@@ -51,34 +51,36 @@ const Services = () => {
   ];
 
   return (
-    <section className={`bg-bandTernary space-y-6 inner-container py-8 lg:pb-16 lg:pt-0`}>
+    <section className={`bg-bandTernary py-8 lg:pb-16 lg:pt-0`}>
 
-      <h1 className=" font-extrabold banner-name-font text-6xl text-center">My Services</h1>
-      <p className="text-white text-justify md:text-center w-full md:w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8">
-        See all my services below. If you have any questions, please feel free to contact me.
-      </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {webDevelopmentServicesData.map(
-          ({ title, description, image }, index) => (
-            <div
-              key={index}
-              className={` p-6 rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105 shadow-2xl border-2 border-bandYellow`}
-            >
-              <div className="relative w-full h-48 mb-4 rounded-lg border-2 border-bandOrange">
-                <Image
-                  src={image}
-                  alt={title}
-                  className="object-cover w-full h-full"
-                  fill
-                />
+      <div className="container mx-auto space-y-6 inner-container">
+        <h1 className=" font-extrabold banner-name-font text-6xl text-center">My Services</h1>
+        <p className="text-white text-justify md:text-center w-full md:w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8">
+          See all my services below. If you have any questions, please feel free to contact me.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {webDevelopmentServicesData.map(
+            ({ title, description, image }, index) => (
+              <div
+                key={index}
+                className={` p-6 rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105 shadow-2xl border-2 border-bandYellow`}
+              >
+                <div className="relative w-full h-48 mb-4 rounded-lg border-2 border-bandOrange">
+                  <Image
+                    src={image}
+                    alt={title}
+                    className="object-cover w-full h-full"
+                    fill
+                  />
+                </div>
+                <h3 className="text-2xl font-bold mb-2 text-bandYellow">
+                  {title}
+                </h3>
+                <p className="text-white text-xl">{description}</p>
               </div>
-              <h3 className="text-2xl font-bold mb-2 text-bandYellow">
-                {title}
-              </h3>
-              <p className="text-white text-xl">{description}</p>
-            </div>
-          ),
-        )}
+            ),
+          )}
+        </div>
       </div>
     </section>
   );

@@ -18,9 +18,9 @@ const Contact = () => {
 
 
     return (
-        <>
+        <div className="bg-bandTernary py-8 lg:pb-16 lg:pt-0">
             <div
-                className="bg-bandTernary inner-container py-8 lg:pb-16 lg:pt-0 ">
+                className="container mx-auto inner-container ">
                 <h1 className="font-extrabold mb-2 banner-name-font text-6xl text-center">Contact me!</h1>
                 <p className={`text-white text-justify md:text-center lg:w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}>Let's connect! If you have any questions or would like to discuss potential collaborations, feel free to reach out using the contact details below. I'm eager to hear from you and explore exciting opportunities together. Don't hesitate to get in touch!</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-16">
@@ -73,7 +73,7 @@ const Contact = () => {
                 pauseOnHover
                 theme="light"
             />
-        </>
+        </div>
     );
 };
 

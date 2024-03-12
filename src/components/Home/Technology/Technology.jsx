@@ -113,114 +113,116 @@ const Technology = () => {
   ];
 
   return (
-    <section className="inner-container space-y-4 pt-4 pb-8 lg:pb-14 bg-bandTernary ">
-      <h1 className="text-3xl md:text-6xl font-bold text-bandOrange text-center">
-        Skills
-      </h1>
-      <h2 className="text-xl md:text-3xl font-bold text-white text-center">
-        Technology that I know
-      </h2>
+    <section className="pt-4 pb-8 lg:pb-14 bg-bandTernary ">
+      <div className="inner-container space-y-4 container mx-auto">
+        <h1 className="text-3xl md:text-6xl font-bold text-bandOrange text-center">
+          Skills
+        </h1>
+        <h2 className="text-xl md:text-3xl font-bold text-white text-center">
+          Technology that I know
+        </h2>
 
-      <Marquee autoFill={true}>
-        {skills?.map((skill, i) => (
-          <div
-            className="w-12 h-12 lg:w-20 lg:h-20 flex justify-center items-center mx-4 rounded-3xl"
-            key={i}
-          >
-            <Image
-              className={`${skill == skillImg8 ? "rounded-2xl bg-white" : ""}`}
-              src={skill}
-              alt=""
-            />
+        <Marquee autoFill={true}>
+          {skills?.map((skill, i) => (
+            <div
+              className="w-12 h-12 lg:w-20 lg:h-20 flex justify-center items-center mx-4 rounded-3xl"
+              key={i}
+            >
+              <Image
+                className={`${skill == skillImg8 ? "rounded-2xl bg-white" : ""}`}
+                src={skill}
+                alt=""
+              />
+            </div>
+          ))}
+        </Marquee>
+
+        <p className="text-xl lg:text-xl lg:w-4/5 mx-auto text-white text-justify md:text-center">
+          Check out my extensive list of skills to get a comprehensive
+          understanding of my expertise and capabilities. From front-end
+          development to back-end programming, UI/UX design, database management,
+          and more, my skills cover a wide range of areas in web development.
+          Explore the skills section to see how my technical proficiencies align
+          with your project requirements and discover the value I can bring to
+          your team.
+        </p>
+
+        <div
+          id="technology"
+          className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start justify-start">
+          {/* button side  */}
+          {/* for dextop view */}
+
+          <div className="hidden col-span-1 md:flex flex-col justify-center items-center gap-8 z-10">
+            {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
+              <button
+
+                onClick={() => setShowedTechnology(item.toLowerCase())}
+                key={index}
+                className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
+                  ? "bg-bandYellow text-bandTernary"
+                  : "text-white"
+                  }`}
+              >
+                {item}
+              </button>
+            ))}
           </div>
-        ))}
-      </Marquee>
-
-      <p className="text-xl lg:text-xl lg:w-4/5 mx-auto text-white text-justify md:text-center">
-        Check out my extensive list of skills to get a comprehensive
-        understanding of my expertise and capabilities. From front-end
-        development to back-end programming, UI/UX design, database management,
-        and more, my skills cover a wide range of areas in web development.
-        Explore the skills section to see how my technical proficiencies align
-        with your project requirements and discover the value I can bring to
-        your team.
-      </p>
-
-      <div
-        id="technology"
-        className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start justify-start">
-        {/* button side  */}
-        {/* for dextop view */}
-
-        <div className="hidden col-span-1 md:flex flex-col justify-center items-center gap-8 z-10">
           {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
             <button
-
               onClick={() => setShowedTechnology(item.toLowerCase())}
               key={index}
-              className={`text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
+              className={`md:hidden md:col-span-1 ${showedTechnology === item.toLowerCase() ? "order-1" : "order-3"} z-10 text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
                 ? "bg-bandYellow text-bandTernary"
                 : "text-white"
                 }`}
             >
-              {item}
+              <Link href="#technology">{item}</Link>
             </button>
           ))}
-        </div>
-        {["Frontend", "Backend", "Database", "Devops"].map((item, index) => (
-          <button
-            onClick={() => setShowedTechnology(item.toLowerCase())}
-            key={index}
-            className={`md:hidden md:col-span-1 ${showedTechnology === item.toLowerCase() ? "order-1" : "order-3"} z-10 text-2xl font-bold bg-bandPrimary py-5 w-full rounded-lg ${showedTechnology === item.toLowerCase()
-              ? "bg-bandYellow text-bandTernary"
-              : "text-white"
-              }`}
-          >
-            <Link href="#technology">{item}</Link>
-          </button>
-        ))}
-        {/* Data side */}
-        <div
+          {/* Data side */}
+          <div
 
-          className="md:col-span-2 order-2 py-4">
-          {technologies.map((technology) => {
-            return Object.keys(technology).map((key, index) => {
-              return (
-                key === showedTechnology && (
-                  <div
-                    className="grid grid-cols-2 md:grid-cols-3 gap-8 md:w-2/3 mx-auto"
-                    key={index}
-                  >
-                    {technology[key].map((item, index) => {
-                      return (
-                        <div
+            className="md:col-span-2 order-2 py-4">
+            {technologies.map((technology) => {
+              return Object.keys(technology).map((key, index) => {
+                return (
+                  key === showedTechnology && (
+                    <div
+                      className="grid grid-cols-2 md:grid-cols-3 gap-8 md:w-2/3 mx-auto"
+                      key={index}
+                    >
+                      {technology[key].map((item, index) => {
+                        return (
+                          <div
 
-                          data-aos="zoom-in"
-                          data-aos-duration="500"
-                          className="flex flex-col justify-center items-center gap-8 bg-bandPrimary p-5 border border-text-bandYellow rounded-lg"
-                          key={index}
-                        >
-                          <Image
-                            className={
-                              item.image === expressImage
-                                ? "bg-white p-2 rounded-lg"
-                                : ""
-                            }
-                            src={item.image}
-                            width={100}
-                            alt=""
-                          />
-                          <h3 className="text-xl font-bold text-bandYellow">
-                            {item.name}
-                          </h3>
-                        </div>
-                      );
-                    })}
-                  </div>
-                )
-              );
-            });
-          })}
+                            data-aos="zoom-in"
+                            data-aos-duration="500"
+                            className="flex flex-col justify-center items-center gap-8 bg-bandPrimary p-5 border border-text-bandYellow rounded-lg"
+                            key={index}
+                          >
+                            <Image
+                              className={
+                                item.image === expressImage
+                                  ? "bg-white p-2 rounded-lg"
+                                  : ""
+                              }
+                              src={item.image}
+                              width={100}
+                              alt=""
+                            />
+                            <h3 className="text-xl font-bold text-bandYellow">
+                              {item.name}
+                            </h3>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )
+                );
+              });
+            })}
+          </div>
         </div>
       </div>
     </section>

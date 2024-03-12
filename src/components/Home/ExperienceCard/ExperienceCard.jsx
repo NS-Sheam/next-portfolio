@@ -52,46 +52,48 @@ const ExperienceCard = () => {
     },
   ];
   return (
-    <div className="bg-bandTernary inner-container space-y-6 py-4 lg:py-8">
-      <p className="font-extrabold text-xl md:text-3xl text-white text-center">
-        Experience Highlights{" "}
-      </p>
+    <div className="bg-bandTernary py-4 lg:py-8">
+      <div className="container mx-auto inner-container space-y-6">
+        <p className="font-extrabold text-xl md:text-3xl text-white text-center">
+          Experience Highlights{" "}
+        </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
-        {cardData.map(
-          (
-            { image, heading, description, gradientClass, imageCss, textCss },
-            index,
-          ) => (
-            <div className="card" key={index}>
-              <div
-                className={`container-card space-y-4 rounded-3xl after:rounded-3xl p-4 ${gradientClass}`}
-              >
-                <Image
-                  className={`p-2 rounded-md  ${gradientClass} ${imageCss}`}
-                  width={100}
-                  src={image}
-                  alt={`image ${index}`}
-                />
-                <p
-                  className={`text-3xl md:text-[4rem] font-extrabold ${textCss}`}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 ">
+          {cardData.map(
+            (
+              { image, heading, description, gradientClass, imageCss, textCss },
+              index,
+            ) => (
+              <div className="card" key={index}>
+                <div
+                  className={`container-card space-y-4 rounded-3xl after:rounded-3xl p-4 ${gradientClass}`}
                 >
-                  <CountUp
-                    enableScrollSpy={true}
-                    scrollSpyDelay={100}
-                    className=""
-                    end={heading[0]}
+                  <Image
+                    className={`p-2 rounded-md  ${gradientClass} ${imageCss}`}
+                    width={100}
+                    src={image}
+                    alt={`image ${index}`}
                   />
-                  {heading[1]}
-                </p>
+                  <p
+                    className={`text-3xl md:text-[4rem] font-extrabold ${textCss}`}
+                  >
+                    <CountUp
+                      enableScrollSpy={true}
+                      scrollSpyDelay={100}
+                      className=""
+                      end={heading[0]}
+                    />
+                    {heading[1]}
+                  </p>
 
-                <p className=" md:text-xl font-extrabold text-white">
-                  {description}
-                </p>
+                  <p className=" md:text-xl font-extrabold text-white">
+                    {description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ),
-        )}
+            ),
+          )}
+        </div>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ export const metadata = await generateMetaDatas();
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} container mx-auto`}>
+      <body className={`${roboto.className} `}>
         <GlovalContextProvider>{children}</GlovalContextProvider>
       </body>
     </html>

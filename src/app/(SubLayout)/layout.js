@@ -25,9 +25,7 @@ const layout = ({ children }) => {
     //       duration: 0.5,
     //     }}
     //   >
-    <div
-      className={` min-h-screen max-w-screen-xl mx-auto relative overflow-hidden`}
-    >
+    <div className={` min-h-screen relative overflow-hidden`}>
       <GlowingBall />
       <Header />
       <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}>

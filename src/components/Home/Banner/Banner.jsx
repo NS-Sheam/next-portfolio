@@ -16,7 +16,7 @@ const Banner = () => {
   return (
     <>
       {/* for dextop  */}
-      <section className="hidden inner-container min-h-[calc(100vh-20vh)] lg:flex justify-between items-center border-b border-white">
+      <section className="container mx-auto hidden inner-container min-h-[calc(100vh-20vh)] lg:flex justify-between items-center border-b border-white">
         <div
           data-aos="fade-right"
           data-aos-anchor="#example-anchor"

@@ -16,36 +16,38 @@ const ProjectsPage = () => {
   }, []);
 
   return (
-    <section className="bg-bandTernary inner-container py-8 lg:pb-16 lg:pt-0 ">
-      <div
-        data-aos="zoom-in"
-        data-aos-anchor="#example-anchor"
-        data-aos-duration="1000"
-      >
-        <h1 className="font-extrabold mb-2 banner-name-font text-6xl text-center">
-          My Projects
-        </h1>
-        <p
-          className={`text-white text-justify md:text-center w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}
+    <section className="bg-bandTernary py-8 lg:pb-16 lg:pt-0 ">
+      <div className="container mx-auto  inner-container">
+        <div
+          data-aos="zoom-in"
+          data-aos-anchor="#example-anchor"
+          data-aos-duration="1000"
         >
-          Browse through my portfolio to explore a diverse range of projects
-          that demonstrate my skills in web development. From interactive React
-          applications to functional JavaScript projects and visually appealing
-          HTML/CSS interfaces, you will find a showcase of my expertise in
-          various web technologies.
-        </p>
-      </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 items-end mx-auto gap-5">
-        {projects?.map((project) => (
-          <SingleProject
-            key={project.id}
-            project={project}
-            setSingleProject={setSingleProject}
-          />
-        ))}
-      </div>
+          <h1 className="font-extrabold mb-2 banner-name-font text-6xl text-center">
+            My Projects
+          </h1>
+          <p
+            className={`text-white text-justify md:text-center w-3/4 mx-auto pb-4 md:pb-6 lg:pb-8`}
+          >
+            Browse through my portfolio to explore a diverse range of projects
+            that demonstrate my skills in web development. From interactive React
+            applications to functional JavaScript projects and visually appealing
+            HTML/CSS interfaces, you will find a showcase of my expertise in
+            various web technologies.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 items-end mx-auto gap-5">
+          {projects?.map((project) => (
+            <SingleProject
+              key={project.id}
+              project={project}
+              setSingleProject={setSingleProject}
+            />
+          ))}
+        </div>
 
-      {singleProject ? <ProjectModal projectData={singleProject} /> : <></>}
+        {singleProject ? <ProjectModal projectData={singleProject} /> : <></>}
+      </div>
     </section>
   );
 };
