@@ -113,7 +113,7 @@ const Technology = () => {
   ];
 
   return (
-    <section className="inner-container space-y-4 pt-4 pb-8 lg:pb-14 bg-bandTernary  ">
+    <section className="inner-container space-y-4 pt-4 pb-8 lg:pb-14 bg-bandTernary ">
       <h1 className="text-3xl md:text-6xl font-bold text-bandOrange text-center">
         Skills
       </h1>
