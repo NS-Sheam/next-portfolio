@@ -2,9 +2,12 @@ const allBlogs = async () => {
   let loading = true;
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_PUBLIC_HOSTING_URL}/allblog`,
+      // `${process.env.NEXT_PUBLIC_PUBLIC_HOSTING_URL}/allblog`,
+      process.env.NEXT_PUBLIC_MEDIUM_URL,
     );
-    const blogs = await res.json();
+    const mediumBlogs = await res.json();
+    const blogs = mediumBlogs?.items;
+
     loading = false;
 
     return { blogs, loading };

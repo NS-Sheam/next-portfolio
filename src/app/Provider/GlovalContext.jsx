@@ -73,7 +73,7 @@ export const GlovalContextProvider = ({ children }) => {
   return (
     <GlovalContext.Provider value={glovalData}>
       {
-        showWelcome ? <div className="h-screen flex justify-center items-center w-full">
+        showWelcome ? <div className="h-screen flex justify-center items-center w-full bg-bandTernary">
 
           <CircularText
             text=" -Welcome-to-the-sky-"

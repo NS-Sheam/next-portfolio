@@ -19,7 +19,7 @@ const ExperienceCard = () => {
     },
     {
       image: clients,
-      heading: [20, "+"],
+      heading: [10, "+"],
       description: "Respected Clients",
       gradientClass: "bg-blue-box",
       imageCss:
