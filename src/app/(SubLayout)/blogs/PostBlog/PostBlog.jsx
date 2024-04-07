@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const img_hosting_token = import.meta.env.VITE_IMAGE_HOSTIONG_TOKEN;
 const hostingUrl = import.meta.env.VITE_HOSTING_URL
 const PostBlog = () => {
-  const [selectedText, setSelectedText] = useState('');
+  const [, setSelectedText] = useState('');
   const contentEditableRef = useRef(null);
   const navigate = useNavigate();
   const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`
@@ -17,8 +17,9 @@ const PostBlog = () => {
 
   const handleTextSelection = () => {
     const text = window.getSelection().toString();
+
     setSelectedText(text);
-    console.log(selectedText);
+
 
   };
 

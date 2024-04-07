@@ -23,12 +23,12 @@ const SingleBlog = async ({ params }) => {
                     filteredBlogs.map(blog => <Link className='cursor-pointer z-10' key={blog?._id} href={`/blogs/${blog?._id}`}>
                         <div className="flex justify-center items-center gap-4 border rounded-lg px-4">
                             <Image className="w-40" src={blog?.image}
-                                alt={`blog-${blog._id}`}
+                                alt={`blog-${blog?._id}`}
                                 width={400}
                                 height={200}
                             />
                             <div className="p-4">
-                                <p className="font-semibold text-bandYellow">{moment(blog.createdAt).format('MMMM DD YYYY')}</p>
+                                <p className="font-semibold text-bandYellow">{moment(blog?.createdAt).format('MMMM DD YYYY')}</p>
                                 <h3 className="text-white">{blog?.heading}</h3>
                             </div>
                         </div>

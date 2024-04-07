@@ -6,6 +6,7 @@ const allBlogs = async () => {
       process.env.NEXT_PUBLIC_MEDIUM_URL,
     );
     const mediumBlogs = await res.json();
+
     const blogs = mediumBlogs?.items;
 
     loading = false;
