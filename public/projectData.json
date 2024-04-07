@@ -27,241 +27,89 @@
   },
   {
     "id": 3,
-    "projectName": "Travel Guru",
-    "technology": [
-      "React.js",
-      "Javascript",
-      "HTML5",
-      "CSS3",
-      "Tailwind css",
-      "Firebase",
-      "Swiper.js"
-    ],
-    "description": [
-      "Travel Guru is a hotel booking site",
-      "Added Swiper.js for slider",
-      "Implement firebase authentication system",
-      "Implement backend functionality with Express.js"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/travel-guru-client-m-64-5",
-    "serverSite": "https://github.com/NS-Sheam/travel-guru-server-m-64.5",
-    "liveSite": "https://travel-guru-ns.netlify.app/",
-    "image": "https://i.ibb.co/G91dw5W/travel-guru.png",
-    "madeWith": ["React", "JavaScript"]
-  },
-  {
-    "id": 4,
-    "projectName": "Justice",
-    "technology": ["HTML5", "CSS3", "Bootstrap"],
-    "description": [
-      "Use HTML, CSS and Bootstrap",
-      "Use Bootstrap as css framework"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/justice-legal-house",
-    "liveSite": "https://justice-legal.netlify.app/",
-    "image": "https://i.ibb.co/Rbdcbkx/justic-legal.png",
-    "madeWith": ["HTML", "CSS"]
-  },
-  {
-    "id": 5,
-    "projectName": "Tea House",
-    "technology": ["HTML5", "CSS3", "Tailwind css"],
-    "description": ["Used HTML, CSS", "Use tailwind as css framework"],
-    "clientSite": "https://github.com/NS-Sheam/tea-house-tailwind-bootstrap-m-15-5",
-    "liveSite": "https://tea-house-ns.netlify.app/",
-    "image": "https://i.ibb.co/Bj058VP/tea-house.png",
-    "madeWith": ["HTML", "CSS"]
-  },
-  {
-    "id": 6,
-    "projectName": "Idea",
-    "technology": ["Javascript", "HTML5", "CSS3", "Tailwind css"],
-    "description": [
-      "Used HTML, CSS and Javascript",
-      "Use tailwind as css framework",
-      "Not so much functionality added"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/leader-board-mod-10",
-    "liveSite": "https://idea-ns-sheam.netlify.app/",
-    "image": "https://i.ibb.co/K9rJ5LL/idea.png",
-    "madeWith": ["HTML", "CSS"]
-  },
-  {
-    "id": 7,
-    "projectName": "AI Universe",
-    "technology": ["Javascript", "HTML5", "CSS3", "Tailwind css"],
-    "description": [
-      "AI Universe site is javascript based site",
-      "added modal with javascript",
-      "Used bookmark functionality"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/ai-universe",
-    "liveSite": "https://mnsakibphassignment6.netlify.app/",
-    "image": "https://i.ibb.co/02sqcKq/ai-universe.png",
-    "madeWith": ["JavaScript", "HTML", "CSS"]
-  },
-  {
-    "id": 8,
-    "projectName": "Knowledge Cafe",
-    "technology": [
-      "React.js",
-      "Javascript",
-      "HTML5",
-      "CSS3",
-      "Tailwind css",
-      "Firebase"
-    ],
-    "description": [
-      "Knowledge Cafe site is for searching books",
-      "Implemented react router",
-      "User can read different books"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/knowledge-hunt-c-sess-mil-9",
-    "liveSite": "https://knowledge-cafe-ns.netlify.app/",
-    "image": "https://i.ibb.co/TBFrdpp/know-ledge-cafe.png",
-    "madeWith": ["JavaScript", "HTML", "CSS"]
-  },
-  {
-    "id": 9,
-    "projectName": "Geometry Genius",
-    "technology": ["Javascript", "HTML5", "CSS3"],
-    "description": [
-      "Geometry Genius is a single page site for getting the area of different shape",
-      "Used javascript for calculate area"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/geometry-genius",
-    "liveSite": "https://geometry-genius-ns.netlify.app/",
-    "image": "https://i.ibb.co/PwnLJ0N/geometry-genius.png",
-    "madeWith": ["JavaScript", "HTML", "CSS"]
-  },
-  {
-    "id": 10,
-    "projectName": "MealDB",
-    "technology": ["React.js", "Javascript", "HTML5", "CSS3", "Tailwind css"],
-    "description": [
-      "Site for searching different meals in the world",
-      "Added search functionality",
-      "Use api for collection meal data"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/mealDB-with-react-router",
-    "liveSite": "https://mealdb-nss.netlify.app/",
-    "image": "https://i.ibb.co/2jKgCgN/mealdb.png",
-    "madeWith": ["React"]
-  },
-  {
-    "id": 11,
-    "projectName": "Get Jobs",
-    "technology": ["React.js", "Javascript", "HTML5", "CSS3", "Tailwind css"],
-    "description": [
-      "Get jobs is a job searching and applying site",
-      "Added applied job functionality with localhost",
-      "Only react based website and no backend used"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/get-jobs",
-    "liveSite": "https://getjobs-ph.netlify.app/",
-    "image": "https://i.ibb.co/6Btx7GF/getjobs.png",
-    "madeWith": ["React", "JavaScript"]
-  },
-  {
-    "id": 12,
-    "projectName": "Heroverse",
+    "projectName": "Next Shop",
     "technology": [
       "React.js",
       "Express.js",
-      "Javascript",
       "Mongodb",
-      "Firebase",
-      "HTML5",
-      "CSS3",
-      "Tailwind css"
-    ],
-    "description": [
-      "Full stack project with MERN technology",
-      "Added backend functionality with Express.js",
-      "Implemented Firebase authentication system",
-      "Use Mongodb for store data",
-      "Use private route for make secure routing"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/heroverse-client-side",
-    "serverSite": "https://github.com/NS-Sheam/heroverse-server-side",
-    "liveSite": "https://toy-marketplace-f77ed.web.app/",
-    "image": "https://i.ibb.co/D9G14D0/Heroverse.png",
-    "madeWith": ["React", "JavaScript"]
-  },
-  {
-    "id": 13,
-    "projectName": "Chef Recipe",
-    "technology": [
-      "React.js",
-      "Express.js",
+      "Mongoose",
       "Javascript",
-      "Firebase",
       "HTML5",
       "CSS3",
-      "React Boostrap"
+      "Redux",
+      "Ant Design",
+      "Tailwind css",
+      "Ssl-commerz",
+      "Nodemailer",
+      "jwt"
     ],
     "description": [
-      "Full stack project with MERN technology",
-      "Added backend functionality with Express.js",
-      "Implemented Firebase authentication system",
-      "Use Mongodb for store data",
-      "Use private route for make secure routing"
+      "Next Shop is a e-commerce site",
+      "Added Ant Design for UI",
+      "Implement secure authentication system",
+      "Implement backend functionality with Express.js",
+      "Added Email verification functionality",
+      "Implement payment gateway system with ssl-commerz",
+      "Use Redux for state management",
+      "Used Mongoose in backend as ODM",
+      "Full responsive full stack website"
     ],
-    "clientSite": "https://github.com/NS-Sheam/chefs-universe-client",
-    "serverSite": "https://github.com/NS-Sheam/chefs-universe-server",
-    "liveSite": "https://chef-recipe-hunting-client.web.app/",
-    "image": "https://i.ibb.co/sVbFNYr/chefrecipe.png",
-    "madeWith": ["React", "JavaScript"]
-  },
-  {
-    "id": 14,
-    "projectName": "News Dragon",
-    "technology": [
-      "React.js",
-      "Express.js",
-      "Firebase",
-      "HTML5",
-      "CSS3",
-      "React Boostrap"
-    ],
-    "description": [
-      "Full stack project with MERN technology",
-      "Added backend functionality with Express.js",
-      "Implemented Firebase authentication system",
-      "Use private route for make secure routing"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/The-news-dragon-client",
-    "serverSite": "https://github.com/NS-Sheam/the-news-dragon-server",
-    "liveSite": "https://the-news-dragon-6d4fa.web.app/",
-    "image": "https://i.ibb.co/DLg69Wg/news-dragon.png",
-    "madeWith": ["React"]
-  },
-  {
-    "id": 15,
-    "projectName": "Car Doctor",
-    "technology": [
-      "React.js",
-      "Express.js",
-      "Firebase",
-      "HTML5",
-      "CSS3",
-      "Tailwind css"
-    ],
-    "description": [
-      "Full stack project with MERN technology",
-      "Added backend functionality with Express.js",
-      "Implemented Firebase authentication system",
-      "Use Mongodb for store data",
-      "Use private route for make secure routing"
-    ],
-    "clientSite": "https://github.com/NS-Sheam/car-doctor-client-m-69",
-    "serverSite": "https://github.com/NS-Sheam/car-doctor-server-m-70",
-    "liveSite": "https://car-doctor-4510b.web.app/",
-    "image": "https://i.ibb.co/MSHv3KD/car-doctor.png",
+    "clientSite": "https://github.com/NS-Sheam/e-commerce-full-stack/tree/main/e-commerce-client/",
+    "serverSite": "https://github.com/NS-Sheam/e-commerce-full-stack/tree/main/e-commerce-server/",
+    "liveSite": "https://next-shop-e-commerce.netlify.app/",
+    "image": "https://i.ibb.co/B3RNY47/next-shop.png",
     "madeWith": ["React", "Express", "Mongodb"]
   },
   {
-    "id": 16,
+    "id": 4,
+    "projectName": "Bookease",
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Mongodb",
+      "Mongoose",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Redux",
+      "Ant Design",
+      "Tailwind css",
+      "Nodemailer",
+      "jwt"
+    ],
+    "description": [
+      "Next Shop is a service booking website",
+      "Added Ant Design for UI",
+      "Use Redux for state management",
+      "Implement secure authentication system",
+      "Implement backend functionality with Express.js",
+      "Added Email verification functionality",
+      "Implement realtime booking functionality with calender",
+      "Used Mongoose in backend as ODM",
+      "Full responsive full stack website"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/service-resarvation/tree/main/reservation-client/",
+    "serverSite": "https://github.com/NS-Sheam/service-resarvation/tree/main/reservation-server/",
+    "liveSite": "https://reservation-client-sigma.vercel.app/",
+    "image": "https://i.ibb.co/TTbPxTP/book-ease.png",
+    "madeWith": ["React", "Express", "Mongodb", "JavaScript"]
+  },
+  {
+    "id": 5,
+    "projectName": "Devspot",
+    "technology": ["Next.js", "HTML5", "CSS3", "Tailwind css"],
+    "description": [
+      "Next Shop is a web support website",
+      "Made with Next.js",
+      "Use tailwind as css framework"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/my-dev-site/",
+    "liveSite": "https://my-dev-site-lemon.vercel.app/",
+    "image": "https://i.ibb.co/30c9Yd2/devspot.png",
+    "madeWith": ["React", "Next.js"]
+  },
+  {
+    "id": 6,
     "projectName": "Magic Learner",
     "technology": [
       "React.js",
@@ -290,5 +138,294 @@
     "liveSite": "https://summer-camp-school-4b850.web.app/",
     "image": "https://i.ibb.co/K20CtvM/magic-learner.png",
     "madeWith": ["React", "Express", "Mongodb"]
+  },
+  {
+    "id": 7,
+    "projectName": "Sportiz",
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Mongodb",
+      "Mongoose",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Redux",
+      "Ant Design",
+      "Tailwind css"
+    ],
+    "description": [
+      "Sportiz is a sports item inventory management dashboard application",
+      "Added Ant Design for UI",
+      "Use Redux for state management",
+      "Implement secure authentication system",
+      "Addend three type of user functionality",
+      "Implement backend functionality with Express.js",
+      "Used Mongoose in backend as ODM",
+      "Implement secure login system"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/",
+    "serverSite": "https://github.com/NS-Sheam/",
+    "liveSite": "https://sports-item-management.netlify.app/",
+    "image": "https://i.ibb.co/6ZznCYk/sportiz.png",
+    "madeWith": ["React", "Express", "Mongodb", "JavaScript"]
+  },
+  {
+    "id": 8,
+    "projectName": "Heroverse",
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Javascript",
+      "Mongodb",
+      "Firebase",
+      "HTML5",
+      "CSS3",
+      "Tailwind css"
+    ],
+    "description": [
+      "Full stack project with MERN technology",
+      "Added backend functionality with Express.js",
+      "Implemented Firebase authentication system",
+      "Use Mongodb for store data",
+      "Use private route for make secure routing"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/heroverse-client-side",
+    "serverSite": "https://github.com/NS-Sheam/heroverse-server-side",
+    "liveSite": "https://toy-marketplace-f77ed.web.app/",
+    "image": "https://i.ibb.co/D9G14D0/Heroverse.png",
+    "madeWith": ["React", "JavaScript"]
+  },
+  {
+    "id": 9,
+    "projectName": "Chef Recipe",
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Javascript",
+      "Firebase",
+      "HTML5",
+      "CSS3",
+      "React Boostrap"
+    ],
+    "description": [
+      "Full stack project with MERN technology",
+      "Added backend functionality with Express.js",
+      "Implemented Firebase authentication system",
+      "Use Mongodb for store data",
+      "Use private route for make secure routing"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/chefs-universe-client",
+    "serverSite": "https://github.com/NS-Sheam/chefs-universe-server",
+    "liveSite": "https://chef-recipe-hunting-client.web.app/",
+    "image": "https://i.ibb.co/sVbFNYr/chefrecipe.png",
+    "madeWith": ["React", "JavaScript"]
+  },
+  {
+    "id": 10,
+    "projectName": "Count Me",
+    "technology": [
+      "React.js",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Redux",
+      "Tailwind css"
+    ],
+    "description": [
+      "Count Me is a time tracking web application",
+      "Use Redux for state management",
+      "Use tailwind as css framework",
+      "Implement login system"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/time-tracking-web-app/",
+    "liveSite": "https://count-me-time-tracker.netlify.app/",
+    "image": "https://i.ibb.co/7VG8WdJ/countMe.png",
+    "madeWith": ["React", "JavaScript"]
+  },
+  {
+    "id": 11,
+    "projectName": "News Dragon",
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Firebase",
+      "HTML5",
+      "CSS3",
+      "React Boostrap"
+    ],
+    "description": [
+      "Full stack project with MERN technology",
+      "Added backend functionality with Express.js",
+      "Implemented Firebase authentication system",
+      "Use private route for make secure routing"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/The-news-dragon-client",
+    "serverSite": "https://github.com/NS-Sheam/the-news-dragon-server",
+    "liveSite": "https://the-news-dragon-6d4fa.web.app/",
+    "image": "https://i.ibb.co/DLg69Wg/news-dragon.png",
+    "madeWith": ["React"]
+  },
+  {
+    "id": 12,
+    "projectName": "Car Doctor",
+    "technology": [
+      "React.js",
+      "Express.js",
+      "Firebase",
+      "HTML5",
+      "CSS3",
+      "Tailwind css"
+    ],
+    "description": [
+      "Full stack project with MERN technology",
+      "Added backend functionality with Express.js",
+      "Implemented Firebase authentication system",
+      "Use Mongodb for store data",
+      "Use private route for make secure routing"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/car-doctor-client-m-69",
+    "serverSite": "https://github.com/NS-Sheam/car-doctor-server-m-70",
+    "liveSite": "https://car-doctor-4510b.web.app/",
+    "image": "https://i.ibb.co/MSHv3KD/car-doctor.png",
+    "madeWith": ["React", "Express", "Mongodb"]
+  },
+  {
+    "id": 13,
+    "projectName": "Get Jobs",
+    "technology": ["React.js", "Javascript", "HTML5", "CSS3", "Tailwind css"],
+    "description": [
+      "Get jobs is a job searching and applying site",
+      "Added applied job functionality with localhost",
+      "Only react based website and no backend used"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/get-jobs",
+    "liveSite": "https://getjobs-ph.netlify.app/",
+    "image": "https://i.ibb.co/6Btx7GF/getjobs.png",
+    "madeWith": ["React", "JavaScript"]
+  },
+
+  {
+    "id": 14,
+    "projectName": "Travel Guru",
+    "technology": [
+      "React.js",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Tailwind css",
+      "Firebase",
+      "Swiper.js"
+    ],
+    "description": [
+      "Travel Guru is a hotel booking site",
+      "Added Swiper.js for slider",
+      "Implement firebase authentication system",
+      "Implement backend functionality with Express.js"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/travel-guru-client-m-64-5",
+    "serverSite": "https://github.com/NS-Sheam/travel-guru-server-m-64.5",
+    "liveSite": "https://travel-guru-ns.netlify.app/",
+    "image": "https://i.ibb.co/G91dw5W/travel-guru.png",
+    "madeWith": ["React", "JavaScript"]
+  },
+  {
+    "id": 15,
+    "projectName": "Justice",
+    "technology": ["HTML5", "CSS3", "Bootstrap"],
+    "description": [
+      "Use HTML, CSS and Bootstrap",
+      "Use Bootstrap as css framework"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/justice-legal-house",
+    "liveSite": "https://justice-legal.netlify.app/",
+    "image": "https://i.ibb.co/Rbdcbkx/justic-legal.png",
+    "madeWith": ["HTML", "CSS"]
+  },
+  {
+    "id": 16,
+    "projectName": "Tea House",
+    "technology": ["HTML5", "CSS3", "Tailwind css"],
+    "description": ["Used HTML, CSS", "Use tailwind as css framework"],
+    "clientSite": "https://github.com/NS-Sheam/tea-house-tailwind-bootstrap-m-15-5",
+    "liveSite": "https://tea-house-ns.netlify.app/",
+    "image": "https://i.ibb.co/Bj058VP/tea-house.png",
+    "madeWith": ["HTML", "CSS"]
+  },
+  {
+    "id": 17,
+    "projectName": "Idea",
+    "technology": ["Javascript", "HTML5", "CSS3", "Tailwind css"],
+    "description": [
+      "Used HTML, CSS and Javascript",
+      "Use tailwind as css framework",
+      "Not so much functionality added"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/leader-board-mod-10",
+    "liveSite": "https://idea-ns-sheam.netlify.app/",
+    "image": "https://i.ibb.co/K9rJ5LL/idea.png",
+    "madeWith": ["HTML", "CSS"]
+  },
+  {
+    "id": 18,
+    "projectName": "AI Universe",
+    "technology": ["Javascript", "HTML5", "CSS3", "Tailwind css"],
+    "description": [
+      "AI Universe site is javascript based site",
+      "added modal with javascript",
+      "Used bookmark functionality"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/ai-universe",
+    "liveSite": "https://mnsakibphassignment6.netlify.app/",
+    "image": "https://i.ibb.co/02sqcKq/ai-universe.png",
+    "madeWith": ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 19,
+    "projectName": "Knowledge Cafe",
+    "technology": [
+      "React.js",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Tailwind css",
+      "Firebase"
+    ],
+    "description": [
+      "Knowledge Cafe site is for searching books",
+      "Implemented react router",
+      "User can read different books"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/knowledge-hunt-c-sess-mil-9",
+    "liveSite": "https://knowledge-cafe-ns.netlify.app/",
+    "image": "https://i.ibb.co/TBFrdpp/know-ledge-cafe.png",
+    "madeWith": ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 20,
+    "projectName": "Geometry Genius",
+    "technology": ["Javascript", "HTML5", "CSS3"],
+    "description": [
+      "Geometry Genius is a single page site for getting the area of different shape",
+      "Used javascript for calculate area"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/geometry-genius",
+    "liveSite": "https://geometry-genius-ns.netlify.app/",
+    "image": "https://i.ibb.co/PwnLJ0N/geometry-genius.png",
+    "madeWith": ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 21,
+    "projectName": "MealDB",
+    "technology": ["React.js", "Javascript", "HTML5", "CSS3", "Tailwind css"],
+    "description": [
+      "Site for searching different meals in the world",
+      "Added search functionality",
+      "Use api for collection meal data"
+    ],
+    "clientSite": "https://github.com/NS-Sheam/mealDB-with-react-router",
+    "liveSite": "https://mealdb-nss.netlify.app/",
+    "image": "https://i.ibb.co/2jKgCgN/mealdb.png",
+    "madeWith": ["React"]
   }
 ]
