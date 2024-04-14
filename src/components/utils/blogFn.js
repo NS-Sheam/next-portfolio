@@ -7,7 +7,7 @@ const allBlogs = async () => {
     );
     const mediumBlogs = await res.json();
 
-    const blogs = mediumBlogs?.items;
+    const blogs = mediumBlogs?.items || [];
 
     loading = false;
 
@@ -28,7 +28,7 @@ const loadBlogs = async (blogId) => {
     const res = await fetch(
       `${process?.env?.NEXT_PUBLIC_PUBLIC_HOSTING_URL}/blog/${blogId}`,
     );
-    const singleBlog = await res.json();
+    const singleBlog = (await res.json()) || {};
     loading = false;
     return { filteredBlogs, singleBlog, loading };
   } catch (error) {

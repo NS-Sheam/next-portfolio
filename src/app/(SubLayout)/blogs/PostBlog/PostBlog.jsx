@@ -16,9 +16,10 @@ const PostBlog = () => {
   };
 
   const handleTextSelection = () => {
-    const text = window.getSelection().toString();
+    // const text = window.getSelection().toString();
 
-    setSelectedText(text);
+    // setSelectedText(text);
+    setSelectedText(null);
 
 
   };
