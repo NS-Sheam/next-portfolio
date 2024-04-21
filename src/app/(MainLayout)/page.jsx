@@ -13,6 +13,7 @@ import { Suspense } from "react";
 // import Testimonial from "@/components/Home/Testimonial/Testimonial";
 // import { Blocks } from 'react-loader-spinner';
 import metaImage from "../../assets/images/nazmus-sakib.png";
+
 export const metadata = {
   title: "Nazmus Sakib",
   description: "Welcome to the sky of Nazmus Sakib",
@@ -38,6 +39,7 @@ export const metadata = {
 
 }
 const HomePage = () => {
+
   return (
     <div className="relative overflow-hidden">
       <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}>
