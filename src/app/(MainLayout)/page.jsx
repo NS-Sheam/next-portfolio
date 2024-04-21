@@ -9,10 +9,18 @@ import Quotes from "@/components/Home/Quotes/Quotes";
 // import Skills from "@/components/Home/Skills/Skills";
 import Technology from "@/components/Home/Technology/Technology";
 import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
+import { generateMetaDatas } from "@/components/utils";
 import { Suspense } from "react";
 // import Testimonial from "@/components/Home/Testimonial/Testimonial";
 // import { Blocks } from 'react-loader-spinner';
+import metaImage from "@/assets/images/nazmus-sakib.png";
+export const metadata = await generateMetaDatas(
+  "Nazmus Sakib",
+  "Welcome to the sky of Nazmus Sakib",
+  metaImage,
 
+
+);
 const HomePage = () => {
   return (
     <div className="relative overflow-hidden">
