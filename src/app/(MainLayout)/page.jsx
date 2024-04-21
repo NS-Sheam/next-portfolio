@@ -12,7 +12,7 @@ import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
 import { Suspense } from "react";
 // import Testimonial from "@/components/Home/Testimonial/Testimonial";
 // import { Blocks } from 'react-loader-spinner';
-import metaImage from "@/assets/images/nazmus-sakib.png";
+import metaImage from "../../assets/images/nazmus-sakib.png";
 export const metadata = {
   title: "Nazmus Sakib",
   description: "Welcome to the sky of Nazmus Sakib",
@@ -29,7 +29,7 @@ export const metadata = {
     description: "Welcome to the sky of Nazmus Sakib",
     images: [
       {
-        url: metaImage,
+        url: "https://nazmus-sakib.me/static/media/nazmus-sakib.58e4c67c.png"
       },
     ],
     site_name: "Nazmus Sakib",
