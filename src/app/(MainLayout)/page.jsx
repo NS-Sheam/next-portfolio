@@ -9,18 +9,34 @@ import Quotes from "@/components/Home/Quotes/Quotes";
 // import Skills from "@/components/Home/Skills/Skills";
 import Technology from "@/components/Home/Technology/Technology";
 import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
-import { generateMetaDatas } from "@/components/utils";
 import { Suspense } from "react";
 // import Testimonial from "@/components/Home/Testimonial/Testimonial";
 // import { Blocks } from 'react-loader-spinner';
 import metaImage from "@/assets/images/nazmus-sakib.png";
-export const metadata = await generateMetaDatas(
-  "Nazmus Sakib",
-  "Welcome to the sky of Nazmus Sakib",
-  metaImage,
+export const metadata = {
+  title: "Nazmus Sakib",
+  description: "Welcome to the sky of Nazmus Sakib",
+  image: metaImage,
+  url: "https://nazmus-sakib.me/",
+  type: "Nazmus Sakib",
+  siteName: "Nazmus Sakib",
+  facebook: "https://www.facebook.com/nazmus.sakib.sheam/",
+  openGraph: {
+    type: "website",
+    locale: "en_IE",
+    url: "https://nazmus-sakib.me/",
+    title: "Nazmus Sakib",
+    description: "Welcome to the sky of Nazmus Sakib",
+    images: [
+      {
+        url: metaImage,
+      },
+    ],
+    site_name: "Nazmus Sakib",
+  },
 
 
-);
+}
 const HomePage = () => {
   return (
     <div className="relative overflow-hidden">
