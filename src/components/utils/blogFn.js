@@ -24,16 +24,21 @@ const allBlogs = async () => {
 const loadBlogs = async (blogId) => {
   let loading = true;
   try {
-    const allBlogData = await allBlogs();
-    const filteredBlogs = allBlogData?.blogs?.filter(
+    const allBlogsRes = await fetch(
+      `${process?.env?.NEXT_PUBLIC_SERVER_URL}/blogs`,
+    );
+    const allBlogData = await allBlogsRes.json();
+
+    const filteredBlogs = allBlogData?.data?.filter(
       (blog) => blog._id !== blogId,
     );
+
     const res = await fetch(
-      `${process?.env?.NEXT_PUBLIC_PUBLIC_HOSTING_URL}/blog/${blogId}`,
+      `${process?.env?.NEXT_PUBLIC_SERVER_URL}/blogs/${blogId}`,
     );
     const singleBlog = (await res.json()) || {};
     loading = false;
-    return { filteredBlogs, singleBlog, loading };
+    return { filteredBlogs, singleBlog: singleBlog.data, loading };
   } catch (error) {
     console.log("error response", error);
 

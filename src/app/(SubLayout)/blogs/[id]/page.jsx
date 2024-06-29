@@ -28,21 +28,25 @@ const SingleBlog = async ({ params }) => {
                                 height={200}
                             />
                             <div className="p-4">
-                                <p className="font-semibold text-bandYellow">{moment(blog?.createdAt).format('MMMM DD YYYY')}</p>
-                                <h3 className="text-white">{blog?.heading}</h3>
+                                <p className="font-semibold text-bandYellow">{moment(blog?.publishDate).format('MMMM DD YYYY')}</p>
+                                <h3 className="text-white">{blog?.title}</h3>
                             </div>
                         </div>
                     </Link>)
                 }
             </div>
             <div className={`col-span-3 md:col-span-2 order-first md:order-2 p-4 lg:p-6 w-full space-y-4 border rounded-lg shadow-lg `}>
-                <Image className="" src={singleBlog?.image}
-                    alt={`blog-${singleBlog._id}`}
-                    width={600}
-                    height={250}
-                />
+                <div
+                    className=""
+                >
+                    <Image className="w-full" src={singleBlog?.image}
+                        alt={`blog-${singleBlog._id}`}
+                        width={600}
+                        height={250}
+                    />
+                </div>
                 <p className="font-semibold text-bandYellow">{moment(singleBlog.createdAt).format('MMMM DD YYYY')}</p>
-                <h1 className="text-xl lg:text-3xl font-bold text-white">{singleBlog?.heading}</h1>
+                <h1 className="text-xl lg:text-3xl font-bold text-white">{singleBlog?.title}</h1>
                 <div className='text-white' dangerouslySetInnerHTML={{ __html: singleBlog?.description }} ></div>
             </div>
         </div>

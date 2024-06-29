@@ -22,7 +22,14 @@ const Blogs = async () => {
         }
 
     }
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/blogs`,
+        {
+            cache: "no-cache",
+        }
 
+    );
+    const serverBlogs = await res.json();
     return (
         <div className="bg-bandTernary  py-8 lg:pb-16 lg:pt-0">
             <div className="container mx-auto inner-container space-y-6">
@@ -35,7 +42,8 @@ const Blogs = async () => {
                     {
                         loading ? <BlogsLoader /> :
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-end mx-auto my-5 gap-5 -mt-8 ">
-                                {blogs?.map((blog, index) => <BlogCard key={index} blog={blog} />)}
+                                {/* {blogs?.map((blog, index) => <BlogCard key={index} blog={blog} />)} */}
+                                {serverBlogs?.data?.map((blog, index) => <BlogCard key={index} blog={blog} />)}
 
                             </div>
                     }
