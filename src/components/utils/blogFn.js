@@ -29,9 +29,8 @@ const loadBlogs = async (blogId) => {
     );
     const allBlogData = await allBlogsRes.json();
 
-    const filteredBlogs = allBlogData?.data?.filter(
-      (blog) => blog._id !== blogId,
-    );
+    const filteredBlogs =
+      allBlogData?.data?.filter((blog) => blog._id !== blogId) || [];
 
     const res = await fetch(
       `${process?.env?.NEXT_PUBLIC_SERVER_URL}/blogs/${blogId}`,

@@ -15,7 +15,7 @@ const HomeBlogs = async () => {
     }
 
   );
-  const serverBlogs = await res.json();
+  const serverBlogs = await res.json() || {};
 
 
   return (

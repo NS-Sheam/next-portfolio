@@ -29,7 +29,7 @@ const Blogs = async () => {
         }
 
     );
-    const serverBlogs = await res.json();
+    const serverBlogs = await res.json() || {};
     return (
         <div className="bg-bandTernary  py-8 lg:pb-16 lg:pt-0">
             <div className="container mx-auto inner-container space-y-6">
