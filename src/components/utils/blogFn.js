@@ -38,7 +38,7 @@ const loadBlogs = async (blogId) => {
     );
     const singleBlog = (await res.json()) || {};
     loading = false;
-    return { filteredBlogs, singleBlog: singleBlog.data, loading };
+    return { filteredBlogs, singleBlog: singleBlog?.data, loading };
   } catch (error) {
     console.log("error response", error);
 

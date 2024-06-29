@@ -12,10 +12,10 @@ const SingleBlog = () => {
     return (
         <>
             <MetaDecorator
-                title={singleBlog.heading}
-                description={singleBlog.heading}
-                imageUrl={singleBlog.image}
-                imageAlt={singleBlog.title}
+                title={singleBlog?.title}
+                description={singleBlog?.title}
+                imageUrl={singleBlog?.image}
+                imageAlt={singleBlog?.title}
             />
             <div className=" bg-gradient-to-r from-bandPrimary via-bandSecondary to-bandTernary ">
                 <Header />
@@ -28,7 +28,7 @@ const SingleBlog = () => {
                                 <img className="w-40" src={blog?.image} alt="" />
                                 <div className="p-4">
                                     <p className="font-semibold">{moment(blog.createdAt).format('MMMM DD YYYY')}</p>
-                                    <h3 className="">{blog?.heading}</h3>
+                                    <h3 className="">{blog?.title}</h3>
                                 </div>
                             </div>
                         </Link>)
@@ -36,7 +36,7 @@ const SingleBlog = () => {
                 </div>
                 <div className={`${theme === "light" ? "bg-white" : "bg-slate-400"} text-bandTernary lg:w-2/3 p-4 lg:p-6 w-full space-y-4 border rounded-lg shadow-lg `}>
                     <img className="mx-auto " src={singleBlog?.image} alt="" />
-                    <p className="font-semibold">{moment(singleBlog.createdAt).format('MMMM DD YYYY')}</p>
+                    <p className="font-semibold">{moment(singleBlog?.createdAt).format('MMMM DD YYYY')}</p>
                     <h1 className="text-xl lg:text-3xl font-bold ">{singleBlog?.heading}</h1>
                     <div dangerouslySetInnerHTML={{ __html: singleBlog?.description }} ></div>
                 </div>
