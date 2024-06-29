@@ -12,16 +12,16 @@ export const metadata = await generateMetaDatas(
 )
 
 const Blogs = async () => {
-    const { blogs, loading } = await BlogFunction.allBlogs();
+    // const { blogs, loading } = await BlogFunction.allBlogs();
 
 
 
-    if (!blogs) {
-        return {
-            notFound: true,
-        }
+    // if (!blogs) {
+    //     return {
+    //         notFound: true,
+    //     }
 
-    }
+    // }
     const res = await fetch(
         `${process.env.NEXT_PUBLIC_SERVER_URL}/blogs`,
         {
