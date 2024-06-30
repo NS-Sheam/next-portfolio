@@ -16,7 +16,8 @@ import metaImage from "../../assets/images/nazmus-sakib.png";
 
 export const metadata = {
   title: "Nazmus Sakib",
-  description: "Welcome to the sky of Nazmus Sakib",
+  // description: "Welcome to the sky of Nazmus Sakib",
+  description: "Welcome to the portfolio of Nazmus Sakib",
   image: metaImage,
   url: "https://nazmus-sakib.me/",
   type: "Nazmus Sakib",
@@ -27,7 +28,8 @@ export const metadata = {
     locale: "en_IE",
     url: "https://nazmus-sakib.me/",
     title: "Nazmus Sakib",
-    description: "Welcome to the sky of Nazmus Sakib",
+    // description: "Welcome to the sky of Nazmus Sakib",
+    description: "Welcome to the portfolio of Nazmus Sakib",
     images: [
       {
         url: "https://nazmus-sakib.me/static/media/nazmus-sakib.58e4c67c.png"

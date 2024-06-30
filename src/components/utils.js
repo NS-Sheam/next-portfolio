@@ -23,7 +23,8 @@ export const generateMetaDatas = async (
 ) => {
   return {
     title: title ? "Nazmus Sakib | " + title : "Nazmus Sakib",
-    description: description || "Welcome to the sky of Nazmus Sakib",
+    // description: description || "Welcome to the sky of Nazmus Sakib",
+    description: description || "Welcome to the portfolio of Nazmus Sakib",
     image: image?.src || myimg.src,
     url: path ? "https://nazmus-sakib.me/" + path : "https://nazmus-sakib.me/",
     type: type ? "Nazmus Sakib" + type : "Nazmus Sakib",
@@ -36,7 +37,8 @@ export const generateMetaDatas = async (
         ? "https://nazmus-sakib.me/" + path
         : "https://nazmus-sakib.me/",
       title: title ? "Nazmus Sakib|" + title : "Nazmus Sakib",
-      description: description || "Welcome to the sky of Nazmus Sakib",
+      // description: description || "Welcome to the sky of Nazmus Sakib",
+      description: description || "Welcome to the portfolio of Nazmus Sakib",
       images: [
         {
           url: image?.src,

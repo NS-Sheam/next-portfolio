@@ -53,7 +53,6 @@ const allBlogsFromServer = async () => {
       cache: "no-cache",
     });
     const blogs = await res.json();
-    console.log("blogs", blogs);
 
     loading = false;
     return { blogs: blogs?.data || [], loading };
