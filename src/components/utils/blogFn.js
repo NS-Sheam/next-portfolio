@@ -46,7 +46,25 @@ const loadBlogs = async (blogId) => {
   }
 };
 
+const allBlogsFromServer = async () => {
+  let loading = true;
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/blogs`, {
+      cache: "no-cache",
+    });
+    const blogs = await res.json();
+    console.log("blogs", blogs);
+
+    loading = false;
+    return { blogs: blogs?.data, loading };
+  } catch (error) {
+    loading = false;
+    throw error;
+  }
+};
+
 export const BlogFunction = {
   allBlogs,
   loadBlogs,
+  allBlogsFromServer,
 };
