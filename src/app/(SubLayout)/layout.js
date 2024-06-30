@@ -28,7 +28,8 @@ const layout = ({ children }) => {
     <div className={` min-h-screen relative overflow-hidden`}>
       <GlowingBall />
       <Header />
-      <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}>
+      {/* <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}> */}
+      <Suspense fallback={<CircularTextLoadingComponent loadingObj="page" />}>
         <AnimationPageContainer>{children}</AnimationPageContainer>
         <Footer />
       </Suspense>

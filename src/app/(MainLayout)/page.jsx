@@ -44,7 +44,8 @@ const HomePage = () => {
 
   return (
     <div className="relative overflow-hidden">
-      <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}>
+      {/* <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}> */}
+      <Suspense fallback={<CircularTextLoadingComponent loadingObj="Page" />}>
         <GlowingBall />
         <HeaderBanner />
         {/* <Skills /> */}

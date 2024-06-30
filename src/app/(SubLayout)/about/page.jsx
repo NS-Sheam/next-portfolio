@@ -87,7 +87,8 @@ const About = () => {
           >
             <div className="flex justify-center items-center">
               <CircularText
-                text="- Welcome - to - the - sky -"
+                // text="- Welcome - to - the - sky -"
+                text="- Welcome - to - the - portfolio -"
                 degree={13}
                 circleSize="250px"
                 logoSize={"180px"}

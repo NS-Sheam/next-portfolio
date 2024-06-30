@@ -1,6 +1,7 @@
 "use client";
 import "./Banner.css";
-import myImg from "@/assets/images/my-img.jpg";
+// import myImg from "@/assets/images/my-img-3.jpg";
+import myImg from "@/assets/images/my-image-3.jpg";
 // import blurImageUrl from "@/assets/images/banner3.jpg";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import Image from "next/image";
@@ -32,7 +33,7 @@ const Banner = () => {
           <div className="w-full">
             <p className="text-white text-4xl text-scrollbar">
               I am a &nbsp;
-              <span className="text-5xl font-bold py-2 ">
+              {/* <span className="text-5xl font-bold py-2 ">
                 Full Stack Developer
                 <br />
                 Backend Developer
@@ -40,6 +41,15 @@ const Banner = () => {
                 React Specialist
                 <br />
                 Javascript Developer
+              </span> */}
+              <span className="text-5xl font-bold py-2 ">
+                Software Engineer
+                <br />
+                Full Stack Developer
+                <br />
+                Web development apprentice
+                <br />
+                Quick learner
               </span>
             </p>
           </div>
@@ -66,7 +76,7 @@ const Banner = () => {
             data-aos-anchor="#example-anchor"
             data-aos-duration="500"
             // className='wavecontainer banner-img '
-            className="img-container-dark banner-img h-[20rem] w-[20rem] "
+            className="img-container-dark banner-img h-[20rem] w-[20rem]  "
           >
             <Image
               blurDataURL="../../../assets/images/banner3.jpg"
@@ -74,7 +84,7 @@ const Banner = () => {
               // onLoad={(e) => console.log(e.target.naturalWidth)}
               src={myImg}
               alt="image"
-              className="rounded-xl mx-auto hover:scale-105 duration-300 shadow-lg"
+              className=" mx-auto hover:scale-105 duration-300 shadow-lg"
             />
 
 
@@ -122,7 +132,7 @@ const Banner = () => {
 
           <p className="text-white text-2xl  text-center">I am a &nbsp;</p>
           <p className="text-scrollbar text-white text-2xl text-center">
-            <span className=" font-bold py-2 block w-full">
+            {/* <span className=" font-bold py-2 block w-full">
               Full Stack Developer
               <br />
               Backend Developer
@@ -130,6 +140,15 @@ const Banner = () => {
               React Specialist
               <br />
               Javascript Developer
+            </span> */}
+            <span className=" font-bold py-2 block w-full">
+              Software Engineer
+              <br />
+              Full Stack Developer
+              <br />
+              Web development apprentice
+              <br />
+              Quick learner
             </span>
           </p>
           <p className="text-white text-center py-2">

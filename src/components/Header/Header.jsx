@@ -154,12 +154,18 @@ const Header = () => {
         className="hidden md:flex justify-center items-center pt-6 bg-bandTernary">
         <Link href="/">
           <CircularText
-            text=" -Welcome-to-the-sky-"
-            degree={18}
-            circleSize="80px"
-            logoSize={"65px"}
+            // text=" -Welcome-to-the-sky-"
+            text=" -Welcome-to-the-portfolio-"
+            // degree={18}
+            // circleSize="80px"
+            // logoSize={"65px"}
+            // logoUrl={logo}
+            // origin="40px"
+            degree={14.8}
+            circleSize="100px"
+            logoSize={"90px"}
             logoUrl={logo}
-            origin="40px"
+            origin="50px"
             textClass="text-[0.5rem] text-bandYellow font-bold uppercase shadow-md shadow-white"
             animationSpeed="7s"
           />
@@ -171,7 +177,8 @@ const Header = () => {
         <div className="flex justify-center items-center">
           <Link href="/">
             <CircularText
-              text=" -Welcome-to-the-sky-"
+              // text=" -Welcome-to-the-sky-"
+              text=" -Welcome-to-the-portfolio-"
               degree={18}
               circleSize="70px"
               logoSize={"50px"}

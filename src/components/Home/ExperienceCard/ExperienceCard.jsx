@@ -11,7 +11,7 @@ const ExperienceCard = () => {
   const cardData = [
     {
       image: experienceImg,
-      heading: [2, "+"],
+      heading: [1, "+"],
       description: "Years of Experience",
       gradientClass: "bg-green-box",
       imageCss: "bg-gradient-to-br from-green-900 via-green-600 to-green-900",
@@ -44,7 +44,7 @@ const ExperienceCard = () => {
     },
     {
       image: ongoing,
-      heading: [10, "+"],
+      heading: [5, "+"],
       description: "Ongoing Projects",
       gradientClass: "bg-green-box",
       imageCss: "bg-gradient-to-br from-green-900 via-green-600 to-green-900",

@@ -13,7 +13,8 @@ const Home = () => {
   return (
     <>
       <MetaDecorator
-        description="Hey this is Nazmus Sakib and welcome to the sky...."
+        // description="Hey this is Nazmus Sakib and welcome to the sky...."
+        description="Hey this is Nazmus Sakib and welcome to my portfolio...."
         title="Nazmus Sakib"
         imageUrl="https://i.ibb.co/TYDxj4H/ns-logo.png"
         imageAlt="nazmus-sakib"
