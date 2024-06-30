@@ -16,6 +16,7 @@ const HomeBlogs = async () => {
 
   );
   const serverBlogs = await res?.json() || {};
+  console.log(serverBlogs);
 
 
   return (
@@ -26,7 +27,9 @@ const HomeBlogs = async () => {
           // loading ? <BlogsLoader /> :
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-end mx-auto my-5 gap-5 -mt-8 ">
             {/* {blogs?.slice(0, 3).map(blog => <BlogCard key={blog._id} blog={blog} />)} */}
-            {serverBlogs?.data?.slice(0, 3).map(blog => <BlogCard key={blog._id} blog={blog} />)}
+            {
+
+              serverBlogs?.data?.slice(0, 3).map(blog => <BlogCard key={blog._id} blog={blog} />)}
 
           </div>
         }
