@@ -15,7 +15,7 @@ const HomeBlogs = async () => {
       cache: "no-cache",
     }
 
-  );
+  ) || {};
   const serverBlogs = await res?.json() || {};
   console.log(serverBlogs);
 
