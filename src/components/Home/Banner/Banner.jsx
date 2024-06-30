@@ -47,15 +47,17 @@ const Banner = () => {
                 <br />
                 Full Stack Developer
                 <br />
-                Web development apprentice
+                Javascript Enthusiast
                 <br />
                 Quick learner
               </span>
             </p>
           </div>
           <p className="text-white text-xl">
-            Building Tomorrow's Web Today – Where Imagination Meets Innovation
-            in Full Stack, Backend, and React Development.
+            {/* Building Tomorrow's Web Today – Where Imagination Meets Innovation
+            in Full Stack, Backend, and React Development. */}
+            I work with the latest technologies to build web applications that are fast, responsive, and user-friendly.  I am passionate about learning new technologies and building innovative solutions.
+
           </p>
           <div className="my-8">
             <button
@@ -146,7 +148,7 @@ const Banner = () => {
               <br />
               Full Stack Developer
               <br />
-              Web development apprentice
+              Javascript Enthusiast
               <br />
               Quick learner
             </span>
