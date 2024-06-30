@@ -25,7 +25,7 @@ const loadBlogs = async (blogId) => {
   let loading = true;
   try {
     const allBlogsRes = await fetch(
-      `${process?.env?.NEXT_PUBLIC_SERVER_URL}/blogs`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/blogs`,
     );
     const allBlogData = await allBlogsRes.json();
 
@@ -33,7 +33,7 @@ const loadBlogs = async (blogId) => {
       allBlogData?.data?.filter((blog) => blog._id !== blogId) || [];
 
     const res = await fetch(
-      `${process?.env?.NEXT_PUBLIC_SERVER_URL}/blogs/${blogId}`,
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/blogs/${blogId}`,
     );
     const singleBlog = (await res.json()) || {};
     loading = false;
