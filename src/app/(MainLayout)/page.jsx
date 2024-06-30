@@ -2,7 +2,7 @@ import Footer from "@/components/Footer/Footer";
 import GlowingBall from "@/components/GlowingBall";
 import ExperienceCard from "@/components/Home/ExperienceCard/ExperienceCard";
 import HeaderBanner from "@/components/Home/HeaderBanner/HeaderBanner";
-// import HomeBlogs from "@/components/Home/HomeBlogs/HomeBlogs";
+import HomeBlogs from "@/components/Home/HomeBlogs/HomeBlogs";
 // import MyServices from "@/components/Home/MyServices/MyServices";
 import Projects from "@/components/Home/Projects/Projects";
 import Quotes from "@/components/Home/Quotes/Quotes";
@@ -49,7 +49,7 @@ const HomePage = () => {
         <ExperienceCard />
         <Technology />
         <Projects />
-        {/* <HomeBlogs /> */}
+        <HomeBlogs />
         {/* <MyServices /> */}
         {/* <Testimonial /> */}
         <Quotes />
