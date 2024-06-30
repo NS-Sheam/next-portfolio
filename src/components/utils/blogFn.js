@@ -56,7 +56,7 @@ const allBlogsFromServer = async () => {
     console.log("blogs", blogs);
 
     loading = false;
-    return { blogs: blogs?.data, loading };
+    return { blogs: blogs?.data || [], loading };
   } catch (error) {
     loading = false;
     throw error;

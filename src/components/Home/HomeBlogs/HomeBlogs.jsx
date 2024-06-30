@@ -7,10 +7,10 @@ import { BlogFunction } from "@/components/utils/blogFn";
 // import BlogsLoader from "@/components/BlogsLoader";
 
 const HomeBlogs = async () => {
-  const { blogs, loading } = await BlogFunction.allBlogs();
+  // const { blogs, loading } = await BlogFunction.allBlogs();
   // const { loading } = await BlogFunction.allBlogs();
 
-  // const { blogs, loading } = await BlogFunction.allBlogsFromServer();
+  const { blogs, loading } = await BlogFunction.allBlogsFromServer();
 
 
 
