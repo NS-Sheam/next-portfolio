@@ -1,6 +1,6 @@
 
 import SectionTitle from "../../../components/SectionTitle";
-// import BlogCard from "../../../components/BlogCard";
+import BlogCard from "../../../components/BlogCard";
 // import { BlogFunction } from "@/components/utils/blogFn";
 // import BlogsLoader from "@/components/BlogsLoader";
 
