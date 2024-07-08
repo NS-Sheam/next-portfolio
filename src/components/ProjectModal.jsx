@@ -11,7 +11,7 @@ const ProjectModal = ({ projectData }) => {
   const {
     projectName,
     technology,
-    description,
+    features,
     liveSite,
     image,
     clientSite,
@@ -45,7 +45,7 @@ const ProjectModal = ({ projectData }) => {
               Description:{" "}
             </h3>
             <ul className="text-white text-sm lg:text-base list-disc">
-              {description?.map((d, i) => (
+              {features?.map((d, i) => (
                 <li key={i}>{d}</li>
               ))}
             </ul>

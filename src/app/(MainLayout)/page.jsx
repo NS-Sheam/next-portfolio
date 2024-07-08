@@ -7,12 +7,13 @@ import HomeBlogs from "@/components/Home/HomeBlogs/HomeBlogs";
 import Projects from "@/components/Home/Projects/Projects";
 import Quotes from "@/components/Home/Quotes/Quotes";
 // import Skills from "@/components/Home/Skills/Skills";
-import Technology from "@/components/Home/Technology/Technology";
+
 import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
 import { Suspense } from "react";
 // import Testimonial from "@/components/Home/Testimonial/Testimonial";
 // import { Blocks } from 'react-loader-spinner';
 import metaImage from "../../assets/images/nazmus-sakib.png";
+import HomeTechnology from "@/components/Home/Technology/HomeTechnology";
 
 export const metadata = {
   title: "Nazmus Sakib",
@@ -50,7 +51,7 @@ const HomePage = () => {
         <HeaderBanner />
         {/* <Skills /> */}
         <ExperienceCard />
-        <Technology />
+        <HomeTechnology />
         <Projects />
         <HomeBlogs />
         {/* <MyServices /> */}
