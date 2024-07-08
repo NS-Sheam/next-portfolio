@@ -34,9 +34,9 @@ const About = async () => {
   const { hobbiesAndInterests, loading: isHobbiesAndInterestsLoading } = await getAllHobbiesAndInterest();
   const { achievements, loading: isAchievementsLoading } = await getAllAchievement();
   const mySkills = {
-    Expertise: expertiseSkills.map((skill) => skill.name),
-    Comfortable: comfortableSkills.map((skill) => skill.name),
-    Familiar: familiarSkills.map((skill) => skill.name),
+    Expertise: expertiseSkills?.map((skill) => skill.name),
+    Comfortable: comfortableSkills?.map((skill) => skill.name),
+    Familiar: familiarSkills?.map((skill) => skill.name),
     Tools: tools.map((skill) => skill.name),
   };
   if (isSkillsLoading || isExperienceLoading || isEducationLoading || isHobbiesAndInterestsLoading || isAchievementsLoading) {
@@ -108,11 +108,11 @@ const About = async () => {
           <p className="text-2xl md:text-4xl font-extrabold">Skills:</p>
           <hr />
           <div className="grid grid-cols-2 gap-4">
-            {Object.keys(mySkills).map((category, index) => (
+            {Object.keys(mySkills)?.map((category, index) => (
               <div key={index}>
                 <h2 className="text-xl md:text-3xl font-bold ">{category}:</h2>
                 <ul className="pl-4">
-                  {mySkills[category].map((skill, idx) => (
+                  {mySkills[category]?.map((skill, idx) => (
                     <li
                       className="text-bandYellow text-sm md:text-base md:font-bold"
                       key={idx}
