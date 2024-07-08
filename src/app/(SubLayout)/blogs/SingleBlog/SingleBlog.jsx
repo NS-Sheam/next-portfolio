@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../../layouts/Main";
 import moment from "moment/moment";
 import MetaDecorator from "../../../meta/MetaDecorator";
+import Image from "next/image";
 
 const SingleBlog = () => {
     const { filteredBlogs, singleBlog } = useLoaderData();
@@ -25,7 +26,7 @@ const SingleBlog = () => {
                     {
                         filteredBlogs.map(blog => <Link key={blog?._id} to={`/blog/${blog?._id}`}>
                             <div className="flex justify-center items-center gap-4 border rounded-lg my-2 px-4">
-                                <img className="w-40" src={blog?.image} alt="" />
+                                <Image className="w-40" src={blog?.image} alt="" />
                                 <div className="p-4">
                                     <p className="font-semibold">{moment(blog.createdAt).format('MMMM DD YYYY')}</p>
                                     <h3 className="">{blog?.title}</h3>
@@ -35,7 +36,7 @@ const SingleBlog = () => {
                     }
                 </div>
                 <div className={`${theme === "light" ? "bg-white" : "bg-slate-400"} text-bandTernary lg:w-2/3 p-4 lg:p-6 w-full space-y-4 border rounded-lg shadow-lg `}>
-                    <img className="mx-auto " src={singleBlog?.image} alt="" />
+                    <Image className="mx-auto " src={singleBlog?.image} alt="" />
                     <p className="font-semibold">{moment(singleBlog?.createdAt).format('MMMM DD YYYY')}</p>
                     <h1 className="text-xl lg:text-3xl font-bold ">{singleBlog?.heading}</h1>
                     <div dangerouslySetInnerHTML={{ __html: singleBlog?.description }} ></div>
