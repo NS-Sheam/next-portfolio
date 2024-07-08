@@ -11,7 +11,6 @@ import { getAllEducations } from "@/services/actions/education";
 import { getAllHobbiesAndInterest } from "@/services/actions/hobbiesAndInterest";
 import { getAllAchievement } from "@/services/actions/achievement";
 import { formatDate } from "@/components/utils/formateDate";
-import { CircularTextLoadingComponent } from "@/components/LoadingComponent";
 
 
 export const metadata = await generateMetaDatas(
@@ -41,7 +40,7 @@ const About = async () => {
     Tools: tools.map((skill) => skill.name),
   };
   if (isSkillsLoading || isExperienceLoading || isEducationLoading || isHobbiesAndInterestsLoading || isAchievementsLoading) {
-    <CircularTextLoadingComponent loadingObj="Page" />
+    return <div>Loading...</div>;
   }
 
   return (
