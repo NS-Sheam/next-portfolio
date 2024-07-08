@@ -1,16 +1,16 @@
-import Link from "next/link";
-import myImg from "@/assets/images/my-img.jpg";
-import { FaFile, FaGithub, FaLinkedin, FaUser } from "react-icons/fa";
-import { FiArrowUpRight } from "react-icons/fi";
-import CircularText from "@/components/CurcularText/CircularText";
 import { generateMetaDatas } from "@/components/utils";
-import ResumeDownloadButton from "@/components/ResumeDownloadButton";
-import { getAllSkills } from "@/services/actions/skills";
-import { getAllExperiences } from "@/services/actions/experience";
-import { getAllEducations } from "@/services/actions/education";
-import { getAllHobbiesAndInterest } from "@/services/actions/hobbiesAndInterest";
-import { getAllAchievement } from "@/services/actions/achievement";
-import { formatDate } from "@/components/utils/formateDate";
+// import Link from "next/link";
+// import myImg from "@/assets/images/my-img.jpg";
+// import { FaFile, FaGithub, FaLinkedin, FaUser } from "react-icons/fa";
+// import { FiArrowUpRight } from "react-icons/fi";
+// import CircularText from "@/components/CurcularText/CircularText";
+// import ResumeDownloadButton from "@/components/ResumeDownloadButton";
+// import { getAllSkills } from "@/services/actions/skills";
+// import { getAllExperiences } from "@/services/actions/experience";
+// import { getAllEducations } from "@/services/actions/education";
+// import { getAllHobbiesAndInterest } from "@/services/actions/hobbiesAndInterest";
+// import { getAllAchievement } from "@/services/actions/achievement";
+// import { formatDate } from "@/components/utils/formateDate";
 
 
 export const metadata = await generateMetaDatas(
@@ -22,30 +22,30 @@ export const metadata = await generateMetaDatas(
 );
 
 const About = async () => {
-  const {
-    familiarSkills,
-    comfortableSkills,
-    expertiseSkills,
-    tools,
-    loading: isSkillsLoading,
-  } = await getAllSkills();
-  const { experiences, loading: isExperienceLoading } = await getAllExperiences();
-  const { educations, loading: isEducationLoading } = await getAllEducations();
-  const { hobbiesAndInterests, loading: isHobbiesAndInterestsLoading } = await getAllHobbiesAndInterest();
-  const { achievements, loading: isAchievementsLoading } = await getAllAchievement();
-  const mySkills = {
-    Expertise: expertiseSkills?.map((skill) => skill.name),
-    Comfortable: comfortableSkills?.map((skill) => skill.name),
-    Familiar: familiarSkills?.map((skill) => skill.name),
-    Tools: tools.map((skill) => skill.name),
-  };
-  if (isSkillsLoading || isExperienceLoading || isEducationLoading || isHobbiesAndInterestsLoading || isAchievementsLoading) {
-    return <div>Loading...</div>;
-  }
+  // const {
+  //   familiarSkills,
+  //   comfortableSkills,
+  //   expertiseSkills,
+  //   tools,
+  //   loading: isSkillsLoading,
+  // } = await getAllSkills();
+  // const { experiences, loading: isExperienceLoading } = await getAllExperiences();
+  // const { educations, loading: isEducationLoading } = await getAllEducations();
+  // const { hobbiesAndInterests, loading: isHobbiesAndInterestsLoading } = await getAllHobbiesAndInterest();
+  // const { achievements, loading: isAchievementsLoading } = await getAllAchievement();
+  // const mySkills = {
+  //   Expertise: expertiseSkills?.map((skill) => skill.name),
+  //   Comfortable: comfortableSkills?.map((skill) => skill.name),
+  //   Familiar: familiarSkills?.map((skill) => skill.name),
+  //   Tools: tools.map((skill) => skill.name),
+  // };
+  // if (isSkillsLoading || isExperienceLoading || isEducationLoading || isHobbiesAndInterestsLoading || isAchievementsLoading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <section className="bg-bandTernary py-8 lg:pb-16 lg:pt-0">
-      <div className="container mx-auto inner-container">
+      {/* <div className="container mx-auto inner-container">
         <h1 className="font-extrabold banner-name-font text-6xl text-center">
           About me!
         </h1>
@@ -241,7 +241,7 @@ const About = async () => {
           </div>
         </div>
 
-      </div>
+      </div> */}
     </section>
   );
 };
