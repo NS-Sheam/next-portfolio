@@ -17,23 +17,23 @@ import HomeTechnology from "@/components/Home/Technology/HomeTechnology";
 
 export const metadata = {
   title: "Nazmus Sakib",
-  // description: "Welcome to the sky of Nazmus Sakib",
-  description: "Welcome to the portfolio of Nazmus Sakib",
+  description: "Welcome to the sky of Nazmus Sakib",
+  // description: "Welcome to the portfolio of Nazmus Sakib",
   image: metaImage,
-  url: "https://nazmus-sakib.me/",
+  url: "https://nazmussakib.dev/",
   type: "Nazmus Sakib",
   siteName: "Nazmus Sakib",
   facebook: "https://www.facebook.com/nazmus.sakib.sheam/",
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://nazmus-sakib.me/",
+    url: "https://nazmussakib.dev/",
     title: "Nazmus Sakib",
-    // description: "Welcome to the sky of Nazmus Sakib",
-    description: "Welcome to the portfolio of Nazmus Sakib",
+    description: "Welcome to the sky of Nazmus Sakib",
+    // description: "Welcome to the portfolio of Nazmus Sakib",
     images: [
       {
-        url: "https://nazmus-sakib.me/static/media/nazmus-sakib.58e4c67c.png"
+        url: "https://nazmussakib.dev/static/media/nazmus-sakib.58e4c67c.png"
       },
     ],
     site_name: "Nazmus Sakib",
@@ -45,8 +45,8 @@ const HomePage = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}> */}
-      <Suspense fallback={<CircularTextLoadingComponent loadingObj="Page" />}>
+      <Suspense fallback={<CircularTextLoadingComponent loadingObj="sky" />}>
+        {/* <Suspense fallback={<CircularTextLoadingComponent loadingObj="Page" />}> */}
         <GlowingBall />
         <HeaderBanner />
         {/* <Skills /> */}

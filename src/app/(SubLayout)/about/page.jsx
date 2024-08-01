@@ -57,7 +57,7 @@ const About = async () => {
         >
           <div className="flex justify-center items-center col-span-1">
             <CircularText
-              text="- Welcome - to - the - portfolio -"
+              text="Welcome - to - the - sky -"
               degree={13}
               circleSize="250px"
               logoSize={"180px"}
@@ -184,7 +184,7 @@ const About = async () => {
             <ul className="space-y-2">
               {hobbiesAndInterests?.map((hobby, index) => (
                 <li key={index}>
-                  {`${hobby.passionLevel ? hobby.passionLevel + " | " : ""}${hobby.name}`}
+                  {hobby.name}
                 </li>
               ))}
             </ul>

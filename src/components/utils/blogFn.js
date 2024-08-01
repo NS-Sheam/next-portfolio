@@ -52,7 +52,7 @@ const allBlogsFromServer = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/blogs`, {
       cache: "no-cache",
     });
-    
+
     const blogs = await res.json();
 
     loading = false;

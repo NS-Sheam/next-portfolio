@@ -12,8 +12,8 @@ export const metadata = await generateMetaDatas(
 )
 
 const Blogs = async () => {
-    // const { blogs, loading } = await BlogFunction.allBlogs();
-    const { blogs, loading } = await BlogFunction.allBlogsFromServer();
+    const { blogs, loading } = await BlogFunction.allBlogs();
+    // const { blogs, loading } = await BlogFunction.allBlogsFromServer();
 
 
 
@@ -30,7 +30,6 @@ const Blogs = async () => {
                         loading ? <BlogsLoader /> :
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 items-end mx-auto my-5 gap-5 -mt-8 ">
                                 {blogs?.map((blog, index) => <BlogCard key={index} blog={blog} />)}
-                                dfdf
                             </div>
                     }
                 </div>

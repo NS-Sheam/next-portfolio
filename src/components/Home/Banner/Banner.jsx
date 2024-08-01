@@ -33,16 +33,16 @@ const Banner = () => {
           <div className="w-full">
             <p className="text-white text-4xl text-scrollbar">
               I am a &nbsp;
-              {/* <span className="text-5xl font-bold py-2 ">
+              <span className="text-5xl font-bold py-2 ">
                 Full Stack Developer
                 <br />
                 Backend Developer
                 <br />
-                React Specialist
+                Software Engineer
                 <br />
                 Javascript Developer
-              </span> */}
-              <span className="text-5xl font-bold py-2 ">
+              </span>
+              {/* <span className="text-5xl font-bold py-2 ">
                 Software Engineer
                 <br />
                 Full Stack Developer
@@ -50,7 +50,7 @@ const Banner = () => {
                 Javascript Enthusiast
                 <br />
                 Quick learner
-              </span>
+              </span> */}
             </p>
           </div>
           <p className="text-white text-xl">
@@ -134,16 +134,16 @@ const Banner = () => {
 
           <p className="text-white text-2xl  text-center">I am a &nbsp;</p>
           <p className="text-scrollbar text-white text-2xl text-center">
-            {/* <span className=" font-bold py-2 block w-full">
+            <span className=" font-bold py-2 block w-full">
               Full Stack Developer
               <br />
               Backend Developer
               <br />
-              React Specialist
+              Software Engineer
               <br />
               Javascript Developer
-            </span> */}
-            <span className=" font-bold py-2 block w-full">
+            </span>
+            {/* <span className=" font-bold py-2 block w-full">
               Software Engineer
               <br />
               Full Stack Developer
@@ -151,7 +151,7 @@ const Banner = () => {
               Javascript Enthusiast
               <br />
               Quick learner
-            </span>
+            </span> */}
           </p>
           <p className="text-white text-center py-2">
             Building Tomorrow's Web Today – Where Imagination Meets Innovation

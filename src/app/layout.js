@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <link rel="icon" href="./ns-logo.png" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </Head>
       <body className={`${roboto.className} `}>
         <GlovalContextProvider>{children}</GlovalContextProvider>
