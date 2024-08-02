@@ -14,12 +14,13 @@ import { Suspense } from "react";
 // import { Blocks } from 'react-loader-spinner';
 import metaImage from "../../assets/images/nazmus-sakib.png";
 import HomeTechnology from "@/components/Home/Technology/HomeTechnology";
-
+import myimg from "../../assets/images/my-img.jpg";
+const defaultImageUrl = "https://i.ibb.co/RDyqbJB/nazmus-sakib.png";
 export const metadata = {
   title: "Nazmus Sakib",
   description: "Welcome to the sky of Nazmus Sakib",
   // description: "Welcome to the portfolio of Nazmus Sakib",
-  image: metaImage,
+  image: metaImage?.src || myimg?.src || defaultImageUrl,
   url: "https://nazmussakib.dev/",
   type: "Nazmus Sakib",
   siteName: "Nazmus Sakib",
@@ -33,7 +34,7 @@ export const metadata = {
     // description: "Welcome to the portfolio of Nazmus Sakib",
     images: [
       {
-        url: "https://nazmussakib.dev/static/media/nazmus-sakib.58e4c67c.png"
+        url: metaImage?.src || myimg?.src || defaultImageUrl,
       },
     ],
     site_name: "Nazmus Sakib",
