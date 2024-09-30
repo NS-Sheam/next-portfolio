@@ -1,7 +1,7 @@
 "use client";
 import "./Banner.css";
 // import myImg from "@/assets/images/my-img-3.jpg";
-import myImg from "@/assets/images/my-image-3.jpg";
+import myImg from "@/assets/images/my-img.jpg";
 // import blurImageUrl from "@/assets/images/banner3.jpg";
 import { AiOutlineCloudDownload } from "react-icons/ai";
 import Image from "next/image";
@@ -24,7 +24,7 @@ const Banner = () => {
           data-aos-duration="500"
           className="w-1/2 space-y-4"
         >
-          <h2 className="text-5xl font-light text-white">
+          <h2 className="text-4xl font-light text-white">
             HI! I am{" "}
             <span className="font-semibold mb-2 banner-name-font text-6xl">
               Nazmus Sakib
@@ -33,7 +33,7 @@ const Banner = () => {
           <div className="w-full">
             <p className="text-white text-4xl text-scrollbar">
               I am a &nbsp;
-              <span className="text-5xl font-bold py-2 ">
+              <span className="text-4xl font-bold py-2">
                 Full Stack Developer
                 <br />
                 Backend Developer
